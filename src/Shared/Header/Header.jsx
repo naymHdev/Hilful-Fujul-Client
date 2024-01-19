@@ -11,8 +11,8 @@ const Header = () => {
 
   const navProducts = (
     <>
-      <div className="grid md:flex items-center list-none gap-5 font-medium">
-        <li className="hover:bg-slate-100 lg:hover:bg-white p-1 rounded-sm text-center">
+      <div className="grid md:flex text-slate-500 items-center list-none gap-5 font-medium">
+        <li className="p-1 rounded-sm text-center">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -22,7 +22,7 @@ const Header = () => {
             Home
           </NavLink>
         </li>
-        <li className="hover:bg-slate-100 lg:hover:bg-white p-1 rounded-sm text-center">
+        <li className="p-1 rounded-sm text-center">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -32,7 +32,7 @@ const Header = () => {
             Gallery
           </NavLink>
         </li>
-        <li className="hover:bg-slate-100 lg:hover:bg-white p-1 rounded-sm text-center">
+        <li className="p-1 rounded-sm text-center">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -42,7 +42,7 @@ const Header = () => {
             Events
           </NavLink>
         </li>
-        <li className="hover:bg-slate-100 lg:hover:bg-white p-1 rounded-sm text-center">
+        <li className="p-1 rounded-sm text-center">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -52,7 +52,7 @@ const Header = () => {
             Donations
           </NavLink>
         </li>
-        <li className="hover:bg-slate-100 lg:hover:bg-white p-1 rounded-sm text-center">
+        <li className="p-1 rounded-sm text-center">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -62,7 +62,7 @@ const Header = () => {
             Blogs
           </NavLink>
         </li>
-        <li className="hover:bg-slate-100 lg:hover:bg-white p-1 rounded-sm text-center">
+        <li className="p-1 rounded-sm text-center">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -77,15 +77,15 @@ const Header = () => {
   );
 
   return (
-    <header className="bg-white shadow-sm fixed z-10 w-11/12 mx-auto">
+    <header className="relative shadow-sm">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto shadow-md flex w-11/12 fixed top-0 z-50 items-center justify-between py-5"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Hil Full</span>
-            <h2 className="text-3xl font-bold">Hil Full</h2>
+            <h2 className="text-3xl font-bold text-white">Hil Full</h2>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -116,7 +116,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <h2 className="text-3xl font-bold">Hil full</h2>
+              <h2 className="text-3xl font-bold text-white">Hil full</h2>
             </a>
             <button
               type="button"
