@@ -1,3 +1,4 @@
+import Causes from "../Pages/Causes/Causes";
 import AboutUs from "./AboutUs/AboutUs";
 import Banner from "./Banner/Banner";
 import Calculations from "./Calculations/Calculations";
@@ -15,7 +16,8 @@ const Home = () => {
       <Banner />
       <AboutUs />
       <Join />
-      <CoreFeatures /> 
+      <CoreFeatures />
+      <Causes />
       <Calculations />
       <Work />
       <OurGallery />

@@ -79,13 +79,13 @@ const Header = () => {
   return (
     <header className="relative">
       <nav
-        className="mx-auto shadow-md px-5 flex w-11/12 fixed top-0 z-50 items-center justify-between py-5"
+        className="mx-auto bg-white shadow-md px-5 flex w-11/12 fixed top-0 z-50 items-center justify-between py-5"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Hilf al-Fudul</span>
-            <h2 className="text-3xl font-bold text-white">Hilf al-Fudul</h2>
+            <h2 className="text-3xl font-bold text-slate-600">Hilf al-Fudul</h2>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -116,7 +116,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <h2 className="text-3xl font-bold text-white">Hilf al-Fudul</h2>
+              <h2 className="text-3xl font-bold text-slate-600">Hilf al-Fudul</h2>
             </a>
             <button
               type="button"

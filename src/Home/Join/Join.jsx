@@ -2,6 +2,7 @@ import { ImManWoman } from "react-icons/im";
 import { BiDonateHeart } from "react-icons/bi";
 import { GiLoveLetter } from "react-icons/gi";
 import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
 
 const Join = () => {
   return (
@@ -18,7 +19,9 @@ const Join = () => {
               </p>
             </div>
             <div className=" mt-5 flex justify-start">
+              <Link to="/logIn">
               <Button text="Join Now" />
+              </Link>
             </div>
           </div>
           <div className="hover:rounded-none bg-[#FA6015] p-6 rounded-t-3xl rounded-bl-3xl">
