@@ -1,5 +1,6 @@
 import AboutUs from "./AboutUs/AboutUs";
 import Banner from "./Banner/Banner";
+import CoreFeatures from "./CoreFeatures/CoreFeatures";
 import Join from "./Join/Join";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <AboutUs />
       <Join />
+      <CoreFeatures />
     </div>
   );
 };
