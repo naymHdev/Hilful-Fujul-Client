@@ -11,7 +11,7 @@ const Layouts = () => {
       <div className="min-h-screen">
         <Outlet />
       </div>
-      <div>
+      <div className=" mt-20">
         <Footer />
       </div>
     </div>

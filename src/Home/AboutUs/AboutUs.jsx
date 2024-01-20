@@ -53,7 +53,11 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1"></div>
+      <div className="flex-1">
+        <div>
+          <img className=" rounded-tl-full" src="https://i.ibb.co/ssHVpFw/about-main2.jpg" alt="" />
+        </div>
+      </div>
     </div>
   );
 };
