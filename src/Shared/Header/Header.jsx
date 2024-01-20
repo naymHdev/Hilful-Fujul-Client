@@ -79,7 +79,7 @@ const Header = () => {
   return (
     <header className="relative shadow-sm">
       <nav
-        className="mx-auto shadow-md flex w-11/12 fixed top-0 z-50 items-center justify-between py-5"
+        className="mx-auto shadow-md px-5 flex w-11/12 fixed top-0 z-50 items-center justify-between py-5"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
