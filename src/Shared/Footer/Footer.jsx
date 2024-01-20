@@ -1,46 +1,121 @@
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { IoLocationOutline } from "react-icons/io5";
+import { IoIosCall } from "react-icons/io";
+import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
-        <aside>
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            className="fill-current"
-          >
-            <path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-          </svg>
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
+    <div className="bg-[#302D51]">
+      <footer className="footer rounded-sm px-8 py-20 grid grid-cols-2 md:grid-cols-4">
+        <div>
+          <div>
+            <Link to="/">
+              <h3 className=" text-3xl font-bold text-white">Hilf al-Fudul</h3>
+            </Link>
+          </div>
+          <p className=" text-sm mt-3 text-slate-50">
+            It fits perfectly for your human charity! It evokes nobility,
+            collective action, and standing up for the weak, all valuable traits
+            for a charitable organization.
           </p>
-        </aside>
-        <nav>
-          <header className="footer-title">Services</header>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Company</header>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Legal</header>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
-        </nav>
+          <div className=" flex items-center justify-center gap-3 mt-5">
+            <div className=" border rounded-full p-1">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/96zoy?mibextid=ZbWKwL"
+              >
+                <FaFacebookF className=" text-sky-500 text-2xl" />
+              </a>
+            </div>
+            <div className=" border rounded-full p-1">
+              <FaYoutube className=" text-red-500 text-2xl" />
+            </div>
+            <div className=" border rounded-full p-1">
+              <FaTwitter className=" text-sky-600 text-2xl" />
+            </div>
+            <div className=" border rounded-full p-1">
+              <FaInstagram className=" text-orange-500 text-2xl" />
+            </div>
+          </div>
+        </div>
+        {/* Urgent causes */}
+        <div className="text-white hover:text-green-400">
+          <header className=" text-slate-200 text-2xl font-medium">
+            Urgent causes
+          </header>
+        </div>
+        {/* Quick links */}
+        <div className="text-white">
+          <header className=" text-slate-200 text-2xl font-medium">
+            Quick links
+          </header>
+          <section>
+            <Link to="/about">
+              <div className="mt-3 flex hover:text-green-400 items-center gap-1 text-xl font-medium">
+                <MdKeyboardArrowRight className=" text-2xl" /> About
+              </div>
+            </Link>
+            <div className=" border-b-2 mt-3 mb-2 border-slate-400"></div>
+            <Link to="/blogs">
+              <div className=" flex hover:text-green-400 items-center gap-1 text-xl font-medium">
+                <MdKeyboardArrowRight className=" text-2xl" /> Blogs
+              </div>
+            </Link>
+            <div className=" border-b-2 mt-3 mb-2 border-slate-400"></div>
+            <Link to="/events">
+              <div className=" flex hover:text-green-400 items-center gap-1 text-xl font-medium">
+                <MdKeyboardArrowRight className=" text-2xl" /> Events
+              </div>
+            </Link>
+            <div className=" border-b-2 mt-3 mb-2 border-slate-400"></div>
+            <Link to="/donations">
+              <div className="flex hover:text-green-400 items-center gap-1 text-xl font-medium">
+                <MdKeyboardArrowRight className=" text-2xl" /> Donation
+              </div>
+            </Link>
+          </section>
+        </div>
+        {/* Contact info */}
+        <div className="text-white">
+          <header className=" text-slate-200 text-2xl font-medium">
+            Contact info
+          </header>
+          <section>
+            <div className=" mt-3 flex gap-3 hover:text-green-400 items-center font-medium">
+              <IoLocationOutline className=" text-2xl" /> 6B, Helvetica street,
+              Jordan
+            </div>
+            <div className=" mt-3 flex gap-3 hover:text-green-400 items-center font-medium">
+              <IoIosCall className=" text-2xl" /> +123-456-789
+            </div>
+            <div className=" border-b-2 border-slate-400 mt-6 mb-6"></div>
+
+            <div className=" mt-3 flex gap-3 hover:text-green-400 items-center font-medium">
+              <IoLocationOutline className=" text-2xl" /> 6B, Helvetica street,
+              Jordan
+            </div>
+            <div className=" mt-3 flex gap-3 hover:text-green-400 items-center font-medium">
+              <IoIosCall className=" text-2xl" /> +123-456-789
+            </div>
+          </section>
+        </div>
       </footer>
+      <div className="divider divider-accent w-11/12 mx-auto"></div>
+      <section>
+        <div className=" flex gap-2 text-center justify-center text-white pb-5">
+          Copyright @2024 Hilf al-Fudul. Developed By
+          <a
+            className=" font-bold text-green-200 underline"
+            target="_blank"
+            rel="noreferrer"
+            href="https://naymhossen1b.netlify.app"
+          >
+            @Naym Hossen
+          </a>
+        </div>
+      </section>
     </div>
   );
 };

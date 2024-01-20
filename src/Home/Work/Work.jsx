@@ -1,7 +1,7 @@
 const Work = () => {
   return (
     <>
-      <section className="grid grid-cols-1 md:flex p-2 mt-16">
+      <section className="grid grid-cols-1 md:flex p-5 mt-16 bg-slate-50">
         <div className=" flex-1">
           <div>
             <h5 className=" text-xl font-medium text-green-500">How we work</h5>

@@ -2,18 +2,19 @@ import { HiOutlineHomeModern } from "react-icons/hi2";
 import { CiMedicalCase } from "react-icons/ci";
 import { GiFoodTruck } from "react-icons/gi";
 import { PiStudent } from "react-icons/pi";
+import SectionDetails from "../../Hooks/SectionDetails";
 
 const CoreFeatures = () => {
   return (
     <>
-      <div className=" text-center space-y-2 mt-16">
-        <h4 className=" text-green-500 font-medium text-xl">Core features</h4>
-        <h2 className=" text-3xl font-bold">Our goals and missions</h2>
-        <p>
-          We exist for non-profits, social enterprises, community groups,
-          activists,lorem <br /> politicians and individual citizens that are
-          making.
-        </p>
+      <div>
+        <SectionDetails
+          sectionName="Core features"
+          sectionTitle="Our goals and missions"
+          sectionDetails="We exist for non-profits, social enterprises, community groups,
+      activists,lorem politicians and individual citizens that are
+      making."
+        />
       </div>
       <div className=" grid grid-cols-2 md:grid-cols-4 gap-10 mt-16">
         <div className=" hover:-translate-y-12 px-3 py-8 border-green-400 border-2 border-dotted rounded-3xl text-center space-y-2">
