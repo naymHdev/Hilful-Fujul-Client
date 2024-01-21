@@ -92,9 +92,9 @@ const Header = () => {
   );
 
   return (
-    <header className="relative">
+    <header className="relative ">
       <nav
-        className="mx-auto bg-white shadow-md px-5 flex w-11/12 fixed top-0 z-50 items-center justify-between py-5"
+        className="bg-white shadow-md px-5 flex items-center justify-between py-5"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -136,7 +136,7 @@ const Header = () => {
             )}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button text="Donation" icon={GiSelfLove} />
+            <Button text="Donate" icon={GiSelfLove} />
           </div>
         </Popover.Group>
       </nav>
