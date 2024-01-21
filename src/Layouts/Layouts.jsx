@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
+import { Toaster } from "react-hot-toast";
 
 const Layouts = () => {
   return (
@@ -14,6 +15,7 @@ const Layouts = () => {
       <div className=" mt-20">
         <Footer />
       </div>
+      <Toaster />
     </div>
   );
 };

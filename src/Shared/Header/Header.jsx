@@ -1,13 +1,28 @@
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { IoReorderThree } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GiCrossedSabres } from "react-icons/gi";
 import Button from "../../Components/Button";
 import { GiSelfLove } from "react-icons/gi";
+import useAuth from "../../Hooks/useAuth";
+import { FaRegUserCircle } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { user, logOut } = useAuth();
+
+  const handleLogout = async () => {
+    await logOut()
+      .then(() => {
+        toast.success("Logout Success!");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
 
   const navProducts = (
     <>
@@ -98,12 +113,32 @@ const Header = () => {
             <IoReorderThree className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden lg:flex items-center justify-center lg:gap-x-12">
           {navProducts}
+          <div>
+            {user && (
+              <div className="dropdown dropdown-hover">
+                <div tabIndex={0}>
+                  <FaRegUserCircle className="text-2xl" />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu font-medium space-y-2 p-3 text-black bg-slate-100 rounded-md"
+                >
+                  <Link to="/dashboard">
+                    <li>Dashboard</li>
+                  </Link>
+                  <li role="button" onClick={() => handleLogout()}>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <Button text="Donation" icon={GiSelfLove} />
+          </div>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button text="Donation" icon={GiSelfLove} />
-        </div>
       </nav>
       <Dialog
         as="div"
@@ -116,7 +151,9 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <h2 className="text-3xl font-bold text-slate-600">Hilf al-Fudul</h2>
+              <h2 className="text-3xl font-bold text-slate-600">
+                Hilf al-Fudul
+              </h2>
             </a>
             <button
               type="button"
