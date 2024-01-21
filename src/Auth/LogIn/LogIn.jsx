@@ -16,7 +16,6 @@ const LogIn = () => {
     const form = e.target;
     const password = form.password.value;
     const email = form.email.value;
-    console.log(email, password);
     await userLogin(email, password)
       .then(() => {
         toast.success("Login Success");
