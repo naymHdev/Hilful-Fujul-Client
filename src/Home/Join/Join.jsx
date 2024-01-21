@@ -19,7 +19,7 @@ const Join = () => {
               </p>
             </div>
             <div className=" mt-5 flex justify-start">
-              <Link to="/signUp">
+              <Link to="/joinVolunteer">
               <Button text="Join Now" />
               </Link>
             </div>

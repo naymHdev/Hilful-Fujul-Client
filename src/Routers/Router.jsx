@@ -9,6 +9,9 @@ import Events from "../Pages/Events/Events";
 import Blogs from "../Pages/Blogs/Blogs";
 import SignUp from "../Auth/SugnUp/SignUp";
 import LogIn from "../Auth/LogIn/LogIn";
+import Join from "../Home/Join/Join";
+import PrivateRoute from "../Auth/PrivateRoute";
+import JoinVolunteer from "../Pages/JoinVolunteer/JoinVolunteer";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +42,18 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/joinVolunteer",
+        element: (
+          <PrivateRoute>
+            <JoinVolunteer />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/join",
+        element: <Join />,
       },
     ],
   },
