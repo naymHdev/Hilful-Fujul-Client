@@ -4,6 +4,15 @@ const ChairmanForm = () => {
   const handelDetails = (e) => {
     e.preventDefault();
     const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const role = form.role.value;
+    const facebookId = form.facebookId.value;
+    const whatsApp = form.whatsApp.value;
+    const twitter = form.twitter.value;
+    const image = form.image.value;
+    const details = { name, email, role, facebookId, whatsApp, twitter, image };
+    console.log(details);
   };
 
   return (
@@ -27,6 +36,7 @@ const ChairmanForm = () => {
                   type="text"
                   id="name"
                   name="name"
+                  required
                   placeholder="type your name"
                 />
               </div>
@@ -37,6 +47,7 @@ const ChairmanForm = () => {
                   type="email"
                   id="email"
                   name="email"
+                  required
                   placeholder="type your email"
                 />
               </div>
@@ -47,6 +58,7 @@ const ChairmanForm = () => {
                   type="text"
                   id="role"
                   name="role"
+                  required
                   placeholder="type your role"
                 />
               </div>
@@ -57,6 +69,7 @@ const ChairmanForm = () => {
                   type="url"
                   id="facebookId"
                   name="facebookId"
+                  required
                   placeholder="type your facebook id"
                 />
               </div>
@@ -67,6 +80,7 @@ const ChairmanForm = () => {
                   type="number"
                   id="whatsApp"
                   name="whatsApp"
+                  required
                   placeholder="type your whatsApp number"
                 />
               </div>
@@ -77,6 +91,7 @@ const ChairmanForm = () => {
                   type="url"
                   id="twitter"
                   name="twitter"
+                  required
                   placeholder="type your twitter number"
                 />
               </div>
@@ -87,6 +102,7 @@ const ChairmanForm = () => {
                   type="file"
                   name="image"
                   id="image"
+                  required
                   placeholder="add your image"
                 />
               </div>
