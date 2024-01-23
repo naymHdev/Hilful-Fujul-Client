@@ -1,7 +1,13 @@
+import toast from "react-hot-toast";
 import Button from "../../Components/Button";
+import PrivateAxios from "../../Hooks/PrivateAxios";
+import { useNavigate } from "react-router-dom";
+import { imageApi } from "../../Utils/ImageAPI/ImageApi";
 
 const ChairmanForm = () => {
-  const handelDetails = (e) => {
+  const navigate = useNavigate();
+
+  const handelDetails = async (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -10,9 +16,34 @@ const ChairmanForm = () => {
     const facebookId = form.facebookId.value;
     const whatsApp = form.whatsApp.value;
     const twitter = form.twitter.value;
-    const image = form.image.value;
-    const details = { name, email, role, facebookId, whatsApp, twitter, image };
-    console.log(details);
+    const images = form.image.files[0];
+    const image_url = await imageApi(images);
+
+    try {
+      const details = {
+        name,
+        email,
+        role,
+        facebookId,
+        whatsApp,
+        twitter,
+        image: image_url?.data?.display_url,
+      };
+      await PrivateAxios.post("/founders", details)
+        .then((res) => {
+          //   console.log(res);
+          if (res.data.acknowledged == true) {
+            toast.success("Information added!");
+            navigate("/dashboard/addChairman");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          toast.error(err?.message);
+        });
+    } catch (err) {
+      toast.error(err?.message);
+    }
   };
 
   return (
@@ -32,7 +63,7 @@ const ChairmanForm = () => {
               <div>
                 <label className=" label font-bold">Name:</label>
                 <input
-                  className=" w-full px-1 py-2 rounded-md border"
+                  className=" w-full px-2 py-2 rounded-md border"
                   type="text"
                   id="name"
                   name="name"
