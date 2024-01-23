@@ -32,7 +32,7 @@ const DashboardLayout = () => {
             </div>
 
             <div className="flex-1 px-2 mx-2">Hilf al-Fudul</div>
-            <div className="flex-none hidden md:block ">
+            <div className="flex-none hidden md:block">
               <ul className="menu menu-horizontal">
                 {/* Navbar menu content here */}
                 <AdminRoutes />
@@ -49,13 +49,15 @@ const DashboardLayout = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200">
+          <ul className="menu p-4 w-80 min-h-full bg-base-200 md:hidden">
             {/* Sidebar content here */}
-            <AdminRoutes />Ô
+            <AdminRoutes />
           </ul>
         </div>
       </div>
-      <Outlet />
+      <div className=" w-11/12 mx-auto overflow-hidden">
+        <Outlet />
+      </div>
     </div>
   );
 };
