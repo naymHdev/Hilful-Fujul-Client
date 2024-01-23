@@ -8,6 +8,16 @@ const AdminRoutes = () => {
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? " text-green-500" : ""
           }
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li className="p-1 rounded-sm text-center">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-green-500" : ""
+          }
           to="/dashboard"
         >
           Dashboard
