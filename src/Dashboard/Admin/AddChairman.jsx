@@ -1,12 +1,27 @@
+import toast from "react-hot-toast";
 import DasTitle from "../../Hooks/DasTitle";
+import PrivateAxios from "../../Hooks/PrivateAxios";
 import useChairman from "../../Hooks/useChairman";
 import ChairmanForm from "./ChairmanForm";
 import { FaFacebook, FaTwitter, FaUserEdit, FaWhatsapp } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const AddChairman = () => {
-  const [chairman] = useChairman();
+  const [chairman, refetch] = useChairman();
   //   console.log(chairman);
+
+  const handelDelete = async (id) => {
+    await PrivateAxios.delete(`/founders/${id}`)
+      .then((res) => {
+        if (res.data?.deletedCount === 1) {
+          toast.success("Deleted Success!");
+          refetch();
+        }
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
 
   return (
     <>
@@ -76,17 +91,13 @@ const AddChairman = () => {
                       <FaTwitter className=" text-xl text-sky-400" />
                     </a>
                   </th>
-                  {/* <td className=" text-2xl flex items-center gap-8">
-                    <p><FaUserEdit className=" text-yellow-500" /></p>
-                    <p><RiDeleteBin6Line className=" text-red-700" /></p>
-                  </td> */}
                   <td>
                     <div className=" text-2xl flex items-center gap-8">
                       <p>
-                        <FaUserEdit className=" text-green-500" />
+                        <FaUserEdit className=" text-green-500 hover:cursor-pointer" />
                       </p>
-                      <p>
-                        <RiDeleteBin6Line className=" text-red-700" />
+                      <p onClick={() => handelDelete(man._id)}>
+                        <RiDeleteBin6Line className=" text-red-700 hover:cursor-pointer" />
                       </p>
                     </div>
                   </td>
