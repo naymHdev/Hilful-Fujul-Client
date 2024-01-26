@@ -28,7 +28,7 @@ const AddChairman = () => {
                     <input type="checkbox" className="checkbox" />
                   </label>
                 </th>
-                <th>Name</th>
+                <th>Name({chairman?.length})</th>
                 <th>Image</th>
                 <th>Role</th>
                 <th>WhatsApp</th>

@@ -3,9 +3,11 @@ import Button from "../../Components/Button";
 import PrivateAxios from "../../Hooks/PrivateAxios";
 import { useNavigate } from "react-router-dom";
 import { imageApi } from "../../Utils/ImageAPI/ImageApi";
+import useChairman from "../../Hooks/useChairman";
 
 const ChairmanForm = () => {
   const navigate = useNavigate();
+  const [, refetch] = useChairman();
 
   const handelDetails = async (e) => {
     e.preventDefault();
@@ -35,6 +37,7 @@ const ChairmanForm = () => {
           if (res.data.acknowledged == true) {
             toast.success("Information added!");
             navigate("/dashboard/addChairman");
+            refetch();
           }
         })
         .catch((err) => {
