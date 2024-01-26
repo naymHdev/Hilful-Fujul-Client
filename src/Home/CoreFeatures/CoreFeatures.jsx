@@ -16,8 +16,8 @@ const CoreFeatures = () => {
       making."
         />
       </div>
-      <div className=" grid grid-cols-2 md:grid-cols-4 gap-10 mt-16">
-        <div className=" hover:-translate-y-12 px-3 py-8 border-green-400 border-2 border-dotted rounded-3xl text-center space-y-2">
+      <div className=" grid grid-cols-1 md:grid-cols-4 gap-10 md:mt-16 mt-5">
+        <div className=" hover:-translate-y-12 px-3 md:py-8 p-3  border-green-400 border-2 border-dotted rounded-3xl text-center space-y-2">
           <div className=" text-3xl flex items-center justify-center">
             <div className=" rounded-full bg-[#E6E6FF] hover:bg-[#302C51] hover:text-white avatar p-5">
               <HiOutlineHomeModern />
@@ -29,7 +29,7 @@ const CoreFeatures = () => {
             safe, affordable houses for families in need.
           </p>
         </div>
-        <div className=" hover:-translate-y-12 px-3 py-8 border-teal-400 border-2 border-dotted rounded-3xl text-center space-y-2">
+        <div className=" hover:-translate-y-12 px-3 md:py-8 p-3 border-teal-400 border-2 border-dotted rounded-3xl text-center space-y-2">
           <div className=" text-3xl flex items-center justify-center">
             <div className=" rounded-full bg-[#E6E6FF] hover:bg-[#302C51] hover:text-white avatar p-5">
               <CiMedicalCase />
@@ -43,7 +43,7 @@ const CoreFeatures = () => {
             safe, affordable houses for families in need.
           </p>
         </div>
-        <div className=" hover:-translate-y-12 px-3 py-8 border-yellow-400 border-2 border-dotted rounded-3xl text-center space-y-2">
+        <div className=" hover:-translate-y-12 px-3 md:py-8 p-3  border-yellow-400 border-2 border-dotted rounded-3xl text-center space-y-2">
           <div className=" text-3xl flex items-center justify-center">
             <div className=" rounded-full bg-[#E6E6FF] hover:bg-[#302C51] hover:text-white avatar p-5">
               <GiFoodTruck />
@@ -55,7 +55,7 @@ const CoreFeatures = () => {
             safe, affordable houses for families in need.
           </p>
         </div>
-        <div className=" hover:-translate-y-12 px-3 py-8 border-orange-400 border-2 border-dotted rounded-3xl text-center space-y-2">
+        <div className=" hover:-translate-y-12 px-3 md:py-8 p-3 border-orange-400 border-2 border-dotted rounded-3xl text-center space-y-2">
           <div className=" text-3xl flex items-center justify-center">
             <div className=" rounded-full bg-[#E6E6FF] hover:bg-[#302C51] hover:text-white avatar p-5">
               <PiStudent />

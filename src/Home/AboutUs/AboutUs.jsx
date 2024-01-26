@@ -3,8 +3,17 @@ import Button from "../../Components/Button";
 /* eslint-disable react/no-unescaped-entities */
 const AboutUs = () => {
   return (
-    <div className="flex justify-center gap-10 py-10">
+    <div className="md:flex flex-grow-0 justify-center gap-10 py-10">
       <div className="flex-1">
+        <div>
+          <img
+            className=" rounded-tl-full"
+            src="https://i.ibb.co/ssHVpFw/about-main2.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="flex-1 order-first">
         <h2 className="text-green-500 font-bold">About us</h2>
         <div className="mt-5 space-y-2">
           <h3 className="text-4xl font-bold">We're for social causes</h3>
@@ -48,14 +57,9 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className=" flex justify-end mt-4">
+          <div className=" flex justify-end mt-4 md:pb-0 pb-4">
             <Button text="Read More..." />
           </div>
-        </div>
-      </div>
-      <div className="flex-1">
-        <div>
-          <img className=" rounded-tl-full" src="https://i.ibb.co/ssHVpFw/about-main2.jpg" alt="" />
         </div>
       </div>
     </div>

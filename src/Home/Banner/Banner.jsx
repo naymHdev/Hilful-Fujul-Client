@@ -14,17 +14,17 @@ const Banner = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-      <div className="absolute text-white -mt-[370px] px-12">
+      <div className="absolute text-white md:-mt-[370px] -mt-[300px] md:px-12 px-3">
         <div className="space-y-4">
-          <h3 className="text-5xl font-medium">
+          <h3 className="md:text-5xl text-2xl font-medium">
             We help all of the <br /> people in need around <br /> the world
           </h3>
-          <p className="font-medium">
+          <p className="md:font-medium font-thin">
             It is a long established fact that a reader will be page distracted
             by the <br /> readable content of a pain
           </p>
         </div>
-        <div className=" flex items-center gap-5 mt-8">
+        <div className=" md:flex flex-grow justify-center space-y-2 items-center gap-5 mt-4 md:mt-8">
           <Button text="Get Start A Funding" />
           <Button text="Donate Now" />
         </div>

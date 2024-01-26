@@ -8,7 +8,7 @@ const Join = () => {
   return (
     <>
       <div className="text-white w-full mt-16 bg-fixed bg-[url('https://i.ibb.co/ssHVpFw/about-main2.jpg')]">
-        <div className="grid grid-cols-1 px-16 md:grid-cols-3 gap-8 items-center min-h-screen">
+        <div className="grid grid-cols-1 p-1 md:px-16 md:grid-cols-3 gap-8 items-center min-h-screen">
           <div className="hover:rounded-none bg-[#2DB187] p-6 rounded-t-3xl rounded-bl-3xl">
             <ImManWoman className=" text-5xl " />
             <div className=" mt-5 space-y-2">
@@ -20,7 +20,7 @@ const Join = () => {
             </div>
             <div className=" mt-5 flex justify-start">
               <Link to="/joinVolunteer">
-              <Button text="Join Now" />
+                <Button text="Join Now" />
               </Link>
             </div>
           </div>

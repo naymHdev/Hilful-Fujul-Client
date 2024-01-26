@@ -5,7 +5,7 @@ const Work = () => {
         <div className=" flex-1">
           <div>
             <h5 className=" text-xl font-medium text-green-500">How we work</h5>
-            <h2 className=" text-4xl font-bold mt-5">
+            <h2 className="md:text-4xl text-xl font-bold mt-2 md:mt-5">
               We exist for non-profits, <br /> social enterprises,
               <br /> community groups
             </h2>
@@ -72,16 +72,16 @@ const Work = () => {
         </div>
         {/* Images Section */}
         <div className="flex-1">
-          <div className="  rounded-lg flex justify-end items-end">
+          <div className="rounded-lg flex justify-end items-end">
             <img
-              className="rounded-lg w-96"
+              className="rounded-lg md:w-96"
               src="https://i.ibb.co/h1M57w3/work1.jpg"
               alt=""
             />
           </div>
-          <div className="w-96 rounded-lg -mt-36">
+          <div className="md:w-96 rounded-lg md:-mt-36">
             <img
-              className="rounded-lg"
+              className="rounded-lg mt-4 md:mt-0"
               src="https://i.ibb.co/HhpQ564/work2.jpg"
               alt=""
             />
