@@ -2,8 +2,9 @@ import toast from "react-hot-toast";
 import Button from "../../Components/Button";
 import PrivateAxios from "../../Hooks/PrivateAxios";
 import { useNavigate } from "react-router-dom";
-import { imageApi } from "../../Utils/ImageAPI/ImageApi";
+// import { imageApi } from "../../Utils/ImageAPI/ImageApi";
 import useChairman from "../../Hooks/useChairman";
+import { imageApi } from "../../Utils/ImageAPI/imageApi";
 
 const ChairmanForm = () => {
   const navigate = useNavigate();
@@ -140,7 +141,7 @@ const ChairmanForm = () => {
                   placeholder="add your image"
                 />
               </div>
-              <div className=" flex py-3 justify-center">
+              <div className="flex justify-center modal-action">
                 <Button text="Save Now" />
               </div>
             </form>
