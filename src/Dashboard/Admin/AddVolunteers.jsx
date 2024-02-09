@@ -45,6 +45,7 @@ const AddVolunteers = () => {
                 <th>Birth</th>
                 <th>National Id</th>
                 <th>Facebook Id</th>
+                <th>Whatsapp</th>
                 <th>Current Address</th>
                 <th>Permanent Address</th>
                 <th>Operation</th>
@@ -74,19 +75,17 @@ const AddVolunteers = () => {
                   <td>
                     <p>{man?.email}</p>
                   </td>
-                  <td>
-                    {man?.age} Year Old
-                  </td>
-                  <td>
-                    {man?.birthDate}
-                  </td>
-                  <td>
-                    {man?.nationalId}
-                  </td>
+                  <td>{man?.age} Year Old</td>
+                  <td>{man?.birthDate}</td>
+                  <td>{man?.nationalId}</td>
                   <th className="">
                     <a href={man?.facebookId} target="_blank" rel="noreferrer">
                       <FaFacebook className=" text-2xl text-sky-400" />
                     </a>
+                  </th>
+                  <th className=" flex items-center gap-1">
+                    <FaWhatsapp className=" text-2xl text-sky-400" />
+                    <p>{man?.whatsApp}</p>
                   </th>
                   <th>{man?.currentAddress}</th>
                   <th>{man?.permanentAddress}</th>
