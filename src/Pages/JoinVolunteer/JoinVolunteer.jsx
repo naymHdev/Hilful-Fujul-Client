@@ -18,30 +18,31 @@ const JoinVolunteer = () => {
     const imageURL = await imageApi(images);
     const volunteersImage = imageURL.data.display_url;
     const name = form.name.value;
-    const number = form.number.value;
+    const whatsApp = form.whatsApp.value;
     const nationalId = form.nationalId.value;
     const email = form.email.value;
     const age = form.age.value;
     const currentAddress = form.currentAddress.value;
     const permanentAddress = form.permanentAddress.value;
     const birthDate = form.birthDate.value;
-
+    const facebookId = form.facebookId.value;
     const volunteersData = {
       volunteersImage,
       name,
-      number,
+      whatsApp,
       nationalId,
       email,
       age,
       currentAddress,
       permanentAddress,
       birthDate,
+      facebookId,
     };
 
     try {
       await PrivateAxios.post("/joinVolunteer", volunteersData)
-        .then((res) => {
-          console.log(res.data);
+        .then(() => {
+          // console.log(res.data);
           toast.success("Successfully Joined a Volunteer!");
         })
         .catch((err) => {
@@ -100,14 +101,26 @@ const JoinVolunteer = () => {
                 placeholder="type your email"
               />
             </div>
-            <div className=" w-full">
-              <label className="label font-bold">Phone Number:</label>
+            <div>
+              <label className=" label font-bold">FaceBook Id Link:</label>
               <input
-                className=" p-2 border rounded-md w-full"
+                className=" w-full px-1 py-2 rounded-md border"
+                type="url"
+                id="facebookId"
+                name="facebookId"
+                required
+                placeholder="type your facebook id"
+              />
+            </div>
+            <div>
+              <label className=" label font-bold">WhatsApp Number:</label>
+              <input
+                className=" w-full px-1 py-2 rounded-md border"
                 type="number"
-                name="number"
-                id=""
-                placeholder="type your phone number"
+                id="whatsApp"
+                name="whatsApp"
+                required
+                placeholder="type your whatsApp number"
               />
             </div>
             <div className=" w-full">
