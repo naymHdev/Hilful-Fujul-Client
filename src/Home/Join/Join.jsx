@@ -34,7 +34,7 @@ const Join = () => {
               </p>
             </div>
             <div className=" mt-5 flex justify-start">
-              <Button text="Join Now" />
+              <Button text="Donate now" />
             </div>
           </div>
           <div className="hover:rounded-none bg-[#302C51] p-6 rounded-t-3xl rounded-bl-3xl">
@@ -47,7 +47,7 @@ const Join = () => {
               </p>
             </div>
             <div className=" mt-5 flex justify-start">
-              <Button text="Join Now" />
+              <Button text="Show your love" />
             </div>
           </div>
         </div>
