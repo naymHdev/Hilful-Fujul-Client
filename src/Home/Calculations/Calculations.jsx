@@ -2,8 +2,11 @@ import { FaSackDollar } from "react-icons/fa6";
 import { SlEvent } from "react-icons/sl";
 import { FaUsers } from "react-icons/fa";
 import { LiaHandsHelpingSolid } from "react-icons/lia";
+import useVolunteer from "../../Hooks/useVolunteer";
 
 const Calculations = () => {
+  const [volunteer] = useVolunteer();
+
   return (
     <div>
       <section className="mt-16 grid grid-cols-2 md:grid-cols-4">
@@ -41,7 +44,7 @@ const Calculations = () => {
           </div>
           <div>
             <div className=" text-5xl font-bold">
-              <span>120</span>
+              <span>{volunteer?.length}</span>
               <span>+</span>
             </div>
             <h2 className=" mt-4 text-slate-400 font-bold">

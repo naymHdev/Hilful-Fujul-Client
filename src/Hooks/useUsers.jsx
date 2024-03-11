@@ -1,15 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import PrivateAxios from "./PrivateAxios";
 
-const useVolunteer = () => {
-  const { data: volunteer = [], refetch } = useQuery({
-    queryKey: ["volunteer"],
+const useUsers = () => {
+  const { data: isUsers = [], refetch } = useQuery({
+    queryKey: ["isUsers"],
     queryFn: async () => {
       const res = await PrivateAxios.get("/users");
+      //   console.log(res.data);
       return res?.data;
     },
   });
-  return [volunteer, refetch];
+  return { isUsers, refetch };
 };
 
-export default useVolunteer;
+export default useUsers;

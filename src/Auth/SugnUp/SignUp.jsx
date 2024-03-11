@@ -6,10 +6,12 @@ import { ImSpinner10 } from "react-icons/im";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
 import PrivateAxios from "../../Hooks/PrivateAxios";
+import useVolunteer from "../../Hooks/useVolunteer";
 
 const SignUp = () => {
   const { updateUser, userCreate, loading, googleJoin } = useAuth();
   const navigate = useNavigate();
+  const [, refetch] = useVolunteer();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const SignUp = () => {
           if (res.data.acknowledged == true) {
             toast.success("User Account Create Success!");
             navigate("/");
+            refetch();
           }
         })
         .catch((err) => {
