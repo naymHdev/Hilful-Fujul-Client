@@ -4,6 +4,7 @@ import { FaFacebookSquare, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Volunteer = () => {
   const [chairman] = useChairman();
+  console.log(chairman);
 
   return (
     <>
@@ -17,16 +18,15 @@ const Volunteer = () => {
       <section>
         <div className=" grid grid-cols-1 md:grid-cols-3 py-8 gap-10">
           {chairman?.slice(0, 3).map((man) => (
-            <div className="dropdown dropdown-hover" key={man._id}>
+            <div
+              className="dropdown dropdown-hover shadow-md rounded-xl hover:shadow-green-300"
+              key={man._id}
+            >
               <div tabIndex={0} className=" rounded-md">
-                <img
-                  className=" rounded-md w-full h-60"
-                  src={man?.image}
-                  alt=""
-                />
+                <img className=" rounded-md w-full" src={man?.image} alt="" />
               </div>
               <div tabIndex={10} className="dropdown-content z-[1]">
-                <div className="list-none flex text-center items-center gap-5 justify-center w-full ml-[75px] -mt-12">
+                <div className="list-none flex text-center items-center gap-5 justify-center w-full ml-[67px] -mt-12">
                   <li className="rounded-full bg-[#1F2937] p-2">
                     <a href={man?.facebookId}>
                       <FaFacebookSquare className=" text-xl text-sky-400 hover:cursor-pointer" />
@@ -41,6 +41,12 @@ const Volunteer = () => {
                     <FaWhatsapp className=" text-xl text-green-400 cursor-pointer" />
                   </li>
                 </div>
+              </div>
+              <div className=" text-center py-3">
+                <h2 className=" text-xl font-medium">{man?.name}</h2>
+                <h2 className=" text-green-600 text-xl font-bold">
+                  {man?.role}
+                </h2>
               </div>
             </div>
           ))}
