@@ -4,7 +4,7 @@ import { FaFacebookSquare, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Volunteer = () => {
   const [chairman] = useChairman();
-  console.log(chairman);
+  // console.log(chairman);
 
   return (
     <>

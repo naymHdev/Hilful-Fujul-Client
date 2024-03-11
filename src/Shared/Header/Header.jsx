@@ -1,33 +1,22 @@
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { IoReorderThree } from "react-icons/io5";
-import { Link, NavLink } from "react-router-dom";
-import { GiCrossedSabres } from "react-icons/gi";
+import { NavLink } from "react-router-dom";
+import { RxCross2 } from "react-icons/rx";
 import Button from "../../Components/Button";
 import { GiSelfLove } from "react-icons/gi";
 import useAuth from "../../Hooks/useAuth";
-import { FaRegUserCircle } from "react-icons/fa";
-import toast from "react-hot-toast";
+import { LuLayoutDashboard } from "react-icons/lu";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const { user, logOut } = useAuth();
-
-  const handleLogout = async () => {
-    await logOut()
-      .then(() => {
-        toast.success("Logout Success!");
-      })
-      .catch((err) => {
-        toast.error(err.message);
-      });
-  };
+  const { user } = useAuth();
 
   const navProducts = (
     <>
       <div className="grid md:flex text-slate-500 items-center list-none gap-5 font-medium">
-        <li className="p-1 rounded-sm text-center">
+        <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -37,7 +26,8 @@ const Header = () => {
             Home
           </NavLink>
         </li>
-        <li className="p-1 rounded-sm text-center">
+        <hr />
+        <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -47,7 +37,8 @@ const Header = () => {
             Gallery
           </NavLink>
         </li>
-        <li className="p-1 rounded-sm text-center">
+        <hr />
+        <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -57,7 +48,8 @@ const Header = () => {
             Events
           </NavLink>
         </li>
-        <li className="p-1 rounded-sm text-center">
+        <hr />
+        <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -67,7 +59,8 @@ const Header = () => {
             Donations
           </NavLink>
         </li>
-        <li className="p-1 rounded-sm text-center">
+        <hr />
+        <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -77,7 +70,8 @@ const Header = () => {
             Blogs
           </NavLink>
         </li>
-        <li className="p-1 rounded-sm text-center">
+        <hr />
+        <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? " text-green-500" : ""
@@ -86,6 +80,19 @@ const Header = () => {
           >
             About
           </NavLink>
+        </li>
+        <hr />
+        <li className="rounded-sm  text-xl hover:text-green-500">
+          {user && (
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? " text-green-500" : ""
+              }
+              to="/dashboard"
+            >
+              <LuLayoutDashboard />
+            </NavLink>
+          )}
         </li>
       </div>
     </>
@@ -110,31 +117,11 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <IoReorderThree className="h-6 w-6" aria-hidden="true" />
+            <IoReorderThree className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl" aria-hidden="true" />
           </button>
         </div>
         <Popover.Group className="hidden lg:flex items-center justify-center lg:gap-x-12">
           {navProducts}
-          <div>
-            {user && (
-              <div className="dropdown dropdown-hover">
-                <div tabIndex={0}>
-                  <FaRegUserCircle className="text-2xl" />
-                </div>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content z-[1] menu font-medium space-y-2 p-3 text-black bg-slate-100 rounded-md"
-                >
-                  <Link to="/dashboard">
-                    <li>Dashboard</li>
-                  </Link>
-                  <li role="button" onClick={() => handleLogout()}>
-                    Logout
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Button text="Donate" icon={GiSelfLove} />
           </div>
@@ -161,7 +148,7 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <GiCrossedSabres className="h-6 w-6" aria-hidden="true" />
+              <RxCross2 className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
