@@ -90,7 +90,8 @@ const DonationDetailsCard = ({ donation }) => {
             </Tab.Group>
           </div>
         </section>
-        <section className=" col-span-3"></section>
+        <section className=" col-span-3">
+        </section>
       </section>
     </>
   );

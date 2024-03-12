@@ -31,7 +31,7 @@ const CommentModification = ({ comment }) => {
             <a>Edit</a>
           </li>
           <li>
-            <a>Share</a>
+            <a>Reply</a>
           </li>
           <li onClick={() => handelDelete(comment?._id)}>
             <a>Delete</a>

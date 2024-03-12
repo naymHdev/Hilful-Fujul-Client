@@ -13,7 +13,7 @@ const UserComments = () => {
               <div>
                 <div className="avatar">
                   <div className="w-24 mask mask-squircle">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5CqzrVklCQOvwCPHw4Rk31x8xhLMwlHtxEg&usqp=CAU" alt="user image" />
                   </div>
                 </div>
               </div>
@@ -23,7 +23,7 @@ const UserComments = () => {
                 <p className="mt-3">{comment?.comment}</p>
               </div>
             </div>
-            <div className="absolute md:right-[430px] right-[100px] md:-mt-[110px] hover:cursor-pointer">
+            <div className="absolute md:right-[430px] right-[10px] md:-mt-[110px] -mt-[120px] hover:cursor-pointer">
               <CommentModification comment={comment} />
             </div>
           </div>

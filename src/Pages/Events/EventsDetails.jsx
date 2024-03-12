@@ -11,9 +11,9 @@ const EventsDetails = () => {
   return (
     <>
       <section className=" overflow-hidden">
-        <section className="bg-[url(https://i.ibb.co/KGGzHf6/top-view-paper-hand-holding-heart-with-copy-space.jpg)] bg-cover w-full h-[60vh]">
-          <div className="pt-40 px-8 mx-auto">
-            <h3 className=" text-7xl font-bold text-green-700">
+        <section className="bg-[url(https://i.ibb.co/KGGzHf6/top-view-paper-hand-holding-heart-with-copy-space.jpg)] bg-cover w-full h-[40vh] md:h-[60vh]">
+          <div className="md:pt-40 pt-[90px] md:px-8 px-5 mx-auto">
+            <h3 className="md:text-7xl text-4xl font-bold text-green-700">
               Events Details
             </h3>
           </div>
