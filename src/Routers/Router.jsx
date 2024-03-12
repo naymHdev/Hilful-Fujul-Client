@@ -16,6 +16,7 @@ import DashboardLayout from "../Layouts/DashboardLayout";
 import Dashboard from "../Dashboard/Dashboard";
 import AddChairman from "../Dashboard/Admin/AddChairman";
 import AddVolunteers from "../Dashboard/Admin/AddVolunteers";
+import EventsDetails from "../Pages/Events/EventsDetails";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Events />,
+      },
+      {
+        path: "/eventsDetails/:id",
+        element: <EventsDetails />,
       },
       {
         path: "/blogs",
