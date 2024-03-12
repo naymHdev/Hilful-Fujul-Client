@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Tab } from "@headlessui/react";
 import { Progress } from "antd";
+import Comments from "../../Components/Comments";
+import Donate from "../Donate/Donate";
 
 const DonationDetailsCard = ({ donation }) => {
   // console.log(donation);
@@ -26,7 +28,7 @@ const DonationDetailsCard = ({ donation }) => {
       <section className=" grid grid-cols-1 md:grid-cols-9 gap-3 mt-16">
         <section className=" col-span-6">
           <div>
-            <img className=" w-full h-full" src={image} alt="" />
+            <img className=" w-full h-full md:h-[90vh]" src={image} alt="" />
           </div>
           {/* Tab content */}
           <div className="mt-16">
@@ -34,7 +36,7 @@ const DonationDetailsCard = ({ donation }) => {
               <Tab.List>
                 <Tab className="border rounded-3xl p-5 ">Description</Tab>
                 <Tab className="border rounded-3xl p-5 ml-5 ">Donations</Tab>
-                <Tab className="border rounded-3xl p-5 ml-5 ">Comments</Tab>
+                <Tab className="border rounded-3xl p-5 md:ml-5 mt-5 ">Comments</Tab>
               </Tab.List>
               <Tab.Panels className="mt-16">
                 {/* Content 1 */}
@@ -76,10 +78,14 @@ const DonationDetailsCard = ({ donation }) => {
                     </div>
                   </section>
                 </Tab.Panel>
-                {/* Content 2 */}
-                <Tab.Panel>Content 2</Tab.Panel>
-                {/* Content 3 */}
-                <Tab.Panel>Content 3</Tab.Panel>
+                {/* Your Donation */}
+                <Tab.Panel>
+                  <Donate />
+                </Tab.Panel>
+                {/* Leave a Comment */}
+                <Tab.Panel>
+                  <Comments />
+                </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
           </div>
