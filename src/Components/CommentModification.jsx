@@ -1,6 +1,22 @@
+/* eslint-disable react/prop-types */
 import { PiDotsThreeOutlineVerticalThin } from "react-icons/pi";
+import PrivateAxios from "../Hooks/PrivateAxios";
+import toast from "react-hot-toast";
+import useComments from "../Hooks/useComments";
 
-const CommentModification = () => {
+const CommentModification = ({ comment }) => {
+  const [, refetch] = useComments();
+
+  const handelDelete = async (id) => {
+    const res = await PrivateAxios.delete(`/comments/${id}`);
+    if (res.data.deletedCount === 1) {
+      toast.success("Comment Deleted 🤓");
+      refetch();
+    } else {
+      toast.error("Deleted failed 😟");
+    }
+  };
+
   return (
     <div>
       <div className="dropdown dropdown-left">
@@ -17,7 +33,7 @@ const CommentModification = () => {
           <li>
             <a>Share</a>
           </li>
-          <li>
+          <li onClick={() => handelDelete(comment?._id)}>
             <a>Delete</a>
           </li>
         </ul>

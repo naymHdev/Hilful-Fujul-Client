@@ -23,8 +23,8 @@ const UserComments = () => {
                 <p className="mt-3">{comment?.comment}</p>
               </div>
             </div>
-            <div className="absolute right-[430px] -mt-[110px] hover:cursor-pointer">
-              <CommentModification />
+            <div className="absolute md:right-[430px] right-[100px] md:-mt-[110px] hover:cursor-pointer">
+              <CommentModification comment={comment} />
             </div>
           </div>
         ))}
