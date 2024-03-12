@@ -2,10 +2,12 @@ import toast from "react-hot-toast";
 import PrivateAxios from "../Hooks/PrivateAxios";
 import Button from "./Button";
 import useComments from "../Hooks/useComments";
+import moment from "moment";
+import UserComments from "./UserComments";
 
 const Comments = () => {
-  const [isComments, refetch] = useComments();
-  console.log(isComments);
+  const [, refetch] = useComments();
+  //   console.log(isComments);
 
   const handelComment = async (e) => {
     e.preventDefault();
@@ -13,7 +15,8 @@ const Comments = () => {
     const name = form.name.value;
     const email = form.email.value;
     const comment = form.comment.value;
-    const userComment = { name, email, comment };
+    const postTime = moment().format("MMMM Do YYYY, h:mm:ss a");
+    const userComment = { name, email, comment, postTime };
 
     try {
       const res = await PrivateAxios.post("/comments", userComment);
@@ -31,9 +34,12 @@ const Comments = () => {
 
   return (
     <>
-    <section>
-      <h2 className=" text-3xl font-bold text-slate-800">Comments</h2>
-    </section>
+      <section>
+        <h2 className=" text-3xl font-bold text-slate-800">Comments</h2>
+        <div>
+          <UserComments />
+        </div>
+      </section>
       <h2 className=" text-3xl font-bold text-slate-800">Leave a Comment</h2>
       <section>
         <form onSubmit={handelComment}>
