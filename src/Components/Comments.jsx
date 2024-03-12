@@ -35,12 +35,12 @@ const Comments = () => {
   return (
     <>
       <section>
-        <h2 className=" text-3xl font-bold text-slate-800">Comments</h2>
+        <h2 className=" text-3xl font-bold text-slate-800 mb-12">Comments</h2>
         <div>
           <UserComments />
         </div>
       </section>
-      <h2 className=" text-3xl font-bold text-slate-800">Leave a Comment</h2>
+      <h2 className=" text-3xl font-bold text-slate-800 mt-16">Leave a Comment</h2>
       <section>
         <form onSubmit={handelComment}>
           <div className="grid md:flex items-center gap-5 mt-10">

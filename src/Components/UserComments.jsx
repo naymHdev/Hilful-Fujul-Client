@@ -1,5 +1,5 @@
 import useComments from "../Hooks/useComments";
-import { PiDotsThreeOutlineVerticalThin } from "react-icons/pi";
+import CommentModification from "./CommentModification";
 
 const UserComments = () => {
   const [isComments] = useComments();
@@ -8,7 +8,7 @@ const UserComments = () => {
     <>
       <section className=" space-y-5">
         {isComments?.map((comment) => (
-          <div key={comment._id} className="border rounded-sm p-5">
+          <div key={comment._id} className="border rounded-md shadow-md p-5">
             <div className=" flex gap-5">
               <div>
                 <div className="avatar">
@@ -24,7 +24,7 @@ const UserComments = () => {
               </div>
             </div>
             <div className="absolute right-[430px] -mt-[110px] hover:cursor-pointer">
-              <PiDotsThreeOutlineVerticalThin className=" text-3xl text-slate-700 hover:text-green-500" />
+              <CommentModification />
             </div>
           </div>
         ))}
