@@ -1,31 +1,22 @@
-
+import { useParams } from "react-router-dom";
+import useEvents from "../../Hooks/useEvents";
+import EventDetailsCard from "./EventDetailsCard";
 
 const EventsDetails = () => {
+  const [isEvents] = useEvents();
+  const { id } = useParams();
 
-    // const {
-    //     image,
-    //     title,
-    //     date,
-    //     month,
-    //     description_title,
-    //     first_description,
-    //     second_description,
-    //     third_description,
-    //     fourth_description,
-    //     fifth_description,
-    //     starting_time,
-    //     phone,
-    //     category,
-    //     website_link,
-    //     location,
-    //     _id,
-    //   } = event || {};
+  const eventDetails = isEvents.filter((item) => item._id === id);
 
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <section>
+        {eventDetails?.map((details) => (
+          <EventDetailsCard key={details._id} details={details} />
+        ))}
+      </section>
+    </>
+  );
 };
 
 export default EventsDetails;

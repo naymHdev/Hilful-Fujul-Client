@@ -16,6 +16,7 @@
     "antd": "^5.14.0",
     "axios": "^1.6.5",
     "firebase": "^10.7.2",
+    "google-map-react": "^2.2.1",
     "heroicons": "^2.1.1",
     "immer": "^10.0.3",
     "localforage": "^1.10.0",
