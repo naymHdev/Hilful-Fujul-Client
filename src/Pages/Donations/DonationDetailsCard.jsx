@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Tab } from "@headlessui/react";
 import { Progress } from "antd";
 
@@ -51,6 +52,26 @@ const DonationDetailsCard = ({ donation }) => {
                           <p>Goal:</p>
                           <p>$10,000.00</p>
                         </div>
+                      </div>
+                    </div>
+                    <div className="mt-10 space-y-4">
+                      <h3 className="text-3xl font-bold py-5">
+                        {description_title}
+                      </h3>
+                      <p>{first_description}</p>
+                      <p>{second_description}</p>
+                      <p>{third_description}</p>
+                      <p>{fourth_description}</p>
+                      <p>{fifth_description}</p>
+                      <h3 className="text-3xl font-bold py-5">
+                        {conditions_title}
+                      </h3>
+                      <div className=" space-y-4">
+                        <p>{condition_one}</p>
+                        <p>{condition_two}</p>
+                        <p>{condition_three}</p>
+                        <p>{condition_fourth}</p>
+                        <p>{condition_fifth}</p>
                       </div>
                     </div>
                   </section>
