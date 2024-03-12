@@ -1,6 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const AdminRoutes = () => {
+  const { logOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handelLogout = () => {
+    logOut()
+      .then((res) => {
+        console.log(res);
+        toast.success("Logout Success!");
+        navigate("/");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
+
   return (
     <div className="grid md:flex items-center">
       <li className="p-1 rounded-sm text-center">
@@ -42,6 +59,9 @@ const AdminRoutes = () => {
         >
           Add Volunteers
         </NavLink>
+      </li>
+      <li className="p-1 rounded-md text-center" onClick={handelLogout}>
+        <NavLink>Logout</NavLink>
       </li>
     </div>
   );

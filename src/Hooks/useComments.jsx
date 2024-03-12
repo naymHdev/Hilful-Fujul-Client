@@ -2,18 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import PrivateAxios from "./PrivateAxios";
 
 const useComments = () => {
-  const {
-    data: isComments = [],
-    refetch,
-    isLoading,
-  } = useQuery({
+  const { data: isComments = [], refetch } = useQuery({
     queryKey: ["isComments"],
     queryFn: async () => {
-      const res = PrivateAxios.get("/comments");
+      const res = await PrivateAxios.get("/comments");
       return res.data;
     },
   });
-  return [isComments, refetch, isLoading];
+  return [isComments, refetch];
 };
 
 export default useComments;

@@ -4,7 +4,8 @@ import Button from "./Button";
 import useComments from "../Hooks/useComments";
 
 const Comments = () => {
-  const [isComments, refetch, isLoading] = useComments();
+  const [isComments, refetch] = useComments();
+  console.log(isComments);
 
   const handelComment = async (e) => {
     e.preventDefault();
@@ -30,6 +31,9 @@ const Comments = () => {
 
   return (
     <>
+    <section>
+      <h2 className=" text-3xl font-bold text-slate-800">Comments</h2>
+    </section>
       <h2 className=" text-3xl font-bold text-slate-800">Leave a Comment</h2>
       <section>
         <form onSubmit={handelComment}>

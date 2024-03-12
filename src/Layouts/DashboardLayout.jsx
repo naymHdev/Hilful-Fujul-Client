@@ -39,8 +39,7 @@ const DashboardLayout = () => {
               </ul>
             </div>
           </div>
-          {/* Page content here */}
-          {/* Content */}
+          <li className="p-1 rounded-sm text-center"></li>
         </div>
 
         <div className="drawer-side">

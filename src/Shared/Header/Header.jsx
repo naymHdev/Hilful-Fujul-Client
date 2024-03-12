@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { IoReorderThree } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 import Button from "../../Components/Button";
 import { GiSelfLove } from "react-icons/gi";
@@ -117,13 +117,18 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <IoReorderThree className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl" aria-hidden="true" />
+            <IoReorderThree
+              className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl"
+              aria-hidden="true"
+            />
           </button>
         </div>
         <Popover.Group className="hidden lg:flex items-center justify-center lg:gap-x-12">
           {navProducts}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Button text="Donate" icon={GiSelfLove} />
+            <Link to="/donate">
+              <Button text="Donate" icon={GiSelfLove} />
+            </Link>
           </div>
         </Popover.Group>
       </nav>
@@ -148,7 +153,10 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <RxCross2 className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl" aria-hidden="true" />
+              <RxCross2
+                className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <div className="mt-6 flow-root">
