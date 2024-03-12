@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const Layouts = () => {
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto overflow-hidden">
       <div>
         <Header />
       </div>
