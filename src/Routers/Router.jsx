@@ -17,6 +17,8 @@ import Dashboard from "../Dashboard/Dashboard";
 import AddChairman from "../Dashboard/Admin/AddChairman";
 import AddVolunteers from "../Dashboard/Admin/AddVolunteers";
 import EventsDetails from "../Pages/Events/EventsDetails";
+import Donate from "../Pages/Donate/Donate";
+import DonationDetails from "../Pages/Donations/DonationDetails";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/donations",
         element: <Donations />,
+      },
+      {
+        path: "/donationDetails/:id",
+        element: <DonationDetails />
       },
       {
         path: "/events",
@@ -64,6 +70,10 @@ const router = createBrowserRouter([
         path: "/join",
         element: <Join />,
       },
+      {
+        path: "/donate",
+        element: <Donate />
+      }
     ],
   },
   { path: "/signUp", element: <SignUp /> },

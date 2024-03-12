@@ -1,24 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Progress } from "antd";
 import { Link } from "react-router-dom";
 
 const DonationCard = ({ casus }) => {
-  const {
-    image,
-    title,
-    _id,
-    description_title,
-    first_description,
-    second_description,
-    third_description,
-    fourth_description,
-    fifth_description,
-    conditions_title,
-    condition_one,
-    condition_two,
-    condition_three,
-    condition_fourth,
-    condition_fifth,
-  } = casus || {};
+  const { image, title, _id } = casus || {};
 
   return (
     <>

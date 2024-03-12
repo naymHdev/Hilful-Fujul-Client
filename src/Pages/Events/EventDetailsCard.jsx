@@ -2,6 +2,7 @@
 import GoogleMapReact from "google-map-react";
 import Button from "../../Components/Button";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -53,7 +54,7 @@ const EventDetailsCard = ({ details }) => {
             </div>
           </div>
           <div className="py-8">
-            <Button icon={FaArrowRight} text="Donate Now" />
+            <Link to="/donate"><Button icon={FaArrowRight} text="Donate Now" /></Link>
           </div>
         </div>
         <div className="col-span-3">
