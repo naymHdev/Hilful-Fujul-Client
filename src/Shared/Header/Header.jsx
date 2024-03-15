@@ -82,6 +82,17 @@ const Header = () => {
           </NavLink>
         </li>
         <hr />
+        <li className="hover:text-green-500 rounded-sm ">
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? " text-green-500" : ""
+            }
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+        </li>
+        {/* <hr /> */}
         <li className="rounded-sm  text-xl hover:text-green-500">
           {user && (
             <NavLink

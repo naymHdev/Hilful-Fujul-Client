@@ -19,6 +19,7 @@ import AddVolunteers from "../Dashboard/Admin/AddVolunteers";
 import EventsDetails from "../Pages/Events/EventsDetails";
 import Donate from "../Pages/Donate/Donate";
 import DonationDetails from "../Pages/Donations/DonationDetails";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />
       },
       {
         path: "/joinVolunteer",
