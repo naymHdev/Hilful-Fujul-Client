@@ -31,6 +31,73 @@ const Contact = () => {
           </div>
         </section>
       </section>
+      <section className=" mt-20">
+        <div>
+          <h2 className=" text-3xl font-bold mb-2">Let's talk...!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+            iusto possimus doloremque amet vitae facere blanditiis nulla
+            explicabo obcaecati nihil ipsam deleniti nesciunt illo, non iure
+          </p>
+        </div>
+        <div className="md:w-9/12 mx-auto mt-16">
+          <form className="md:space-y-10 space-y-5">
+            <div className=" md:flex grid gap-5">
+              <div className=" w-full">
+                <input
+                  className="bg-[#F9F9F9] w-full p-3 rounded-md border-transparent focus:outline-none focus:ring-0"
+                  placeholder="Name"
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div className=" w-full">
+                <input
+                  className="bg-[#F9F9F9] w-full p-3 rounded-md border-transparent focus:outline-none focus:ring-0"
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+            </div>
+            <div className=" md:flex grid gap-5">
+              <div className=" w-full">
+                <input
+                  className="bg-[#F9F9F9] w-full p-3 rounded-md border-transparent focus:outline-none focus:ring-0"
+                  placeholder="Phone"
+                  type="number"
+                  name="phone"
+                  id="phone"
+                />
+              </div>
+              <div className=" w-full">
+                <input
+                  className="bg-[#F9F9F9] w-full p-3 rounded-md border-transparent focus:outline-none focus:ring-0"
+                  placeholder="Subject"
+                  type="text"
+                  name="subject"
+                  id="subject"
+                />
+              </div>
+            </div>
+            <div className=" w-full">
+              <textarea
+                className="bg-[#F9F9F9] w-full p-3 rounded-md border-transparent focus:outline-none focus:ring-0"
+                placeholder="Write message"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div>
+                
+            </div>
+          </form>
+        </div>
+      </section>
     </>
   );
 };
