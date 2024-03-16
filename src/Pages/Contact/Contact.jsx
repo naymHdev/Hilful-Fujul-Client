@@ -1,9 +1,27 @@
+/* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
-import { MdLocalPhone, MdLocationOn, MdAlternateEmail } from "react-icons/md";
+import {
+  MdLocalPhone,
+  MdLocationOn,
+  MdAlternateEmail,
+  MdOutlineSearch,
+} from "react-icons/md";
 import PrivateAxios from "../../Hooks/PrivateAxios";
 import toast from "react-hot-toast";
+import GoogleMapReact from "google-map-react";
+import { Input } from "antd";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Contact = () => {
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 11,
+  };
+
   const {
     register,
     handleSubmit,
@@ -26,6 +44,17 @@ const Contact = () => {
 
   return (
     <>
+      <section className="md:w-6/12 w-9/12 mx-auto mt-20">
+        <h1 className=" text-3xl text-center font-bold">How can we help?</h1>
+        <div className="mt-8 md:mt-14">
+          <Input className="rounded-full border border-green-500 focus:ring-green-500 focus:border-green-500"
+            size="large"
+            variant="outlined"
+            placeholder="Search the Hilf Al Fudul Help Center"
+            prefix={<MdOutlineSearch />}
+          />
+        </div>
+      </section>
       <section>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20 md:w-7/12 mx-auto">
           <div className="space-y-2">
@@ -167,6 +196,22 @@ const Contact = () => {
               </button>
             </div>
           </form>
+        </div>
+      </section>
+      {/* Map  */}
+      <section className=" mt-40 -mb-16">
+        <div style={{ height: "70vh", width: "100%" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: "" }}
+            defaultCenter={defaultProps.center}
+            defaultZoom={defaultProps.zoom}
+          >
+            <AnyReactComponent
+              lat={59.955413}
+              lng={30.337844}
+              text="My Marker"
+            />
+          </GoogleMapReact>
         </div>
       </section>
     </>
