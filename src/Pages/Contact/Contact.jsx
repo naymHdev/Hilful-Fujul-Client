@@ -9,7 +9,7 @@ import {
 import PrivateAxios from "../../Hooks/PrivateAxios";
 import toast from "react-hot-toast";
 import GoogleMapReact from "google-map-react";
-import { Input } from "antd";
+import { Breadcrumb, Input } from "antd";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -44,10 +44,26 @@ const Contact = () => {
 
   return (
     <>
+      <section className=" mt-5">
+        <Breadcrumb
+          className="text-xl font-semibold"
+          separator=">"
+          items={[
+            {
+              href: "/",
+              title: "Home",
+            },
+            {
+              title: "Contact",
+            },
+          ]}
+        />
+      </section>
       <section className="md:w-6/12 w-9/12 mx-auto mt-20">
         <h1 className=" text-3xl text-center font-bold">How can we help?</h1>
         <div className="mt-8 md:mt-14">
-          <Input className="rounded-full border border-green-500 focus:ring-green-500 focus:border-green-500"
+          <Input
+            className="rounded-full border border-green-500 focus:ring-green-500 focus:border-green-500"
             size="large"
             variant="outlined"
             placeholder="Search the Hilf Al Fudul Help Center"
