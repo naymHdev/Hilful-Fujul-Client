@@ -30,8 +30,6 @@ const Donations = () => {
         description="Help others by donating to their fundraiser, or start one for
               someone you care about."
         headerTitle="Discover nonprofit fundraisers on Hilf al-Fudul"
-        bottomTitle="Sarah raised $5k to help children in need get an education."
-        btn="Start a Hilf al-Fudul"
       />
       <hr />
       <h3 className=" text-2xl md:text-4xl font-semibold  md:mt-12 mt-5">
