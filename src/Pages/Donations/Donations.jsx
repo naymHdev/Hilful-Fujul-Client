@@ -1,9 +1,9 @@
-import Button from "../../Components/Button";
 import useDonations from "../../Hooks/useDonations";
 import DonationCard from "./DonationCard";
 import { Breadcrumb } from "antd";
 import bdH from "../../assets/bdh.jpeg";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import IsBanner from "../../Hooks/IsBanner";
 
 const Donations = () => {
   const [isDonations] = useDonations();
@@ -25,32 +25,14 @@ const Donations = () => {
           ]}
         />
       </section>
-      <section className=" py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div>
-          <div className=" space-y-3">
-            <h2 className=" text-4xl font-bold">
-              Discover nonprofit fundraisers on Hilf al-Fudul
-            </h2>
-            <p className=" font-medium">
-              Help others by donating to their fundraiser, or start one for
-              someone you care about.
-            </p>
-          </div>
-          <div className=" mt-10">
-            <Button text="Start a Hilf al-Fudul" />
-          </div>
-          <p className=" text-sm mt-10">
-            Sarah raised $5k to help children in need get an education.
-          </p>
-        </div>
-        <div className=" w-full order-first md:order-last">
-          <img
-            className=" w-full bg-cover rounded-md h-full"
-            src={bdH}
-            alt=""
-          />
-        </div>
-      </section>
+      <IsBanner
+        image={bdH}
+        description="Help others by donating to their fundraiser, or start one for
+              someone you care about."
+        headerTitle="Discover nonprofit fundraisers on Hilf al-Fudul"
+        bottomTitle="Sarah raised $5k to help children in need get an education."
+        btn="Start a Hilf al-Fudul"
+      />
       <hr />
       <h3 className=" text-2xl md:text-4xl font-semibold  md:mt-12 mt-5">
         Browse nonprofit fundraisers
