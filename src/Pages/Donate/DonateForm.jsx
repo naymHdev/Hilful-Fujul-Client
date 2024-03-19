@@ -43,7 +43,7 @@ const DonateForm = ({ donate }) => {
               500TK
             </div>
           </div>
-          <div className=" mt-2">
+          <div className=" mt-8">
             <InputNumber
               className="py-4"
               prefix="TK"
@@ -53,11 +53,11 @@ const DonateForm = ({ donate }) => {
               }}
             />
           </div>
-          <div className="mt-5 space-y-8">
+          <div className="mt-5">
             <h3 className=" text-xl font-semibold">
               Tip Hilf Al-Fudul services
             </h3>
-            <p className=" text-xs text-slate-600 font-medium">
+            <p className=" text-xs text-slate-600 font-medium mt-5 mb-12">
               Hilf Al-Fudul has a 0% platform fee for organizers. Hilf Al-Fudul
               will continue offering its services thanks to donors who will
               leave an optional amount here:
@@ -65,8 +65,9 @@ const DonateForm = ({ donate }) => {
             <Progress percent={50} status="active" />
           </div>
         </section>
+          <hr className="mt-16 mb-16" />
         {/* Payment method*/}
-        <section className=" mt-16">
+        <section className="">
           <h2 className=" text-xl font-bold">Payment method</h2>
           <PaymentMethodTab />
         </section>

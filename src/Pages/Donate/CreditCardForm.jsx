@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
+import { Checkbox } from "antd";
 
 const CreditCardForm = () => {
+  const onChange = (e) => {
+    console.log(`checked = ${e.target.checked}`);
+  };
+
   const {
     register,
     handleSubmit,
@@ -9,7 +14,6 @@ const CreditCardForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    // You can perform further actions like submitting data to the server here
   };
 
   return (
@@ -176,12 +180,36 @@ const CreditCardForm = () => {
           )}
         </div>
       </div>
+      <section className=" py-5 space-y-2">
+        <Checkbox onChange={onChange}>
+          Don't display my name publicly on the fundraiser.
+        </Checkbox>
+        <Checkbox onChange={onChange}>
+          Get occasional marketing updates from Hilf Al-Fudul. You may
+          unsubscribe at any time.
+        </Checkbox>
+      </section>
+      <hr className=" py-2" />
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outl4ne-none focus:shadow-outline"
+        className="bg-green-500 w-full hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md focus:outl4ne-none focus:shadow-outline"
       >
-        Submit
+        Donate now
       </button>
+      <div className=" text-xs text-slate-600 font-medium py-5">
+        By choosing the payment method above, you agree to the Hilf Al-Fudul
+        <a className=" underline px-1" href="#">
+          Terms of Service
+        </a>
+        and acknowledge the{" "}
+        <a className=" underline" href="#">
+          Privacy Notice
+        </a>
+        . <br /> Learn more about{" "}
+        <a className=" underline" href="#">
+          pricing and fees.
+        </a>
+      </div>
     </form>
   );
 };

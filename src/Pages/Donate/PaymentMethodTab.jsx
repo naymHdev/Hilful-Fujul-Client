@@ -43,7 +43,7 @@ const PaymentMethodTab = () => {
             </div>
           </Tab>
         </Tab.List>
-        <section className="py-8">
+        <section className="mt-8">
           <Tab.Panels>
             <Tab.Panel>Content 1</Tab.Panel>
             <Tab.Panel>Content 2</Tab.Panel>
