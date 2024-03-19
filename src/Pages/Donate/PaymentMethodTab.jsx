@@ -2,6 +2,7 @@ import { Tab } from "@headlessui/react";
 import ssl from "../../assets/ssl-thumb.png";
 import gPlay from "../../assets/G-play-image.png";
 import debitCard from "../../assets/debit-icon.png";
+import CreditCardForm from "./CreditCardForm";
 
 const PaymentMethodTab = () => {
   return (
@@ -46,7 +47,9 @@ const PaymentMethodTab = () => {
           <Tab.Panels>
             <Tab.Panel>Content 1</Tab.Panel>
             <Tab.Panel>Content 2</Tab.Panel>
-            <Tab.Panel>Content 3</Tab.Panel>
+            <Tab.Panel>
+              <CreditCardForm />
+            </Tab.Panel>
           </Tab.Panels>
         </section>
       </Tab.Group>
