@@ -7,7 +7,7 @@ const IsDonations = ({image, title, _id}) => {
         <div>
               <section className=" bg-gray-50 rounded-b-md shadow-md hover:shadow-2xl hover:rounded-none shadow-gray-400">
         <div>
-          <img className=" w-full h-96" src={image} alt="" />
+          <img className="w-full h-96 rounded-md" src={image} alt="" />
         </div>
         <div className=" w-10/12 mx-auto py-5">
           <div>
@@ -35,7 +35,7 @@ const IsDonations = ({image, title, _id}) => {
                 Learn More
               </div>
             </Link>
-            <Link to="/donate">
+            <Link to={`/donate/${_id}`}>
               <div className="text-center bg-[#31C8CC] text-white w-full py-3 px-6">
                 Donate Now
               </div>

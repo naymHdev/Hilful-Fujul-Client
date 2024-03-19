@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         element: <Join />,
       },
       {
-        path: "/donate",
+        path: "/donate/:id",
         element: <Donate />
       }
     ],

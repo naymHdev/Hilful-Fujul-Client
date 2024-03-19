@@ -28,7 +28,7 @@ const DonationDetailsCard = ({ donation }) => {
       <section className=" grid grid-cols-1 md:grid-cols-9 gap-3 mt-16">
         <section className=" col-span-6">
           <div>
-            <img className=" w-full h-full md:h-[90vh]" src={image} alt="" />
+            <img className=" w-full h-full md:h-[90vh] rounded-md" src={image} alt="" />
           </div>
           {/* Tab content */}
           <div className="mt-16">
