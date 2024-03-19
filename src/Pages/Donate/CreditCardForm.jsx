@@ -15,9 +15,6 @@ const CreditCardForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-full">
       <div className="mb-4">
-        <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-          Email Address
-        </label>
         <input
           {...register("email", {
             required: "Email is required",
@@ -34,98 +31,41 @@ const CreditCardForm = () => {
           <p className="text-red-500 text-xs italic">{errors.email.message}</p>
         )}
       </div>
-      <div className="mb-4">
-        <label
-          htmlFor="firstName"
-          className="block text-gray-700 font-bold mb-2"
-        >
-          First Name
-        </label>
-        <input
-          {...register("firstName", { required: "First name is required" })}
-          type="text"
-          id="firstName"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-            errors.firstName ? "border-red-500" : ""
-          }`}
-          placeholder="First Name"
-        />
-        {errors.firstName && (
-          <p className="text-red-500 text-xs italic">
-            {errors.firstName.message}
-          </p>
-        )}
+      <div className="grid md:flex gap-5 items-center mb-4">
+        <div className=" w-full">
+          <input
+            {...register("firstName", { required: "First name is required" })}
+            type="text"
+            id="firstName"
+            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              errors.firstName ? "border-red-500" : ""
+            }`}
+            placeholder="First Name"
+          />
+          {errors.firstName && (
+            <p className="text-red-500 text-xs italic">
+              {errors.firstName.message}
+            </p>
+          )}
+        </div>
+        <div className=" w-full">
+          <input
+            {...register("lastName", { required: "Last name is required" })}
+            type="text"
+            id="lastName"
+            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              errors.lastName ? "border-red-500" : ""
+            }`}
+            placeholder="Last Name"
+          />
+          {errors.lastName && (
+            <p className="text-red-500 text-xs italic">
+              {errors.lastName.message}
+            </p>
+          )}
+        </div>
       </div>
       <div className="mb-4">
-        <label
-          htmlFor="lastName"
-          className="block text-gray-700 font-bold mb-2"
-        >
-          Last Name
-        </label>
-        <input
-          {...register("lastName", { required: "Last name is required" })}
-          type="text"
-          id="lastName"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-            errors.lastName ? "border-red-500" : ""
-          }`}
-          placeholder="Last Name"
-        />
-        {errors.lastName && (
-          <p className="text-red-500 text-xs italic">
-            {errors.lastName.message}
-          </p>
-        )}
-      </div>
-      <div className="mb-4">
-        <label htmlFor="country" className="block text-gray-700 font-bold mb-2">
-          Country
-        </label>
-        <input
-          {...register("country", { required: "Country is required" })}
-          type="text"
-          id="country"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-            errors.country ? "border-red-500" : ""
-          }`}
-          placeholder="Your Country"
-        />
-        {errors.country && (
-          <p className="text-red-500 text-xs italic">
-            {errors.country.message}
-          </p>
-        )}
-      </div>
-      <div className="mb-4">
-        <label
-          htmlFor="postalCode"
-          className="block text-gray-700 font-bold mb-2"
-        >
-          Postal Code
-        </label>
-        <input
-          {...register("postalCode", { required: "Postal code is required" })}
-          type="text"
-          id="postalCode"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-            errors.postalCode ? "border-red-500" : ""
-          }`}
-          placeholder="Your Postal Code"
-        />
-        {errors.postalCode && (
-          <p className="text-red-500 text-xs italic">
-            {errors.postalCode.message}
-          </p>
-        )}
-      </div>
-      <div className="mb-4">
-        <label
-          htmlFor="cardNumber"
-          className="block text-gray-700 font-bold mb-2"
-        >
-          Card Number
-        </label>
         <input
           {...register("cardNumber", {
             required: "Card number is required",
@@ -136,7 +76,7 @@ const CreditCardForm = () => {
           className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
             errors.cardNumber ? "border-red-500" : ""
           }`}
-          placeholder="XXXX XXXX XXXX XXXX"
+          placeholder="Card Number"
         />
         {errors.cardNumber && (
           <p className="text-red-500 text-xs italic">
@@ -144,56 +84,42 @@ const CreditCardForm = () => {
           </p>
         )}
       </div>
-      <div className="mb-4">
-        <label htmlFor="expiry" className="block text-gray-700 font-bold mb-2">
-          Expiry Date
-        </label>
-        <input
-          {...register("expiry", {
-            required: "Expiry date is required",
-            pattern: {
-              value: /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/,
-              message: "Invalid expiry date",
-            },
-          })}
-          type="text"
-          id="expiry"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-            errors.expiry ? "border-red-500" : ""
-          }`}
-          placeholder="MM/YY"
-        />
-        {errors.expiry && (
-          <p className="text-red-500 text-xs italic">{errors.expiry.message}</p>
-        )}
+      <div className="grid md:flex gap-5 items-center mb-4">
+        <div className="w-full">
+          <input
+            {...register("country", { required: "Country is required" })}
+            type="text"
+            id="country"
+            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              errors.country ? "border-red-500" : ""
+            }`}
+            placeholder="Your Country"
+          />
+          {errors.country && (
+            <p className="text-red-500 text-xs italic">
+              {errors.country.message}
+            </p>
+          )}
+        </div>
+        <div className="w-full">
+          <input
+            {...register("postalCode", { required: "Postal code is required" })}
+            type="text"
+            id="postalCode"
+            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              errors.postalCode ? "border-red-500" : ""
+            }`}
+            placeholder="Your Postal Code"
+          />
+          {errors.postalCode && (
+            <p className="text-red-500 text-xs italic">
+              {errors.postalCode.message}
+            </p>
+          )}
+        </div>
       </div>
+
       <div className="mb-4">
-        <label htmlFor="cvv" className="block text-gray-700 font-bold mb-2">
-          CVV
-        </label>
-        <input
-          {...register("cvv", {
-            required: "CVV is required",
-            pattern: { value: /^[0-9]{3}$/, message: "Invalid CVV" },
-          })}
-          type="text"
-          id="cvv"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-            errors.cvv ? "border-red-500" : ""
-          }`}
-          placeholder="XXX"
-        />
-        {errors.cvv && (
-          <p className="text-red-500 text-xs italic">{errors.cvv.message}</p>
-        )}
-      </div>
-      <div className="mb-4">
-        <label
-          htmlFor="nameOnCard"
-          className="block text-gray-700 font-bold mb-2"
-        >
-          Name on Card
-        </label>
         <input
           {...register("nameOnCard", { required: "Name on card is required" })}
           type="text"
@@ -201,13 +127,54 @@ const CreditCardForm = () => {
           className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
             errors.nameOnCard ? "border-red-500" : ""
           }`}
-          placeholder="John Doe"
+          placeholder="Name on Card"
         />
         {errors.nameOnCard && (
           <p className="text-red-500 text-xs italic">
             {errors.nameOnCard.message}
           </p>
         )}
+      </div>
+      <div className="grid md:flex gap-5 items-center mb-4">
+        <div className="w-full">
+          <input
+            {...register("expiry", {
+              required: "Expiry date is required",
+              pattern: {
+                value: /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/,
+                message: "Invalid expiry date",
+              },
+            })}
+            type="text"
+            id="expiry"
+            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              errors.expiry ? "border-red-500" : ""
+            }`}
+            placeholder="MM/YY"
+          />
+          {errors.expiry && (
+            <p className="text-red-500 text-xs italic">
+              {errors.expiry.message}
+            </p>
+          )}
+        </div>
+        <div className="w-full">
+          <input
+            {...register("cvv", {
+              required: "CVV is required",
+              pattern: { value: /^[0-9]{3}$/, message: "Invalid CVV" },
+            })}
+            type="text"
+            id="cvv"
+            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              errors.cvv ? "border-red-500" : ""
+            }`}
+            placeholder="CVV"
+          />
+          {errors.cvv && (
+            <p className="text-red-500 text-xs italic">{errors.cvv.message}</p>
+          )}
+        </div>
       </div>
       <button
         type="submit"

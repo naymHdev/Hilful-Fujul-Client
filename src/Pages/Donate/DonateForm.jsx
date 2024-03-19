@@ -9,7 +9,7 @@ const DonateForm = ({ donate }) => {
 
   return (
     <>
-      <section className="w-8/12 mx-auto rounded-3xl shadow-xl bg-green-50 p-10 mt-20">
+      <section className="md:w-8/12 mx-auto rounded-3xl shadow-xl p-10 mt-20">
         <div className=" flex items-center gap-5">
           <div className="avatar">
             <div className="w-40 mask mask-squircle">
