@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { InputNumber, Progress } from "antd";
+import PaymentMethodTab from "./PaymentMethodTab";
 
 const DonateForm = ({ donate }) => {
   const { image, title } = donate || {};
@@ -63,6 +64,11 @@ const DonateForm = ({ donate }) => {
             </p>
             <Progress percent={50} status="active" />
           </div>
+        </section>
+        {/* Payment method*/}
+        <section className=" mt-16">
+          <h2 className=" text-xl font-bold">Payment method</h2>
+          <PaymentMethodTab />
         </section>
       </section>
     </>
