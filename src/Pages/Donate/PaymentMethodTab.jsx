@@ -6,7 +6,7 @@ import CreditCardForm from "./CreditCardForm";
 
 const PaymentMethodTab = () => {
   return (
-    <div className=" py-5">
+    <div className=" py-5 font-joseFin">
       <Tab.Group>
         <Tab.List className="grid gap-3">
           <Tab className="border rounded-xl hover:shadow-xl">

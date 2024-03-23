@@ -12,7 +12,7 @@ import Work from "./Work/Work";
 
 const Home = () => {
   return (
-    <div>
+    <div className="font-joseFin">
       <Banner />
       <AboutUs />
       <Join />

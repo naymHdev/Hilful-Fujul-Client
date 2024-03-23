@@ -9,7 +9,7 @@ const Calculations = () => {
 
   return (
     <div>
-      <section className="mt-16 grid grid-cols-2 md:grid-cols-4">
+      <section className="mt-16 grid grid-cols-2 md:grid-cols-4 font-joseFin">
         <div className=" text-center font-medium space-y-5">
           <div className=" flex justify-center text-5xl text-green-600">
             <FaSackDollar />

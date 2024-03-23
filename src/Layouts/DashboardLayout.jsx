@@ -3,7 +3,7 @@ import AdminRoutes from "../Dashboard/Admin/AdminRoutes";
 
 const DashboardLayout = () => {
   return (
-    <div>
+    <div className="font-joseFin">
       <div className="drawer">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">

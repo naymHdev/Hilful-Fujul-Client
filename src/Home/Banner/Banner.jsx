@@ -3,7 +3,7 @@ import video from "../../assets/hilfulfujul.mp4";
 const Banner = () => {
   return (
     <>
-      <div className="relative h-[100vh]">
+      <div className="relative h-[100vh] font-joseFin">
         <video
           autoPlay
           muted

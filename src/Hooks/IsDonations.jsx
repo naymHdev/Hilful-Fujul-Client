@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const IsDonations = ({image, title, _id}) => {
     return (
-        <div>
+        <div className="font-joseFin">
               <section className=" bg-gray-50 rounded-b-md shadow-md hover:shadow-2xl hover:rounded-none shadow-gray-400">
         <div>
           <img className="w-full h-96 rounded-md" src={image} alt="" />

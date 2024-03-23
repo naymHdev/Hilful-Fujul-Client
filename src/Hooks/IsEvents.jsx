@@ -14,7 +14,7 @@ const IsEvents = ({
 }) => {
   return (
     <>
-      <section className="relative rounded-md">
+      <section className="relative rounded-md font-joseFin">
         <div>
           <img className=" rounded-md" src={image} alt="" />
           <div className="px-2 py-3 rounded-bl-full bg-green-700 text-white absolute top-0 right-0 shadow-lg shadow-green-200">

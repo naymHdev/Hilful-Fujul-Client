@@ -8,7 +8,7 @@ import im3 from "../../assets/v1.jpeg";
 const OurGallery = () => {
   return (
     <>
-      <section className="">
+      <section className="font-joseFin">
         <SectionDetails
           sectionName="Our Gallery"
           sectionTitle="Discover the best things we do"
@@ -16,7 +16,7 @@ const OurGallery = () => {
         activists,lorem politicians and individual citizens that are making."
         />
       </section>
-      <section className="py-5">
+      <section className="py-5 font-joseFin">
         <Marquee speed={100} pauseOnClick={true}>
           <img className=" rounded-2xl px-2" src={im1} alt="" />
           <img className=" rounded-2xl px-2" src={im2} alt="" />

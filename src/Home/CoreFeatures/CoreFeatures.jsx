@@ -16,7 +16,7 @@ const CoreFeatures = () => {
       making."
         />
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:mt-16 mt-5">
+      <div className="font-joseFin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:mt-16 mt-5">
         <div className=" hover:-translate-y-12 px-3 md:py-8 p-3  border-green-400 border-2 border-dotted rounded-3xl text-center space-y-2">
           <div className=" text-3xl flex items-center justify-center">
             <div className=" rounded-full bg-[#E6E6FF] hover:bg-[#302C51] hover:text-white avatar p-5">

@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const Layouts = () => {
   return (
-    <div className="">
+    <div className="font-joseFin">
       <div>
         <Header />
       </div>

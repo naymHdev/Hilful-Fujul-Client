@@ -3,7 +3,7 @@ import SectionDetails from "../../Hooks/SectionDetails";
 const LatestNews = () => {
   return (
     <>
-      <section>
+      <section className="font-joseFin">
         <SectionDetails
           sectionTitle="Latest news & blog"
           sectionName="Latest charity blog"
