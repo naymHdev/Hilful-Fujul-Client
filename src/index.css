@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Icons Hover */
+.reactIcons {
+    transition: 0.5s;
+  }
+  .reactIcons:hover {
+    transform: translateY(-20px);
+  }

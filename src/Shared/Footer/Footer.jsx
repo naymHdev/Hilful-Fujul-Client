@@ -7,7 +7,7 @@ import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className=" text-slate-800 border-t-2">
-      <footer className="footer rounded-sm px-8 py-20 grid grid-cols-2 md:grid-cols-4">
+      <footer className="footer rounded-sm px-8 py-10 grid grid-cols-2 md:grid-cols-4">
         <div>
           <div>
             <Link to="/">
@@ -26,17 +26,17 @@ const Footer = () => {
                 rel="noreferrer"
                 href="https://www.facebook.com/96zoy?mibextid=ZbWKwL"
               >
-                <FaFacebookF className=" text-sky-500 text-2xl" />
+                <FaFacebookF className=" text-sky-500 text-2xl reactIcons" />
               </a>
             </div>
             <div className=" border rounded-full p-1">
-              <FaYoutube className=" text-red-500 text-2xl" />
+              <FaYoutube className=" text-red-500 text-2xl reactIcons" />
             </div>
             <div className=" border rounded-full p-1">
-              <FaTwitter className=" text-sky-600 text-2xl" />
+              <FaTwitter className=" text-sky-600 text-2xl reactIcons" />
             </div>
             <div className=" border rounded-full p-1">
-              <FaInstagram className=" text-orange-500 text-2xl" />
+              <FaInstagram className=" text-orange-500 text-2xl reactIcons" />
             </div>
           </div>
         </div>

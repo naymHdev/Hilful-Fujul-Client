@@ -5,14 +5,14 @@ import { Toaster } from "react-hot-toast";
 
 const Layouts = () => {
   return (
-    <div className="w-11/12 mx-auto overflow-hidden">
+    <div className="">
       <div>
         <Header />
       </div>
-      <div className="min-h-screen">
+      <div className="w-11/12 mx-auto overflow-hidden min-h-screen">
         <Outlet />
       </div>
-      <div className=" mt-20">
+      <div className=" mt-10">
         <Footer />
       </div>
       <Toaster />
