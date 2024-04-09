@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa6";
 import bannerImage from "../../assets/about - banner - image.jpeg";
+import map from "../../assets/aboutUS.jpeg";
+import { BiSolidSquareRounded } from "react-icons/bi";
 
 const About = () => {
   return (
@@ -45,7 +47,9 @@ const About = () => {
       <div className=" mt-20">
         <div className=" w-9/12 mx-auto px-20 py-24 border shadow-md rounded-md">
           <div className=" flex items-center justify-center">
-            <h1 className="text-[#28A16A] text-2xl font-extrabold">Hilf al-Fudul</h1>
+            <h1 className="text-[#28A16A] text-2xl font-extrabold">
+              Hilf al-Fudul
+            </h1>
           </div>
           <p className="text-sm font-thin mt-10">
             Launched in 2010, Hilf al-Fudul is the world’s largest social
@@ -53,6 +57,37 @@ const About = () => {
             million donations, we’re on a mission to help people fundraise for
             personal, business, and charitable causes.
           </p>
+          <div className=" mt-8 flex items-center justify-center">
+            <button className="text-[#28A16A] hover:bg-[#28A16A] hover:text-slate-50 border border-[#28A16A] px-3 py-2 rounded-sm">
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className=" mt-20">
+        <div className=" w-11/12 mx-auto">
+          <img className=" w-full h-full" src={map} alt="" />
+          <div className=" text-sm mt-5 flex items-center justify-between">
+            <div className=" flex items-center gap-2">
+              <BiSolidSquareRounded className=" text-2xl text-green-500" />
+              <p>Can organize and donate</p>
+            </div>
+
+            <div className=" flex items-center gap-2">
+              <BiSolidSquareRounded className=" text-2xl text-green-300" />
+              <p>Can donate</p>
+            </div>
+
+            <div className=" flex items-center gap-2">
+              <BiSolidSquareRounded className=" text-2xl text-gray-400" />
+              <p>Not supported</p>
+            </div>
+
+            <div className=" flex items-center gap-2">
+              <BiSolidSquareRounded className=" text-2xl text-green-800" />
+              <p>Hilf al-Fudul offices</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
