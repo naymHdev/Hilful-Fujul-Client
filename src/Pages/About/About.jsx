@@ -94,6 +94,42 @@ const About = () => {
         <h3 className=" text-center text-3xl font-extrabold">
           The Hilf al-Fudul difference
         </h3>
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 md:w-10/12 mx-auto">
+          <div>
+            <h4 className=" text-2xl font-bold">Trust</h4>
+            <p className=" font-thin mt-5">
+              Our Trust & Safety team works around the clock to ensure your
+              safety and protect against fraud. We also provide the industry’s
+              first and only donor protection guarantee. With eight years of
+              experience and the most money raised, GoFundMe has earned the
+              trust of respected institutions and government officials around
+              the world.
+            </p>
+          </div>
+          <div>
+            <h4 className=" text-2xl font-bold">Speed</h4>
+            <p className=" font-thin mt-5">
+              We’ve helped families and communities get back on their feet
+              quickly. In just the first 30 days following Hurricane Harvey,
+              GoFundMe delivered over $27 million directly to people affected by
+              the storm.
+            </p>
+          </div>
+          <div>
+            <h4 className=" text-2xl font-bold">Reach</h4>
+            <p className=" font-thin mt-5">
+              GoFundMe helps you easily share your story far and wide over
+              email, text, and social media to rally support for your cause. In
+              addition, we have a dedicated team looking for great stories to
+              amplify and share with the media and our community.
+            </p>
+          </div>
+        </div>
+        <div className=" mt-8 flex items-center justify-center">
+          <button className="text-[#28A16A] hover:bg-[#28A16A] hover:text-slate-50 border border-[#28A16A] px-3 py-2 rounded-sm">
+            Learn more
+          </button>
+        </div>
       </section>
     </>
   );
