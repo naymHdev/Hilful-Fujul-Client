@@ -90,6 +90,11 @@ const About = () => {
           </div>
         </div>
       </div>
+      <section className=" mt-20">
+        <h3 className=" text-center text-3xl font-extrabold">
+          The Hilf al-Fudul difference
+        </h3>
+      </section>
     </>
   );
 };
