@@ -10,10 +10,10 @@ const About = () => {
       <div className=" flex items-center mt-8 md:mt-16 gap-3 px-2 md:px-20">
         <div className=" flex items-center gap-5 border rounded-xl px-8 py-1 font-extrabold">
           <FaChevronLeft />
-          <Link>Home</Link>
+          <Link to="/">Home</Link>
         </div>
         <div className="border rounded-xl px-8 py-1 font-extrabold">
-          <Link>About Hilf al-Fudul</Link>
+          <Link to="/about">About Hilf al-Fudul</Link>
         </div>
       </div>
       <div className="mt-2 md:mt-5 space-y-3 w-11/12 mx-auto">
@@ -45,7 +45,7 @@ const About = () => {
         </p>
       </div>
       <div className=" mt-20">
-        <div className=" w-9/12 mx-auto px-20 py-24 border shadow-md rounded-md">
+        <div className="md:w-9/12 mx-auto px-5 py-8 md:px-20 md:py-24 border shadow-md rounded-md">
           <div className=" flex items-center justify-center">
             <h1 className="text-[#28A16A] text-2xl font-extrabold">
               Hilf al-Fudul
