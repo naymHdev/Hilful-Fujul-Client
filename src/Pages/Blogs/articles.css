@@ -1,0 +1,8 @@
+.categoryList li {
+  text-decoration: underline;
+  color: #767676;
+  margin-top: 8px;
+}
+.categoryList li :hover {
+  color: #35c55e;
+}

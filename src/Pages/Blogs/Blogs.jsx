@@ -1,4 +1,5 @@
 import { CiSearch } from "react-icons/ci";
+import Articles from "./Articles";
 
 const Blogs = () => {
   return (
@@ -17,7 +18,7 @@ const Blogs = () => {
             Start a Hilf al-Fudul
           </button>
         </div>
-        <div className="mt-10 w-5/12 mx-auto flex items-center">
+        <div className="mt-10 md:w-4/12 mx-auto flex items-center">
           <input
             className=" bg-slate-100 border-none focus:outline-none rounded-full px-9 py-1 w-full"
             type="search"
@@ -27,6 +28,9 @@ const Blogs = () => {
           />
           <CiSearch className="absolute ml-3" />
         </div>
+      </section>
+      <section className=" mt-16">
+        <Articles />
       </section>
     </>
   );
