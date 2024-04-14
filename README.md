@@ -93,7 +93,7 @@ cd your-backend-directory
 ### Install dependencies:
 
 ```
-npm install
+yarn install
 ```
 
 ### Create a `.env` file in the root directory and add the following variables:
