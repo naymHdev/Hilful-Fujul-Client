@@ -1,6 +1,6 @@
 # Hilful-Fujul Charity Project
 
-![Hilful-Fujul Charity Project](https://hilf-al-fudul.netlify.app)
+## [Hilf al-Fudul Charity Project](https://hilf-al-fudul.netlify.app)
 
 This is a MEERN (MongoDB, Express.js, React.js, Node.js) stack project aimed at creating a charity platform. Users can view and donate to various causes listed on the platform.
 
@@ -59,3 +59,19 @@ cd Hilful-Fujul-Client
 ```
 yarn install
 ```
+
+### Create a `.env` file in the root directory and add the following variables:
+
+```
+REACT_APP_API_BASE_URL= https://hilf-al-fudul-server.vercel.app
+```
+
+### Start the development server:
+
+```
+yarn start
+```
+
+### Access the frontend application at
+
+`http://localhost:5173`
