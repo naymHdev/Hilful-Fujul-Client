@@ -58,7 +58,7 @@ const LatestNewsSlider = () => {
                 />
               </div>
               {/* Details */}
-              <div className="p-2 bg-slate-100  rounded-b-md">
+              <div className="p-2 bg-slate-100  rounded-b-md hover:shadow-md hover:shadow-green-200">
                 <div className=" flex items-center justify-between text-slate-500">
                   <div className=" flex items-center gap-1 font-thin">
                     <CgCalendarDates className=" text-[#1F803D]" />

@@ -10,7 +10,9 @@ const Articles = () => {
       <section className="grid grid-cols-1 md:grid-cols-6 gap-5">
         <div className=" col-span-4 border-r">
           <h4 className=" text-xl font-extrabold">All articles</h4>
-          <OurBlogs />
+          <div className=" mt-8">
+            <OurBlogs />
+          </div>
         </div>
         {/* Categories sections */}
         <div className=" col-span-2">
