@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./articles.css";
 import tips from "../../assets/Fundraising tips-2.png";
 import ideas from "../../assets/funda-ida.jpeg";
+import OurBlogs from "./OurBlogs";
 
 const Articles = () => {
   return (
@@ -9,7 +10,9 @@ const Articles = () => {
       <section className="grid grid-cols-1 md:grid-cols-6 gap-5">
         <div className=" col-span-4 border-r">
           <h4 className=" text-xl font-extrabold">All articles</h4>
+          <OurBlogs />
         </div>
+        {/* Categories sections */}
         <div className=" col-span-2">
           <h4 className=" text-xl font-extrabold">Categories</h4>
           <div className=" font-thin px-5 mt-5">
