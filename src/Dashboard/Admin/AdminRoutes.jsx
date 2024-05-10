@@ -60,6 +60,16 @@ const AdminRoutes = () => {
           Add Volunteers
         </NavLink>
       </li>
+      <li className="p-1 rounded-sm text-center">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-green-500" : ""
+          }
+          to="/dashboard/addImages"
+        >
+          Add Images
+        </NavLink>
+      </li>
       <li className="p-1 rounded-md text-center" onClick={handelLogout}>
         <NavLink>Logout</NavLink>
       </li>

@@ -21,6 +21,7 @@ import Donate from "../Pages/Donate/Donate";
 import DonationDetails from "../Pages/Donations/DonationDetails";
 import Contact from "../Pages/Contact/Contact";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
+import AddImages from "../Dashboard/Moderator/AddImages/AddImages";
 
 const router = createBrowserRouter([
   {
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
       {
         path: "addVolunteers",
         element: <AddVolunteers />,
+      },
+      {
+        path: "addImages",
+        element: <AddImages />,
       },
     ],
   },
