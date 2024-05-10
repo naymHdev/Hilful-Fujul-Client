@@ -80,7 +80,7 @@ const LatestNewsSlider = () => {
                   </p>
                 </div>
                 <div className=" mt-2">
-                  <Link to={`${blog?._id}`}>
+                  <Link to={`/blogDetails/${blog?._id}`}>
                     <button className="hover:border hover:border-green-600 hover:rounded-full px-4 py-3 text-green-400 hover:text-green-700 text-xl font-medium">
                       Read more...
                     </button>

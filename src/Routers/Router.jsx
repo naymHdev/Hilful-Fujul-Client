@@ -20,6 +20,7 @@ import EventsDetails from "../Pages/Events/EventsDetails";
 import Donate from "../Pages/Donate/Donate";
 import DonationDetails from "../Pages/Donations/DonationDetails";
 import Contact from "../Pages/Contact/Contact";
+import BlogDetails from "../Pages/Blogs/BlogDetails";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/donationDetails/:id",
-        element: <DonationDetails />
+        element: <DonationDetails />,
       },
       {
         path: "/events",
@@ -60,8 +61,12 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
+        path: "/blogDetails/:id",
+        element: <BlogDetails />,
+      },
+      {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: "/joinVolunteer",
@@ -77,8 +82,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/donate/:id",
-        element: <Donate />
-      }
+        element: <Donate />,
+      },
     ],
   },
   { path: "/signUp", element: <SignUp /> },
@@ -99,7 +104,7 @@ const router = createBrowserRouter([
       {
         path: "addVolunteers",
         element: <AddVolunteers />,
-      }
+      },
     ],
   },
 ]);

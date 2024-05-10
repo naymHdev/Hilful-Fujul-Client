@@ -25,7 +25,7 @@ const OurBlogs = () => {
               <p className=" font-medium text-sm text-slate-500 py-3">
                 {blog?.blog_publish_time}
               </p>
-              <Link to={`${blog._id}`}>
+              <Link to={`/blogDetails/${blog._id}`}>
                 <h2 className=" text-2xl font-semibold underline">
                   {blog?.blog_name}
                 </h2>
