@@ -7,12 +7,20 @@ import {
   FaPinterest,
   FaTwitter,
 } from "react-icons/fa";
+import {
+  FacebookShareButton,
+  MailruShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 const BlogDetails = () => {
   const [isBlogs] = useBlogs();
-  const { id } = useParams();
 
+  const { id } = useParams();
   const details = isBlogs?.find((blog) => blog?._id === id);
+
+  const url = window.location.href;
 
   return (
     <>
@@ -65,11 +73,19 @@ const BlogDetails = () => {
                 SHARE ARTICLE
               </p>
             </div>
-            <div className=" flex-wrap flex items-center gap-5">
-              <FaFacebookSquare className=" text-2xl text-sky-700" />
-              <FaTwitter className=" text-2xl text-sky-400" />
-              <FaPinterest className=" text-2xl text-red-700" />
-              <FaMailchimp className=" text-2xl text-yellow-700" />
+            <div className=" flex-wrap flex items-center gap-5 hover:cursor-pointer">
+              <FacebookShareButton url={url}>
+                <FaFacebookSquare className=" text-2xl text-sky-700" />
+              </FacebookShareButton>
+              <TwitterShareButton url={url}>
+                <FaTwitter className=" text-2xl text-sky-400" />
+              </TwitterShareButton>
+              <PinterestShareButton url={url}>
+                <FaPinterest className=" text-2xl text-red-700" />
+              </PinterestShareButton>
+              <MailruShareButton url={url}>
+                <FaMailchimp className=" text-2xl text-yellow-700" />
+              </MailruShareButton>
             </div>
           </div>
           <div className=" grid md:flex gap-5 mt-10 bg-[#E6F6EE] rounded-md p-5 md:p-8">
@@ -87,7 +103,9 @@ const BlogDetails = () => {
             </div>
           </div>
         </div>
-        <div className=" col-span-full md:col-span-2 border"></div>
+        <div className=" col-span-full md:col-span-2">
+          <p className=" text-center mt-20">Advertise</p>
+        </div>
       </div>
     </>
   );
