@@ -9,7 +9,7 @@ const Layouts = () => {
       <div>
         <Header />
       </div>
-      <div className="w-11/12 mx-auto overflow-hidden min-h-screen">
+      <div className="overflow-hidden min-h-screen">
         <Outlet />
       </div>
       <div className=" mt-10">

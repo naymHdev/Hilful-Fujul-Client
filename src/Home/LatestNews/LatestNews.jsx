@@ -10,7 +10,7 @@ const LatestNews = () => {
           sectionName="Latest charity blog"
           sectionDetails="We exist for non-profits, social enterprises, community groups, activists,lorem politicians and individual citizens that are making."
         />
-        <div className=" mt-20">
+        <div className="primary-width">
           <LatestNewsSlider />
         </div>
       </section>

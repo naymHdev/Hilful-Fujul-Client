@@ -7,7 +7,7 @@ import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className=" text-slate-800 border-t-2 font-joseFin">
-      <footer className="footer rounded-sm md:px-20 px-2 md:gap-10 md:py-10 py-5 grid grid-cols-1 md:grid-cols-3">
+      <footer className="footer rounded-sm primary-width md:gap-10 md:py-10 py-5 grid grid-cols-1 md:grid-cols-3">
         <div>
           <div>
             <Link to="/">

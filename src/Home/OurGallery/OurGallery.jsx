@@ -16,7 +16,7 @@ const OurGallery = () => {
         activists,lorem politicians and individual citizens that are making."
         />
       </section>
-      <section className="py-5 font-joseFin">
+      <section className=" mt-8 mb-32 font-joseFin">
         <Marquee speed={100} pauseOnClick={true}>
           <img className="w-96 rounded-2xl px-2" src={im1} alt="" />
           <img className="w-96 rounded-2xl px-2" src={im2} alt="" />

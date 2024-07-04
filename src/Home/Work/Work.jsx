@@ -2,7 +2,7 @@ const Work = () => {
   return (
     <>
       <section className="grid grid-cols-1 font-joseFin md:flex p-5 mt-16 bg-slate-50">
-        <div className=" flex-1">
+        <div className="flex-1">
           <div>
             <h5 className=" text-xl font-medium text-green-500">How we work</h5>
             <h2 className="md:text-4xl text-xl font-bold mt-2 md:mt-5">

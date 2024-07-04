@@ -5,8 +5,12 @@
 
 /* Icons Hover */
 .reactIcons {
-    transition: 0.5s;
-  }
-  .reactIcons:hover {
-    transform: translateY(-20px);
-  }
+  transition: 0.5s;
+}
+.reactIcons:hover {
+  transform: translateY(-20px);
+}
+
+.primary-width {
+  @apply max-w-7xl p-4 md:p-8 mx-auto;
+}

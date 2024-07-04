@@ -8,15 +8,15 @@ const Volunteer = () => {
 
   return (
     <>
-      <section className="mt-16 font-joseFin">
+      <section className="font-joseFin">
         <SectionDetails
           sectionName="Volunteer"
           sectionTitle="Meet our excellent volunteers"
           sectionDetails="We exist for non-profits, social enterprises, community groups, activists,lorem politicians and individual citizens that are making.          "
         />
       </section>
-      <section className="font-joseFin">
-        <div className=" grid grid-cols-1 md:grid-cols-3 py-8 gap-10">
+      <section className="primary-width font-joseFin mb-28">
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-10">
           {chairman?.slice(0, 3).map((man) => (
             <div
               className="dropdown dropdown-hover shadow-md rounded-xl hover:shadow-green-300"

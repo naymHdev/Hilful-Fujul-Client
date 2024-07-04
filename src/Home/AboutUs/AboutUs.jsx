@@ -3,7 +3,7 @@ import Button from "../../Components/Button";
 /* eslint-disable react/no-unescaped-entities */
 const AboutUs = () => {
   return (
-    <div className="md:flex flex-grow-0 justify-center gap-10 py-10 font-joseFin">
+    <div className="md:flex flex-grow-0 justify-center gap-10 py-10 font-joseFin primary-width">
       <div className="flex-1">
         <div>
           <img
