@@ -24,7 +24,7 @@ const Banner = () => {
             by the <br /> readable content of a pain
           </p>
         </div>
-        <div className=" md:flex flex-grow justify-center space-y-2 items-center gap-5 mt-4 md:mt-8">
+        <div className=" md:flex flex-grow items-center gap-5 mt-4 md:mt-8">
           <Button text="Get Start A Funding" />
           <Button text="Donate Now" />
         </div>

@@ -18,7 +18,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8">
+      <div className="primary-width grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8">
         {images?.map((itm) => (
           <GalleryCard key={itm._id} itm={itm} />
         ))}

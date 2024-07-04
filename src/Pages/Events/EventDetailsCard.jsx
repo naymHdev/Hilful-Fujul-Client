@@ -34,6 +34,9 @@ const EventDetailsCard = ({ details }) => {
 
   return (
     <>
+      <div>
+        <h2 className="mt-10 text-3xl font-bold">{description_title}</h2>
+      </div>
       <section className=" grid grid-cols-1 md:grid-cols-9 gap-3 py-8">
         <div className="relative col-span-6">
           <div>
@@ -44,7 +47,6 @@ const EventDetailsCard = ({ details }) => {
             </div>
           </div>
           <div className=" font-medium ">
-            <h2 className="mt-10 text-3xl font-bold">{description_title}</h2>
             <div className=" space-y-5 mt-10">
               <p>{first_description}</p>
               <p>{second_description}</p>
@@ -54,7 +56,9 @@ const EventDetailsCard = ({ details }) => {
             </div>
           </div>
           <div className="py-8">
-            <Link to="/donate"><Button icon={FaArrowRight} text="Donate Now" /></Link>
+            <Link to="/donate">
+              <Button icon={FaArrowRight} text="Donate Now" />
+            </Link>
           </div>
         </div>
         <div className="col-span-3">

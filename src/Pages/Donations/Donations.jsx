@@ -10,9 +10,9 @@ const Donations = () => {
 
   return (
     <>
-      <section className=" mt-5">
+      <section className="primary-width mt-5">
         <Breadcrumb
-          className="text-xl font-semibold"
+          className="text-xl font-semibold font-joseFin"
           separator=">"
           items={[
             {
@@ -35,7 +35,7 @@ const Donations = () => {
       <h3 className=" text-2xl md:text-4xl font-semibold  md:mt-12 mt-5">
         Browse nonprofit fundraisers
       </h3>
-      <section className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5 md:mt-10">
+      <section className="primary-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5 md:mt-10">
         {isDonations?.map((casus) => (
           <DonationCard key={casus?._id} casus={casus} />
         ))}

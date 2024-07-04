@@ -29,7 +29,7 @@ const Blogs = () => {
           <CiSearch className="absolute ml-3" />
         </div>
       </section>
-      <section className=" mt-16">
+      <section className="primary-width mt-16">
         <Articles />
       </section>
     </>

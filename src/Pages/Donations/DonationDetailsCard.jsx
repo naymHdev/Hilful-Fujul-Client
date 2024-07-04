@@ -25,10 +25,17 @@ const DonationDetailsCard = ({ donation }) => {
 
   return (
     <>
-      <section className=" grid grid-cols-1 md:grid-cols-9 gap-3 mt-16">
+      <div className=" py-5 mt-4">
+      <h2 className=" text-4xl font-medium">{title}</h2>
+      </div>
+      <section className=" grid grid-cols-1 md:grid-cols-9 gap-3">
         <section className=" col-span-6">
           <div>
-            <img className=" w-full h-full md:h-[90vh] rounded-md" src={image} alt="" />
+            <img
+              className=" w-full h-full md:h-[90vh] rounded-md"
+              src={image}
+              alt=""
+            />
           </div>
           {/* Tab content */}
           <div className="mt-16">
@@ -36,7 +43,9 @@ const DonationDetailsCard = ({ donation }) => {
               <Tab.List>
                 <Tab className="border rounded-3xl p-5 ">Description</Tab>
                 <Tab className="border rounded-3xl p-5 ml-5 ">Donations</Tab>
-                <Tab className="border rounded-3xl p-5 md:ml-5 mt-5 ">Comments</Tab>
+                <Tab className="border rounded-3xl p-5 md:ml-5 mt-5 ">
+                  Comments
+                </Tab>
               </Tab.List>
               <Tab.Panels className="mt-16">
                 {/* Content 1 */}
@@ -90,8 +99,7 @@ const DonationDetailsCard = ({ donation }) => {
             </Tab.Group>
           </div>
         </section>
-        <section className=" col-span-3">
-        </section>
+        <section className=" col-span-3"></section>
       </section>
     </>
   );

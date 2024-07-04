@@ -12,5 +12,5 @@
 }
 
 .primary-width {
-  @apply max-w-7xl p-4 md:p-8 mx-auto;
+  @apply max-w-7xl px-4 md:px-8 mx-auto;
 }

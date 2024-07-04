@@ -112,7 +112,7 @@ const Header = () => {
   return (
     <header className="relative">
       <nav
-        className="bg-white shadow-md px-5 flex items-center justify-between py-5"
+        className="bg-white shadow-sm px-5 flex items-center justify-between py-5"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -137,7 +137,7 @@ const Header = () => {
         <Popover.Group className="hidden lg:flex items-center justify-center lg:gap-x-12">
           {navProducts}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/donate">
+            <Link to="#">
               <Button text="Donate" icon={GiSelfLove} />
             </Link>
           </div>

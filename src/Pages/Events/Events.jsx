@@ -11,9 +11,9 @@ const Events = () => {
 
   return (
     <>
-      <section className=" mt-5">
+      <section className="primary-width mt-5">
         <Breadcrumb
-          className="text-xl font-semibold"
+          className="text-xl font-semibold font-joseFin"
           separator=">"
           items={[
             {
@@ -32,10 +32,10 @@ const Events = () => {
         image={eventImage}
       />
       <hr />
-      <h3 className=" text-2xl md:text-4xl font-semibold  md:mt-12 mt-5">
+      <h3 className="primary-width text-2xl md:text-4xl font-semibold  md:mt-12 mt-5">
         Browse nonprofit fundraisers Events
       </h3>
-      <section className="py-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="primary-width py-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {isEvents?.map((item) => (
           <EventCard key={item._id} event={item} />
         ))}

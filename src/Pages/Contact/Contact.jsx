@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className=" mt-5">
+      <section className="primary-width mt-5">
         <Breadcrumb
           className="text-xl font-semibold"
           separator=">"
@@ -59,7 +59,7 @@ const Contact = () => {
           ]}
         />
       </section>
-      <section className="md:w-6/12 w-9/12 mx-auto mt-20">
+      <section className="primary-width md:w-6/12 w-9/12 mx-auto mt-20">
         <h1 className=" text-3xl text-center font-bold">How can we help?</h1>
         <div className="mt-8 md:mt-14">
           <Input
@@ -99,7 +99,7 @@ const Contact = () => {
           </div>
         </section>
       </section>
-      <section className=" mt-20">
+      <section className="primary-width mt-20">
         <div>
           <h2 className=" text-3xl font-bold mb-2">Let's talk...!</h2>
           <p>

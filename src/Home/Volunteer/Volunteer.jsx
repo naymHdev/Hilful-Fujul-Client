@@ -15,7 +15,7 @@ const Volunteer = () => {
           sectionDetails="We exist for non-profits, social enterprises, community groups, activists,lorem politicians and individual citizens that are making.          "
         />
       </section>
-      <section className="primary-width font-joseFin mb-28">
+      <section className="primary-width font-joseFin mt-8 mb-28">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-10">
           {chairman?.slice(0, 3).map((man) => (
             <div
