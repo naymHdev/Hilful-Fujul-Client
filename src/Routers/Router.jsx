@@ -22,11 +22,16 @@ import Contact from "../Pages/Contact/Contact";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
 import AddImages from "../Dashboard/Moderator/AddImages/AddImages";
 import ImageGallery from "../Pages/Gallery/Gallery";
+import PrimaryLoader from "../Components/PrimaryLoader";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layouts />,
+    element: (
+      <PrimaryLoader>
+        <Layouts />
+      </PrimaryLoader>
+    ),
     errorElement: <Error />,
     children: [
       {
@@ -35,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/gallery",
-        element: <ImageGallery />,
+        element: (
+          <PrimaryLoader>
+            <ImageGallery />
+          </PrimaryLoader>
+        ),
       },
       {
         path: "/about",

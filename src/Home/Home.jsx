@@ -6,7 +6,6 @@ import CoreFeatures from "./CoreFeatures/CoreFeatures";
 import Join from "./Join/Join";
 import LatestNews from "./LatestNews/LatestNews";
 import OurGallery from "./OurGallery/OurGallery";
-// import Testimonials from "./Testimonials/Testimonials";
 import Volunteer from "./Volunteer/Volunteer";
 import Work from "./Work/Work";
 
@@ -22,7 +21,6 @@ const Home = () => {
       <Work />
       <OurGallery />
       <Volunteer />
-      {/* <Testimonials /> */}
       <LatestNews />
     </div>
   );
