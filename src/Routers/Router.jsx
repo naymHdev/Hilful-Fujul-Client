@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Error from "../Components/Error";
 import Layouts from "../Layouts/Layouts";
 import Home from "../Home/Home";
-import Gallery from "../Pages/Gallery/Gallery";
 import About from "../Pages/About/About";
 import Donations from "../Pages/Donations/Donations";
 import Events from "../Pages/Events/Events";
@@ -22,6 +21,7 @@ import DonationDetails from "../Pages/Donations/DonationDetails";
 import Contact from "../Pages/Contact/Contact";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
 import AddImages from "../Dashboard/Moderator/AddImages/AddImages";
+import ImageGallery from "../Pages/Gallery/Gallery";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/gallery",
-        element: <Gallery />,
+        element: <ImageGallery />,
       },
       {
         path: "/about",
