@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Join = () => {
   return (
     <>
-      <div className="text-white font-joseFin w-full mt-16 bg-fixed bg-[url('https://i.ibb.co/ssHVpFw/about-main2.jpg')]">
+      <div className="text-white font-joseFin w-full mt-16 bg-cover bg-center bg-fixed bg-[url('https://i.ibb.co/ssHVpFw/about-main2.jpg')]">
         <div className="grid grid-cols-1 p-1 md:px-16 md:grid-cols-3 gap-8 items-center min-h-screen">
           <div className="hover:rounded-none bg-[#2DB187] p-6 rounded-t-3xl rounded-bl-3xl">
             <ImManWoman className=" text-5xl " />

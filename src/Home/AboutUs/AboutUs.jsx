@@ -1,4 +1,15 @@
+import { Steps } from "antd";
+import { useState } from "react";
+import toast from "react-hot-toast";
+
 const AboutUs = () => {
+  const [current, setCurrent] = useState(3);
+  const onChange = (value) => {
+    // console.log(value);
+    setCurrent(value);
+    toast.success("আসসালামু আলাইকুম!");
+  };
+
   return (
     <div className="md:flex mt-28 md:mt-32 justify-between gap-16 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto">
       <div className="flex-1">
@@ -27,6 +38,24 @@ const AboutUs = () => {
           জানিয়ে একটি আদর্শ কল্যাণমূলক সমাজ গঠনের জন্য অবিরাম প্রচেষ্টা চালিয়ে
           যাচ্ছি।
         </p>
+        <section className=" mt-5 md:mt-8">
+          <Steps
+            current={current}
+            direction="vertical"
+            onChange={onChange}
+            items={[
+              {
+                title: "শিক্ষা",
+              },
+              {
+                title: "সেবা",
+              },
+              {
+                title: "দা‘ওয়াহ",
+              },
+            ]}
+          />
+        </section>
       </div>
     </div>
   );

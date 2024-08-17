@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
-import { Toaster } from "react-hot-toast";
 import HeaderBar from "../Home/Banner/HeaderBar";
 
 const Layouts = () => {
@@ -17,7 +16,6 @@ const Layouts = () => {
       <div className=" mt-10">
         <Footer />
       </div>
-      <Toaster />
     </div>
   );
 };
