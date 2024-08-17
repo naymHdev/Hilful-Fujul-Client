@@ -1,165 +1,103 @@
-import { useState } from "react";
-import { Dialog, Popover } from "@headlessui/react";
-import { IoReorderThree } from "react-icons/io5";
-import { Link, NavLink } from "react-router-dom";
-import { RxCross2 } from "react-icons/rx";
-import Button from "../../Components/Button";
-import { GiSelfLove } from "react-icons/gi";
+import { useState, useEffect } from "react";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const navProducts = (
-    <>
-      <div className="grid sticky md:flex text-slate-500 items-center list-none gap-3 font-medium">
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/"
-          >
-            Home
-          </NavLink>
-        </li>
-        <hr />
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/gallery"
-          >
-            Gallery
-          </NavLink>
-        </li>
-        <hr />
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/events"
-          >
-            Events
-          </NavLink>
-        </li>
-        <hr />
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/donations"
-          >
-            Donations
-          </NavLink>
-        </li>
-        <hr />
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/blogs"
-          >
-            Blogs
-          </NavLink>
-        </li>
-        <hr />
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/about"
-          >
-            About
-          </NavLink>
-        </li>
-        <hr />
-        <li className="hover:text-green-500 rounded-sm ">
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? " text-green-500" : ""
-            }
-            to="/contact"
-          >
-            Contact
-          </NavLink>
-        </li>
-      </div>
-    </>
-  );
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="relative">
-      <nav
-        className="bg-white shadow-sm px-5 flex items-center justify-between py-5"
-        aria-label="Global"
-      >
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Hilf al-Fudul</span>
-            <h2 className="text-3xl font-bold text-slate-600">Hilf al-Fudul</h2>
-          </a>
+    <header
+      className={`${
+        isSticky
+          ? "fixed top-0 z-50 w-full"
+          : "absolute lg:top-[270px] z-50 w-11/12 left-[53px]"
+      } bg-white shadow-md transition-all duration-300`}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-between py-8">
+        <div className="flex items-center">
+          <h2 className="text-2xl font-bold text-slate-600">Hilf al-Fudul</h2>
         </div>
-        <div className="flex lg:hidden">
+        <nav className="hidden lg:flex space-x-6">
+          <a href="/" className="text-gray-700 hover:text-green-500">
+            Home
+          </a>
+          <a href="/gallery" className="text-gray-700 hover:text-green-500">
+            Gallery
+          </a>
+          <a href="/events" className="text-gray-700 hover:text-green-500">
+            Events
+          </a>
+          <a href="/donations" className="text-gray-700 hover:text-green-500">
+            Donations
+          </a>
+          <a href="/blogs" className="text-gray-700 hover:text-green-500">
+            Blogs
+          </a>
+          <a href="/about" className="text-gray-700 hover:text-green-500">
+            About
+          </a>
+          <a href="/contact" className="text-gray-700 hover:text-green-500">
+            Contact
+          </a>
+        </nav>
+        <div className="lg:hidden">
           <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-gray-700 hover:text-green-500"
           >
-            <span className="sr-only">Open main menu</span>
-            <IoReorderThree
-              className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl"
-              aria-hidden="true"
-            />
+            {menuOpen ? (
+              <IoClose className="text-3xl" />
+            ) : (
+              <IoMenu className="text-3xl" />
+            )}
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex items-center justify-center lg:gap-x-12">
-          {navProducts}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="#">
-              <Button text="Donate" icon={GiSelfLove} />
-            </Link>
-          </div>
-        </Popover.Group>
-      </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <h2 className="text-3xl font-bold text-slate-600">
-                Hilf al-Fudul
-              </h2>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="lg:hidden bg-white shadow-md w-full">
+          <nav className="flex flex-col items-center space-y-4 py-4">
+            <a href="/" className="text-gray-700 hover:text-green-500">
+              Home
             </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <RxCross2
-                className="h-6 w-6 hover:bg-green-200 hover:p-1 text-2xl"
-                aria-hidden="true"
-              />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">{navProducts}</div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
+            <a href="/gallery" className="text-gray-700 hover:text-green-500">
+              Gallery
+            </a>
+            <a href="/events" className="text-gray-700 hover:text-green-500">
+              Events
+            </a>
+            <a href="/donations" className="text-gray-700 hover:text-green-500">
+              Donations
+            </a>
+            <a href="/blogs" className="text-gray-700 hover:text-green-500">
+              Blogs
+            </a>
+            <a href="/about" className="text-gray-700 hover:text-green-500">
+              About
+            </a>
+            <a href="/contact" className="text-gray-700 hover:text-green-500">
+              Contact
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

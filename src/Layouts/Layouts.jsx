@@ -9,7 +9,7 @@ const Layouts = () => {
     <div className="font-joseFin">
       <div>
         <HeaderBar />
-        {/* <Header /> */}
+        <Header />
       </div>
       <div className="loaderoverflow-hidden min-h-screen">
         <Outlet />
