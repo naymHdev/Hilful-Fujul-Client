@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         joseFin: "'Josefin Sans', sans-serif",
       },
+      backgroundImage: {},
     },
   },
   plugins: [require("daisyui")],

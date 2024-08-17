@@ -11,7 +11,7 @@ const Header = () => {
 
   const navProducts = (
     <>
-      <div className="grid md:flex text-slate-500 items-center list-none gap-3 font-medium">
+      <div className="grid sticky md:flex text-slate-500 items-center list-none gap-3 font-medium">
         <li className="hover:text-green-500 rounded-sm ">
           <NavLink
             className={({ isActive, isPending }) =>

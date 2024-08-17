@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useBlogs from "../../Hooks/useBlogs";
-import author from "../../../public/16f8e077ff29debbf45e6b237e9bd7c7.png";
+// import author from "../../../public/16f8e077ff29debbf45e6b237e9bd7c7.png";
 import {
   FaFacebookSquare,
   FaMailchimp,
@@ -90,7 +90,7 @@ const BlogDetails = () => {
           </div>
           <div className=" grid md:flex gap-5 mt-10 bg-[#E6F6EE] rounded-md p-5 md:p-8">
             <div>
-              <img className=" rounded-md" src={author} alt="" />
+              {/* <img className=" rounded-md" src={author} alt="" /> */}
             </div>
             <div>
               <h3 className=" text-2xl font-semibold text-slate-500">
