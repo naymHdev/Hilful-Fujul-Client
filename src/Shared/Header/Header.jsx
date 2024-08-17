@@ -5,13 +5,9 @@ import { Link, NavLink } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 import Button from "../../Components/Button";
 import { GiSelfLove } from "react-icons/gi";
-import useAuth from "../../Hooks/useAuth";
-import { LuLayoutDashboard } from "react-icons/lu";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const { user } = useAuth();
 
   const navProducts = (
     <>
@@ -91,19 +87,6 @@ const Header = () => {
           >
             Contact
           </NavLink>
-        </li>
-        {/* <hr /> */}
-        <li className="rounded-sm  text-xl hover:text-green-500">
-          {user && (
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? " text-green-500" : ""
-              }
-              to="/dashboard"
-            >
-              <LuLayoutDashboard />
-            </NavLink>
-          )}
         </li>
       </div>
     </>
