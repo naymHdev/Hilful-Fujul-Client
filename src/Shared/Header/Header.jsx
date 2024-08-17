@@ -1,7 +1,7 @@
 import { Divider } from "antd";
 import { useState, useEffect } from "react";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -55,16 +55,26 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Toggle Button */}
-        <div className="lg:hidden flex items-center">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-gray-700 hover:text-green-500"
-          >
-            {menuOpen ? (
-              <IoClose className="text-3xl" />
-            ) : (
-              <HiMiniBars3BottomLeft className="text-3xl" />
-            )}
+        <div className="lg:hidden flex items-center justify-between space-x-20 md:space-x-60">
+          <div>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-gray-700 hover:text-green-500"
+            >
+              {menuOpen ? (
+                <IoClose className="text-3xl" />
+              ) : (
+                <HiMiniBars3BottomLeft className="text-3xl" />
+              )}
+            </button>
+          </div>
+          <div>
+            <h2 className="text-xl font-extrabold">
+              হিলফুল <span className=" text-green-600">ফুজুল</span>
+            </h2>
+          </div>
+          <button>
+            <IoSearchOutline className=" text-2xl font-bold" />
           </button>
         </div>
       </div>
