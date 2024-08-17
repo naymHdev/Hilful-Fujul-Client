@@ -6,7 +6,6 @@ import CoreFeatures from "./CoreFeatures/CoreFeatures";
 import Join from "./Join/Join";
 import LatestNews from "./LatestNews/LatestNews";
 import OurGallery from "./OurGallery/OurGallery";
-import Volunteer from "./Volunteer/Volunteer";
 import Work from "./Work/Work";
 
 const Home = () => {
@@ -20,7 +19,7 @@ const Home = () => {
       <Calculations />
       <Work />
       <OurGallery />
-      <Volunteer />
+      {/* <Volunteer /> */}
       <LatestNews />
     </div>
   );
