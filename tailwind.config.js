@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        joseFin: "'Josefin Sans', sans-serif",
+        // joseFin: "'Josefin Sans', sans-serif",
       },
       backgroundImage: {},
     },
