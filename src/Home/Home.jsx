@@ -7,6 +7,7 @@ import CoreFeatures from "./CoreFeatures/CoreFeatures";
 import Join from "./Join/Join";
 import LatestNews from "./LatestNews/LatestNews";
 import OurGallery from "./OurGallery/OurGallery";
+import Save from "./Save/Save";
 import Work from "./Work/Work";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <div>
       <Banner />
       <LogoBar />
+      <Save />
       <AboutUs />
       <Join />
       <CoreFeatures />
