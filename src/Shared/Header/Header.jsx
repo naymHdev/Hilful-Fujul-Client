@@ -1,5 +1,8 @@
+import { Divider } from "antd";
 import { useState, useEffect } from "react";
-import { IoMenu, IoClose } from "react-icons/io5";
+import { HiMiniBars3BottomLeft } from "react-icons/hi2";
+import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -29,7 +32,7 @@ const Header = () => {
           : "absolute lg:top-[270px] z-50 w-full lg:w-11/12 mx-auto lg:left-[55px]"
       } bg-white shadow-md transition-all duration-300`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-start py-4 md:py-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-between py-4 md:py-8">
         <nav className="hidden lg:flex space-x-6 text-[#161616] font-bold">
           <a href="/" className="hover:text-green-500">
             হোম
@@ -50,7 +53,9 @@ const Header = () => {
             সংবাদ
           </a>
         </nav>
-        <div className="lg:hidden">
+
+        {/* Mobile Menu Toggle Button */}
+        <div className="lg:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-gray-700 hover:text-green-500"
@@ -58,40 +63,77 @@ const Header = () => {
             {menuOpen ? (
               <IoClose className="text-3xl" />
             ) : (
-              <IoMenu className="text-3xl" />
+              <HiMiniBars3BottomLeft className="text-3xl" />
             )}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="lg:hidden bg-white shadow-md w-full">
-          <nav className="flex flex-col items-center space-y-4 py-4">
-            <a href="/" className="text-gray-700 hover:text-green-500">
-              Home
-            </a>
-            <a href="/gallery" className="text-gray-700 hover:text-green-500">
-              Gallery
-            </a>
-            <a href="/events" className="text-gray-700 hover:text-green-500">
-              Events
-            </a>
-            <a href="/donations" className="text-gray-700 hover:text-green-500">
-              Donations
-            </a>
-            <a href="/blogs" className="text-gray-700 hover:text-green-500">
-              Blogs
-            </a>
-            <a href="/about" className="text-gray-700 hover:text-green-500">
-              About
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-green-500">
-              Contact
-            </a>
-          </nav>
-        </div>
-      )}
+      <div
+        className={`lg:hidden fixed top-0 right-0 w-64 bg-white shadow-md h-full transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Mobile Menu Header */}
+        <Link to="/">
+          <div className="col text-center space-y-1 py-2 shadow-sm">
+            <h2 className="text-xl font-extrabold">হিলফুল ফুজুল</h2>
+            <p className="text-[#3BCF94] font-bold">সমাজ কল্যাণ ফাউন্ডেশন</p>
+          </div>
+        </Link>
+
+        <nav className="flex flex-col items-start space-y-4 py-4 px-6 mt-8">
+          <a href="/" className="hover:text-green-500">
+            হোম
+          </a>
+          <Divider
+            style={{
+              borderColor: "#3BCF95",
+            }}
+          />
+          <a href="/gallery" className="hover:text-green-500">
+            আমাদের কার্যক্রম
+          </a>
+          <Divider
+            style={{
+              borderColor: "#3BCF95",
+            }}
+          />
+          <a href="/events" className="hover:text-green-500">
+            চলমান প্রজেক্ট
+          </a>
+          <Divider
+            style={{
+              borderColor: "#3BCF95",
+            }}
+          />
+          <a href="/donations" className="hover:text-green-500">
+            আজীবন ও দাতা সদস্য
+          </a>
+          <Divider
+            style={{
+              borderColor: "#3BCF95",
+            }}
+          />
+          <a href="/blogs" className="hover:text-green-500">
+            গ্যালারী
+          </a>
+          <Divider
+            style={{
+              borderColor: "#3BCF95",
+            }}
+          />
+          <a href="/about" className="hover:text-green-500">
+            সংবাদ
+          </a>
+          <Divider
+            style={{
+              borderColor: "#3BCF95",
+            }}
+          />
+        </nav>
+      </div>
     </header>
   );
 };
