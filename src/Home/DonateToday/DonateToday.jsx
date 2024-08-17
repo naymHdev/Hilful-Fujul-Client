@@ -23,10 +23,10 @@ const DonateToday = () => {
             <FcDonate className="text-9xl" />
           </div>
           <div className=" mt-14 space-y-7">
-            <h1 className=" text-5xl font-bold md:text-7xl md:font-extrabold">
+            <h1 className=" text-5xl font-bold text-black md:text-7xl md:font-extrabold">
               আজ দান করুন
             </h1>
-            <p className=" font-medium">
+            <p className=" font-medium text-gray-700">
               আজকের একটি দান আগামীকালের সুন্দর ভবিষ্যতের ভিত্তি হতে পারে। এগিয়ে
               আসুন, এবং পরিবর্তনের পথে আপনার ভূমিকা রাখুন।
             </p>

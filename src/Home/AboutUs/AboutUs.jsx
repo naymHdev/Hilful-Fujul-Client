@@ -1,66 +1,32 @@
-import Button from "../../Components/Button";
-
-/* eslint-disable react/no-unescaped-entities */
 const AboutUs = () => {
   return (
-    <div className="md:flex flex-grow-0 justify-center gap-10 py-10 font-joseFin primary-width">
+    <div className="md:flex mt-28 md:mt-32 justify-between gap-16 px-4 md:px-6 lg:px-10 max-w-7xl mx-auto">
       <div className="flex-1">
-        <div>
-          <img
-            className=" rounded-tl-full"
-            src="https://i.ibb.co/ssHVpFw/about-main2.jpg"
-            alt=""
-          />
-        </div>
+        <img
+          className=" w-full h-full mx-auto"
+          src="/src/assets/islamic-hstry-img.png"
+          alt="Islamic Historic Image"
+        />
       </div>
-      <div className="flex-1 order-first">
-        <h2 className="text-green-500 font-bold">About us</h2>
-        <div className="mt-5 space-y-2">
-          <h3 className="text-4xl font-bold">We're for social causes</h3>
-          <p>
-            Passionate about making a difference? So are we. We champion social
-            causes that improve lives and build a better future.Equality,
-            justice, and a sustainable world - we fight for these values through
-            the power of social causes. Join us in changing the world.
-          </p>
-          <div className=" space-y-4 mt-5">
-            <div className="flex items-center gap-3 font-medium">
-              <div className=" rounded-full bg-purple-400 p-1 text-white">
-                01
-              </div>
-              <div>
-                <p>Raise money from different sources</p>
-              </div>
-            </div>
-            <div className=" flex items-center gap-3 font-medium">
-              <div className=" rounded-full bg-purple-400 p-1 text-white">
-                02
-              </div>
-              <div>
-                <p>Gather all the money and giving relief in need</p>
-              </div>
-            </div>
-            <div className=" flex items-center gap-3 font-medium">
-              <div className=" rounded-full bg-purple-400 p-1 text-white">
-                03
-              </div>
-              <div>
-                <p>Giving relief in rural area all over the world</p>
-              </div>
-            </div>
-            <div className=" flex items-center gap-3 font-medium">
-              <div className=" rounded-full bg-purple-400 p-1 text-white">
-                04
-              </div>
-              <div>
-                <p>Go to the country that really needs help</p>
-              </div>
-            </div>
-          </div>
-          <div className=" flex justify-end mt-4 md:pb-0 pb-4">
-            <Button text="Read More..." />
-          </div>
-        </div>
+      <div className="flex-1 mt-14 md:mt-0">
+        <h2 className=" text-4xl font-extrabold text-green-500">
+          হিলফুল ফুজুল
+        </h2>
+        <p className=" mt-3 font-bold text-black">সমাজ কল্যাণ ফাউন্ডেশন</p>
+
+        <div className="border-2 border-slate-600 my-5 border-dashed" />
+        <p className=" font-medium text-black leading-8">
+          হিলফুল ফুজুল - সমাজ কল্যাণ ফাউন্ডেশন একটি অরাজনৈতিক, অলাভজনক
+          প্রতিষ্ঠান যা শিক্ষা, দাওয়াহ, এবং মানবকল্যাণে নিবেদিত। আমরা মহানবী
+          মুহাম্মদ (সা.)-এর আদর্শ অনুসরণ করে আর্তমানবতার সেবা, সমাজ সংস্কার, এবং
+          নৈতিক মূল্যবোধের উন্মেষে কাজ করি। ফাউন্ডেশনটি দারিদ্র্য বিমোচন,
+          কর্মসংস্থান সৃষ্টি, এবং ইসলামী সংস্কৃতির বিকাশে অগ্রণী ভূমিকা পালন
+          করে। এছাড়াও, আমরা ত্রাণ বিতরণ, স্বল্পমূল্যে বা বিনামূল্যে
+          স্বাস্থ্যসেবা প্রদান, এবং সমাজে সুস্থ মানসিকতার বিকাশে বিভিন্ন
+          কর্মসূচি বাস্তবায়ন করি। সর্বোপরি, আমরা আল্লাহর পথে মানুষকে আহ্বান
+          জানিয়ে একটি আদর্শ কল্যাণমূলক সমাজ গঠনের জন্য অবিরাম প্রচেষ্টা চালিয়ে
+          যাচ্ছি।
+        </p>
       </div>
     </div>
   );
