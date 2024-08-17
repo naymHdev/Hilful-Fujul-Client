@@ -25,11 +25,11 @@ const Header = () => {
     <header
       className={`${
         isSticky
-          ? "fixed top-0 z-50 w-full"
-          : "absolute lg:top-[270px] z-50 w-11/12 left-[55px]"
+          ? "fixed top-0 z-50 w-full left-0"
+          : "absolute lg:top-[270px] z-50 w-full lg:w-11/12 mx-auto lg:left-[55px]"
       } bg-white shadow-md transition-all duration-300`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-start py-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-start py-4 md:py-8">
         <nav className="hidden lg:flex space-x-6 text-[#161616] font-bold">
           <a href="/" className="hover:text-green-500">
             হোম

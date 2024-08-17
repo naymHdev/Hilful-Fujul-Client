@@ -6,12 +6,12 @@ import HeaderBar from "../Home/Banner/HeaderBar";
 
 const Layouts = () => {
   return (
-    <div className="font-joseFin">
+    <div>
       <div>
         <HeaderBar />
         <Header />
       </div>
-      <div className="loaderoverflow-hidden min-h-screen">
+      <div className=" overflow-hidden min-h-screen">
         <Outlet />
       </div>
       <div className=" mt-10">
