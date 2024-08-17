@@ -29,3 +29,25 @@
   color: #f39c12; /* Color change on hover */
   border-color: #f39c12; /* Border color on hover */
 }
+
+
+/* Adjust the position for medium screens (e.g., tablets) */
+@media (max-width: 1280px) {
+  .slick-dots {
+    bottom: 45px; /* Adjust for screens up to 1280px */
+  }
+}
+
+/* Adjust the position for smaller screens (e.g., tablets and mobile) */
+@media (max-width: 768px) {
+  .slick-dots {
+    bottom: 40px; /* Adjust for screens up to 768px */
+  }
+}
+
+/* Adjust the position for mobile screens */
+@media (max-width: 480px) {
+  .slick-dots {
+    bottom: 25px; /* Adjust for screens up to 480px */
+  }
+}
