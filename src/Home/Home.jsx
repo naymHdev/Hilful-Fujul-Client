@@ -4,6 +4,7 @@ import Banner from "./Banner/Banner";
 import LogoBar from "./Banner/LogoBar";
 import Calculations from "./Calculations/Calculations";
 import CoreFeatures from "./CoreFeatures/CoreFeatures";
+import DonateToday from "./DonateToday/DonateToday";
 import Join from "./Join/Join";
 import LatestNews from "./LatestNews/LatestNews";
 import OurGallery from "./OurGallery/OurGallery";
@@ -16,6 +17,7 @@ const Home = () => {
       <Banner />
       <LogoBar />
       <Save />
+      <DonateToday />
       <AboutUs />
       <Join />
       <CoreFeatures />
