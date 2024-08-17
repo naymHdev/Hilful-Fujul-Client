@@ -1,0 +1,31 @@
+/* Custom styles for the dots */
+.slick-dots {
+  bottom: 50px; /* Adjust the position of the dots */
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: green; /* Color for the inactive dots */
+  opacity: 0.75;
+  border: 2px solid transparent; /* Default border to match the background */
+  border-radius: 50%;
+  padding: 3px; /* Space for border effect */
+}
+
+.slick-dots li.slick-active button:before {
+  color: red; /* Color for the active dot */
+  opacity: 1;
+  border: 2px solid red; /* Border color for the active dot */
+  padding: 3px;
+  box-sizing: content-box;
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Spacing between dots */
+}
+
+/* Optional: Add a hover effect for the dots */
+.slick-dots li button:hover:before {
+  color: #f39c12; /* Color change on hover */
+  border-color: #f39c12; /* Border color on hover */
+}

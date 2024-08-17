@@ -45,7 +45,7 @@ const HeaderBar = () => {
                 </Link>
                 <div className=" text-white">|</div>
                 <Link className="text-[#9F9F9F] hover:text-white">
-                  স্বেচ্ছাসেবক স্বেচ্ছাসেবক নিবন্ধন
+                  স্বেচ্ছাসেবক নিবন্ধন
                 </Link>
                 <div className=" text-white">|</div>
                 <Link className="text-[#9F9F9F] hover:text-white">যোগাযোগ</Link>

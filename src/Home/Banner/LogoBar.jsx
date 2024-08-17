@@ -14,8 +14,8 @@ const LogoBar = () => {
           </div>
           <Link to="/">
             <div className="col text-center space-y-2">
-              <h2 className="text-4xl font-bold text-white">হিলফুল ফুজুল</h2>
-              <p className="text-[#3BCF94] font-medium">
+              <h2 className="text-4xl font-extrabold text-white">হিলফুল ফুজুল</h2>
+              <p className="text-[#3BCF94] font-bold">
                 সমাজ কল্যাণ ফাউন্ডেশন
               </p>
             </div>
