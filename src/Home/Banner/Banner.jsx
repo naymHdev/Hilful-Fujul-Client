@@ -10,7 +10,7 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,
@@ -43,11 +43,22 @@ const Banner = () => {
     <>
       <div className="slider-container">
         <Slider {...settings}>
-          <div>
-            <img src={banner1} alt="Slider Banner" />
+          <div className=" relative">
+            <img
+              className=" w-full h-full object-cover object-center"
+              src={banner1}
+              alt="Slider Banner"
+            />
+            <div className="">
+              
+            </div>
           </div>
           <div>
-            <img src={banner2} alt="" />
+            <img
+              className=" w-full h-full object-cover object-center"
+              src={banner2}
+              alt=""
+            />
           </div>
         </Slider>
       </div>

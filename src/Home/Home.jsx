@@ -1,6 +1,7 @@
 import Causes from "../Pages/Causes/Causes";
 import AboutUs from "./AboutUs/AboutUs";
 import Banner from "./Banner/Banner";
+import LogoBar from "./Banner/LogoBar";
 import Calculations from "./Calculations/Calculations";
 import CoreFeatures from "./CoreFeatures/CoreFeatures";
 import Join from "./Join/Join";
@@ -10,8 +11,9 @@ import Work from "./Work/Work";
 
 const Home = () => {
   return (
-    <div className="font-joseFin">
+    <div>
       <Banner />
+      <LogoBar />
       <AboutUs />
       <Join />
       <CoreFeatures />

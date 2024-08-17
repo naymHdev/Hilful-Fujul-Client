@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const HeaderBar = () => {
   return (
     <>
-      <div className=" hidden md:flex items-center">
+      <div className=" hidden lg:flex items-center">
         <div className="bg-[#1F1F1F] w-full mx-auto py-6">
           <Container>
             <div className=" flex items-center justify-between">
