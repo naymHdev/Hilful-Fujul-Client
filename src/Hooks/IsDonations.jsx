@@ -2,10 +2,10 @@
 import { Progress } from "antd";
 import { Link } from "react-router-dom";
 
-const IsDonations = ({image, title, _id}) => {
-    return (
-        <div className="font-joseFin">
-              <section className=" bg-gray-50 rounded-b-md shadow-md hover:shadow-2xl hover:rounded-none shadow-gray-400">
+const IsDonations = ({ image, title, _id }) => {
+  return (
+    <div className="font-joseFin">
+      <section className=" bg-gray-50 rounded-b-md shadow-md hover:shadow-2xl hover:rounded-none shadow-gray-400">
         <div>
           <img className="w-full h-96 rounded-md" src={image} alt="" />
         </div>
@@ -43,8 +43,8 @@ const IsDonations = ({image, title, _id}) => {
           </div>
         </div>
       </section>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default IsDonations;

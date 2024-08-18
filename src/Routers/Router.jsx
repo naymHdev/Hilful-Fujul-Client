@@ -8,7 +8,6 @@ import Events from "../Pages/Events/Events";
 import Blogs from "../Pages/Blogs/Blogs";
 import SignUp from "../Auth/SugnUp/SignUp";
 import LogIn from "../Auth/LogIn/LogIn";
-import Join from "../Home/Join/Join";
 import PrivateRoute from "../Auth/PrivateRoute";
 import JoinVolunteer from "../Pages/JoinVolunteer/JoinVolunteer";
 import EventsDetails from "../Pages/Events/EventsDetails";
@@ -73,8 +72,8 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/join",
-        element: <Join />,
+        path: "/donate",
+        element: <Donate />,
       },
       {
         path: "/donate/:id",

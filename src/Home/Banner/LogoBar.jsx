@@ -35,7 +35,7 @@ const LogoBar = () => {
             <p className="font-medium">বই-পুস্তক লিফলেট বিতরণ</p>
           </div>
           <div>
-            <Button label="দান করুন" />
+            <Button link="/donate" label="দান করুন" />
           </div>
         </section>
       </div>

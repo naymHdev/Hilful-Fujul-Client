@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useGallery from "../../Hooks/useGallery";
 import { Gallery } from "react-grid-gallery";
 

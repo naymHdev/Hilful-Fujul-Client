@@ -1,16 +1,13 @@
 /* eslint-disable react/prop-types */
-const SectionDetails = ({sectionName, sectionTitle, sectionDetails}) => {
+const SectionDetails = ({ sectionName, sectionDetails }) => {
   return (
     <>
-      <section className="mt-16 font-joseFin">
-        <div className=" text-center space-y-2 md:w-6/12 mx-auto">
-          <h4 className=" text-xl font-bold text-green-500">{sectionName}</h4>
-          <h2 className=" text-3xl font-bold">
-            {sectionTitle}
-          </h2>
-          <p className=" text-slate-600">
-            {sectionDetails}
-          </p>
+      <section className="">
+        <div className=" text-center md:text-start space-y-3">
+          <h4 className="text-3xl md:text-4xl font-extrabold text-green-500">
+            {sectionName}
+          </h4>
+          <p className=" text-slate-600 md:w-1/2 font-medium">{sectionDetails}</p>
         </div>
       </section>
     </>

@@ -37,20 +37,20 @@ const Header = () => {
           <a href="/" className="hover:text-green-500">
             হোম
           </a>
-          <a href="/gallery" className="hover:text-green-500">
+          <a href="#" className="hover:text-green-500">
             আমাদের কার্যক্রম
           </a>
           <a href="/events" className="hover:text-green-500">
             চলমান প্রজেক্ট
           </a>
-          <a href="/donations" className="hover:text-green-500">
+          <a href="#" className="hover:text-green-500">
             আজীবন ও দাতা সদস্য
           </a>
-          <a href="/blogs" className="hover:text-green-500">
+          <a href="/gallery" className="hover:text-green-500">
             গ্যালারী
           </a>
-          <a href="/about" className="hover:text-green-500">
-            সংবাদ
+          <a href="/blogs" className="hover:text-green-500">
+            তথ্য ব্লগ
           </a>
         </nav>
 
@@ -102,7 +102,7 @@ const Header = () => {
               borderColor: "#3BCF95",
             }}
           />
-          <a href="/gallery" className="hover:text-green-500">
+          <a href="#" className="hover:text-green-500">
             আমাদের কার্যক্রম
           </a>
           <Divider
@@ -118,7 +118,7 @@ const Header = () => {
               borderColor: "#3BCF95",
             }}
           />
-          <a href="/donations" className="hover:text-green-500">
+          <a href="#" className="hover:text-green-500">
             আজীবন ও দাতা সদস্য
           </a>
           <Divider
@@ -126,7 +126,7 @@ const Header = () => {
               borderColor: "#3BCF95",
             }}
           />
-          <a href="/blogs" className="hover:text-green-500">
+          <a href="/gallery" className="hover:text-green-500">
             গ্যালারী
           </a>
           <Divider
@@ -134,8 +134,8 @@ const Header = () => {
               borderColor: "#3BCF95",
             }}
           />
-          <a href="/about" className="hover:text-green-500">
-            সংবাদ
+          <a href="/blogs" className="hover:text-green-500">
+            তথ্য ব্লগ
           </a>
           <Divider
             style={{

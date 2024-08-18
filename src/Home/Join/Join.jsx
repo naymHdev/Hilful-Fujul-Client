@@ -1,9 +1,9 @@
 const Join = () => {
   return (
     <>
-      <div className="bg-[#FEF0E7] pt-20 pb-8 mt-32">
+      <div className="bg-[#FEF0E7] py-20 mt-32">
         <div className=" px-4 md:px-6 lg:px-10 mx-auto max-w-7xl">
-          <section className=" md:flex justify-between gap-10">
+          <section className=" md:flex items-center justify-between gap-10">
             <div className=" flex-1 order-first md:order-last">
               <img
                 className=" w-full h-full mx-auto"

@@ -1,7 +1,28 @@
-[ "category":
+[
   {
+    "projectName": "",
     "images": [],
-    "title": ""
+    "hadith": {
+      "firstHadith": "",
+      "secondHadith": ""
+    },
+    "shortDescription": "",
+    "projectDescription": "",
+    "projectHighlights": [],
+    "paymentSystem": [
+      {
+        "method": "",
+        "details": {
+          "bankName": "",
+          "accountNumber": "",
+          "swiftCode": "",
+          "provider": "",
+          "number": "",
+          "type": "",
+          "platform": "",
+          "link": ""
+        }
+      }
+    ]
   }
 ]
-

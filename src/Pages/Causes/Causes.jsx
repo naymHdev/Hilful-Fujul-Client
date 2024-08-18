@@ -1,28 +1,14 @@
-import IsDonations from "../../Hooks/IsDonations";
 import SectionDetails from "../../Hooks/SectionDetails";
-import useDonations from "../../Hooks/useDonations";
 
 const Causes = () => {
-  const [isDonations] = useDonations();
-
   return (
     <>
-      <SectionDetails
-        sectionName="Causes to care"
-        sectionTitle="Be the reason of someone smiles"
-        sectionDetails="We exist for non-profits, social enterprises, community groups, activists,lorem politicians and individual citizens that are making."
-      />
-      <section className="primary-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-        {isDonations?.slice(0, 6)?.map((card) => (
-          <div key={card._id}>
-            <IsDonations
-              image={card?.image}
-              title={card?.title}
-              _id={card?._id}
-            />
-          </div>
-        ))}
-      </section>
+      <div className=" px-4 md:px-6 lg:px-10 max-w-7xl mx-auto mt-32">
+        <SectionDetails
+          sectionName="চলুন একসাথে আলোর পথে হাঁটি"
+          sectionDetails="মানবতার কল্যাণে আপনার সহায়তার মাধ্যমে আমরা একটি সুন্দর, শান্তিপূর্ণ, এবং ন্যায়পরায়ণ সমাজ গড়ে তুলতে পারি। আজই এগিয়ে আসুন এবং আলোর পথে একটি পরিবর্তনের সূচনা করুন।"
+        />
+      </div>
     </>
   );
 };
