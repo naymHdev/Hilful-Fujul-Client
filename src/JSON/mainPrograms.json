@@ -1,26 +1,240 @@
 [
   {
-    "projectName": "",
-    "images": [],
-    "hadith": {
-      "firstHadith": "",
-      "secondHadith": ""
+    "projectName": "যাকাত তহবিল",
+    "images": ["https://imgur.com/q9AQl7t", "zakat2.jpg"],
+    "hadiths": {
+      "firstHadith": "যাকাত হলো ধন-সম্পদের পরিস্কারক। - (মুসলিম)",
+      "secondHadith": "যে ব্যক্তি তার সম্পদের যাকাত দেয়, আল্লাহ তার সম্পদকে বাড়িয়ে দেবেন। - (বুখারী)"
     },
-    "shortDescription": "",
-    "projectDescription": "",
-    "projectHighlights": [],
+    "shortDescription": "যাকাত তহবিলের মাধ্যমে আমরা দরিদ্রদের সহায়তা প্রদান করি এবং সমাজে সমতা আনি।",
+    "projectDescription": "যাকাত তহবিল প্রকল্পের মাধ্যমে আমরা বিভিন্ন দরিদ্র এবং অসহায় ব্যক্তির জন্য সহায়তা প্রদান করি। এই প্রকল্পে দানের মাধ্যমে সমাজের ন্যায়বিচার ও সমতা নিশ্চিত করা হয়।",
+    "projectHighlights": [
+      "দরিদ্রদের সহায়তা",
+      "অসহায়দের জন্য আর্থিক সহায়তা",
+      "প্রকল্পের মাধ্যমে সমাজে ন্যায়বিচার"
+    ],
     "paymentSystem": [
       {
-        "method": "",
+        "method": "ব্যাংক ট্রান্সফার",
         "details": {
-          "bankName": "",
-          "accountNumber": "",
-          "swiftCode": "",
-          "provider": "",
-          "number": "",
-          "type": "",
-          "platform": "",
-          "link": ""
+          "bankName": "ইসলামী ব্যাংক",
+          "accountNumber": "123456789",
+          "swiftCode": "ISLMBDDH"
+        }
+      },
+      {
+        "method": "মোবাইল পেমেন্ট",
+        "details": {
+          "provider": "বিকাশ",
+          "number": "017XXXXXXXX",
+          "type": "ব্যক্তিগত"
+        }
+      },
+      {
+        "method": "অনলাইন পেমেন্ট",
+        "details": {
+          "platform": "PayPal",
+          "link": "https://www.paypal.com/donate?token=..."
+        }
+      }
+    ]
+  },
+  {
+    "projectName": "বৃক্ষরোপণ তহবিল",
+    "images": ["plantation1.jpg", "plantation2.jpg"],
+    "hadiths": {
+      "firstHadith": "যদি কেউ একটি গাছ লাগায়, আল্লাহ তার প্রতিটি ফলের জন্য পুরস্কার দিবেন। - (বুখারী)",
+      "secondHadith": "বৃক্ষরোপণ একটি সাদাকাহ জারিয়া। - (মুসলিম)"
+    },
+    "shortDescription": "বৃক্ষরোপণ তহবিল প্রকল্পের মাধ্যমে আমরা পরিবেশের উন্নয়নে সহায়তা করি।",
+    "projectDescription": "বৃক্ষরোপণ তহবিলের মাধ্যমে আমরা বিভিন্ন এলাকায় গাছ লাগাই, যা পরিবেশের উন্নয়ন ও বায়ু পরিশোধনে সহায়ক। আপনার দান আমাদের বৃক্ষরোপণ কার্যক্রমকে আরও কার্যকর করতে সহায়তা করবে।",
+    "projectHighlights": [
+      "পরিবেশের উন্নয়ন",
+      "বায়ু পরিশোধন",
+      "বৃক্ষরোপণের মাধ্যমে সবুজায়ন"
+    ],
+    "paymentSystem": [
+      {
+        "method": "ব্যাংক ট্রান্সফার",
+        "details": {
+          "bankName": "স্ট্যান্ডার্ড চার্টার্ড",
+          "accountNumber": "987654321",
+          "swiftCode": "SCBDBDDH"
+        }
+      },
+      {
+        "method": "মোবাইল পেমেন্ট",
+        "details": {
+          "provider": "নগদ",
+          "number": "018XXXXXXXX",
+          "type": "ব্যক্তিগত"
+        }
+      },
+      {
+        "method": "অনলাইন পেমেন্ট",
+        "details": {
+          "platform": "PayPal",
+          "link": "https://www.paypal.com/donate?token=..."
+        }
+      }
+    ]
+  },
+  {
+    "projectName": "আস-সুন্নাহ ফাউন্ডেশন মসজিদ কমপ্লেক্স",
+    "images": ["mosque1.jpg", "mosque2.jpg"],
+    "hadiths": {
+      "firstHadith": "মসজিদ নির্মাণ একটি সাদাকাহ জারিয়া। - (বুখারী)",
+      "secondHadith": "মসজিদ নির্মাণে সাহায্য করা একটি মহান কাজ। - (মুসলিম)"
+    },
+    "shortDescription": "মসজিদ কমপ্লেক্স নির্মাণের মাধ্যমে ধর্মীয় কার্যক্রমে সহায়তা প্রদান।",
+    "projectDescription": "আস-সুন্নাহ ফাউন্ডেশন মসজিদ কমপ্লেক্স প্রকল্পটি একটি সাদকাহ জারিয়া প্রকল্প। এই প্রকল্পের মাধ্যমে আমরা একটি মসজিদ কমপ্লেক্স নির্মাণ করছি যা মৃত্যুর পরও সাওয়াব পৌঁছে দেবে।",
+    "projectHighlights": [
+      "মসজিদ নির্মাণ",
+      "ধর্মীয় কার্যক্রমের উন্নয়ন",
+      "সাদকাহ জারিয়া প্রকল্প"
+    ],
+    "paymentSystem": [
+      {
+        "method": "ব্যাংক ট্রান্সফার",
+        "details": {
+          "bankName": "বিকাশ ব্যাংক",
+          "accountNumber": "4455667788",
+          "swiftCode": "BICBDDH"
+        }
+      },
+      {
+        "method": "মোবাইল পেমেন্ট",
+        "details": {
+          "provider": "বিকাশ",
+          "number": "017XXXXXXXX",
+          "type": "ব্যক্তিগত"
+        }
+      },
+      {
+        "method": "অনলাইন পেমেন্ট",
+        "details": {
+          "platform": "PayPal",
+          "link": "https://www.paypal.com/donate?token=..."
+        }
+      }
+    ]
+  },
+  {
+    "projectName": "সাধারণ তহবিল",
+    "images": ["general1.jpg", "general2.jpg"],
+    "hadiths": {
+      "firstHadith": "প্রতিটি দান আল্লাহর কাছে মূল্যবান। - (বুখারী)",
+      "secondHadith": "যে ব্যক্তি সাধারন তহবিলের মাধ্যমে সহায়তা করে, তার জন্য বিশেষ সওয়াব আছে। - (মুসলিম)"
+    },
+    "shortDescription": "সাধারণ তহবিলের মাধ্যমে আমরা বিভিন্ন মানবিক সহায়তা প্রদান করি।",
+    "projectDescription": "সাধারণ তহবিল প্রকল্পের মাধ্যমে আমরা সমাজের বিভিন্ন প্রয়োজনীয়তায় সহায়তা প্রদান করি। আপনার দানের মাধ্যমে আমরা দরিদ্র ও অসহায়দের সহায়তা করতে পারি।",
+    "projectHighlights": [
+      "বিভিন্ন মানবিক সহায়তা",
+      "দরিদ্রদের সহায়তা",
+      "প্রয়োজনীয় সহায়তা প্রদান"
+    ],
+    "paymentSystem": [
+      {
+        "method": "ব্যাংক ট্রান্সফার",
+        "details": {
+          "bankName": "ন্যাশনাল ব্যাংক",
+          "accountNumber": "1122334455",
+          "swiftCode": "NATBBDDH"
+        }
+      },
+      {
+        "method": "মোবাইল পেমেন্ট",
+        "details": {
+          "provider": "রকেট",
+          "number": "019XXXXXXXX",
+          "type": "ব্যক্তিগত"
+        }
+      },
+      {
+        "method": "অনলাইন পেমেন্ট",
+        "details": {
+          "platform": "PayPal",
+          "link": "https://www.paypal.com/donate?token=..."
+        }
+      }
+    ]
+  },
+  {
+    "projectName": "জরুরী বন্যা তহবিল",
+    "images": ["flood1.jpg", "flood2.jpg"],
+    "hadiths": {
+      "firstHadith": "জরুরী অবস্থায় সাহায্য করা মুমিনের একটি কর্তব্য। - (বুখারী)",
+      "secondHadith": "যে ব্যক্তি জরুরী সাহায্য প্রদান করে, আল্লাহ তার জন্য পুরস্কার দেবেন। - (মুসলিম)"
+    },
+    "shortDescription": "বন্যা আক্রান্ত অঞ্চলের জরুরী সহায়তার জন্য এই তহবিল কাজ করে।",
+    "projectDescription": "জরুরী বন্যা তহবিলের মাধ্যমে আমরা বন্যায় ক্ষতিগ্রস্ত মানুষের জন্য ত্রাণ ও সহায়তা প্রদান করি। আপনার দান আমাদের ত্রাণ কার্যক্রমকে আরও কার্যকর করতে সাহায্য করবে।",
+    "projectHighlights": [
+      "বন্যা আক্রান্তদের সহায়তা",
+      "ত্রাণ বিতরণ",
+      "জরুরী সহায়তা প্রদান"
+    ],
+    "paymentSystem": [
+      {
+        "method": "ব্যাংক ট্রান্সফার",
+        "details": {
+          "bankName": "বিকাশ ব্যাংক",
+          "accountNumber": "2233445566",
+          "swiftCode": "BICBDDH"
+        }
+      },
+      {
+        "method": "মোবাইল পেমেন্ট",
+        "details": {
+          "provider": "বিকাশ",
+          "number": "017XXXXXXXX",
+          "type": "ব্যক্তিগত"
+        }
+      },
+      {
+        "method": "অনলাইন পেমেন্ট",
+        "details": {
+          "platform": "PayPal",
+          "link": "https://www.paypal.com/donate?token=..."
+        }
+      }
+    ]
+  },
+  {
+    "projectName": "মাসিক অনুদান তহবিল",
+    "images": ["monthly1.jpg", "monthly2.jpg"],
+    "hadiths": {
+      "firstHadith": "নিয়মিত অনুদান দেওয়া একটি ভালো কাজ। - (বুখারী)",
+      "secondHadith": "যে ব্যক্তি নিয়মিত দান করে, আল্লাহ তার জন্য বিশেষ পুরস্কার রাখেন। - (মুসলিম)"
+    },
+    "shortDescription": "নিয়মিত মাসিক অনুদানের মাধ্যমে মানবিক সহায়তা প্রদান করা হয়।",
+    "projectDescription": "মাসিক অনুদান তহবিলের মাধ্যমে আমরা নিয়মিতভাবে দরিদ্র ও অসহায়দের সহায়তা প্রদান করি। আপনার মাসিক দান আমাদের কার্যক্রমকে আরও সুসংহত করে।",
+    "projectHighlights": [
+      "নিয়মিত মানবিক সহায়তা",
+      "দরিদ্রদের সহায়তা",
+      "উন্নতমানের সহায়তা প্রদান"
+    ],
+    "paymentSystem": [
+      {
+        "method": "ব্যাংক ট্রান্সফার",
+        "details": {
+          "bankName": "ঢাকা ব্যাংক",
+          "accountNumber": "3344556677",
+          "swiftCode": "DHKBBDDH"
+        }
+      },
+      {
+        "method": "মোবাইল পেমেন্ট",
+        "details": {
+          "provider": "নগদ",
+          "number": "018XXXXXXXX",
+          "type": "ব্যক্তিগত"
+        }
+      },
+      {
+        "method": "অনলাইন পেমেন্ট",
+        "details": {
+          "platform": "PayPal",
+          "link": "https://www.paypal.com/donate?token=..."
         }
       }
     ]
