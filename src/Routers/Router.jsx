@@ -11,16 +11,11 @@ import LogIn from "../Auth/LogIn/LogIn";
 import Join from "../Home/Join/Join";
 import PrivateRoute from "../Auth/PrivateRoute";
 import JoinVolunteer from "../Pages/JoinVolunteer/JoinVolunteer";
-import DashboardLayout from "../Layouts/DashboardLayout";
-import Dashboard from "../Dashboard/Dashboard";
-import AddChairman from "../Dashboard/Admin/AddChairman";
-import AddVolunteers from "../Dashboard/Admin/AddVolunteers";
 import EventsDetails from "../Pages/Events/EventsDetails";
 import Donate from "../Pages/Donate/Donate";
 import DonationDetails from "../Pages/Donations/DonationDetails";
 import Contact from "../Pages/Contact/Contact";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
-import AddImages from "../Dashboard/Moderator/AddImages/AddImages";
 import ImageGallery from "../Pages/Gallery/Gallery";
 
 const router = createBrowserRouter([
@@ -89,29 +84,6 @@ const router = createBrowserRouter([
   },
   { path: "/signUp", element: <SignUp /> },
   { path: "/logIn", element: <LogIn /> },
-  {
-    path: "/dashboard",
-    element: <DashboardLayout />,
-    errorElement: <Error />,
-    children: [
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "addChairman",
-        element: <AddChairman />,
-      },
-      {
-        path: "addVolunteers",
-        element: <AddVolunteers />,
-      },
-      {
-        path: "addImages",
-        element: <AddImages />,
-      },
-    ],
-  },
 ]);
 
 export default router;

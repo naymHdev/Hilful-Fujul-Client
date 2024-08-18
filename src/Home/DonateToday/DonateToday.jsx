@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { FcDonate } from "react-icons/fc";
 
 const DonateToday = () => {
@@ -11,6 +12,7 @@ const DonateToday = () => {
   const onSubmit = (data) => {
     console.log(data);
     // Handle the form submission
+    toast.error("দুঃখিত! উন্নয়নশীল প্রক্রিয়া কাজ চলমান!");
   };
 
   const selectedAmount = watch("amount");

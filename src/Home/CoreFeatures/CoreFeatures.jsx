@@ -9,7 +9,7 @@ const CoreFeatures = () => {
     <>
       <div>
         <SectionDetails
-          sectionName="Core features"
+          sectionName="বৈশিষ্ট্যযুক্ত বিষয়"
           sectionTitle="Our goals and missions"
           sectionDetails="We exist for non-profits, social enterprises, community groups,
       activists,lorem politicians and individual citizens that are
