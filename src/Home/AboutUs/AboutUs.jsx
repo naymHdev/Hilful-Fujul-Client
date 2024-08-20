@@ -1,6 +1,7 @@
 import { Steps } from "antd";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import islamicHistory from "../../../src/assets/islamic-hstry-img.png";
 
 const AboutUs = () => {
   const [current, setCurrent] = useState(3);
@@ -15,7 +16,7 @@ const AboutUs = () => {
       <div className="flex-1">
         <img
           className=" w-full h-full mx-auto"
-          src="/src/assets/islamic-hstry-img.png"
+          src={islamicHistory}
           alt="Islamic Historic Image"
         />
       </div>

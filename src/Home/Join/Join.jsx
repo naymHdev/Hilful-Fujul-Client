@@ -1,3 +1,5 @@
+import join from "../../../src/assets/join-volunteer.jpg";
+
 const Join = () => {
   return (
     <>
@@ -7,7 +9,7 @@ const Join = () => {
             <div className=" flex-1 order-first md:order-last">
               <img
                 className=" w-full h-full mx-auto"
-                src="/src/assets/join-volunteer.jpg"
+                src={join}
                 alt="Volunteers join image"
               />
             </div>
