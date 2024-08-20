@@ -8,7 +8,11 @@ const Save = () => {
           {threeTopics?.map((itm, index) => (
             <div key={index} className=" flex gap-8">
               <div>
-                <img className="w-56" src={itm.icon} alt="" />
+                <img
+                  className="w-56 h-auto"
+                  src={itm.icon}
+                  alt="icons images"
+                />
               </div>
               <div>
                 <h3 className=" text-3xl font-extrabold">{itm.title}</h3>
