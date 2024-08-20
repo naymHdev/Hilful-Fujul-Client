@@ -55,25 +55,23 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Toggle Button */}
-        <div className="lg:hidden flex items-center justify-between space-x-20 md:space-x-60">
-          <div>
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-gray-700 hover:text-green-500"
-            >
-              {menuOpen ? (
-                <IoClose className="text-3xl" />
-              ) : (
-                <HiMiniBars3BottomLeft className="text-3xl" />
-              )}
-            </button>
-          </div>
-          <div>
+        <div className="lg:hidden  flex items-center justify-between w-full">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-gray-700 hover:text-green-500 col-span-1"
+          >
+            {menuOpen ? (
+              <IoClose className="text-3xl" />
+            ) : (
+              <HiMiniBars3BottomLeft className="text-3xl" />
+            )}
+          </button>
+          <div className=" col-span-3">
             <h2 className="text-xl font-extrabold">
               হিলফুল <span className=" text-green-600">ফুজুল</span>
             </h2>
           </div>
-          <button>
+          <button className=" col-span-1">
             <IoSearchOutline className=" text-2xl font-bold" />
           </button>
         </div>

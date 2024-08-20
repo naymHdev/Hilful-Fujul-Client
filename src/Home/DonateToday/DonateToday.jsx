@@ -43,7 +43,7 @@ const DonateToday = () => {
                     key={value}
                     type="button"
                     onClick={() => setValue("amount", value)}
-                    className={`px-4 py-2 font-bold ${
+                    className={`md:px-4 px-2 py-1 md:py-2 font-bold ${
                       selectedAmount === value
                         ? "bg-green-500 text-white"
                         : " border border-black"
