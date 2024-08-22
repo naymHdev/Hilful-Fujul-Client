@@ -1,39 +1,44 @@
 import { Tab } from "@headlessui/react";
-import ssl from "../../assets/ssl-thumb.png";
-import debitCard from "../../assets/debit-icon.png";
 import CreditCardForm from "./CreditCardForm";
+import MobileBanking from "./MobileBanking";
+import mobile from "../../../src/assets/mobile-banking.png";
+import atm from "../../../src/assets/atm-card.png";
 
 const PaymentMethodTab = () => {
   return (
     <div className=" py-5 font-joseFin">
       <Tab.Group>
-        <Tab.List className="grid gap-3">
-          <Tab className="border rounded-xl hover:shadow-xl">
-            <div className=" flex items-center gap-10">
-              <div className="avatar">
-                <div className="w-24 mask mask-hexagon">
-                  <img src={ssl} />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800">E-Payment</h3>
+        <Tab.List className=" flex items-center justify-center  gap-4">
+          <Tab className="border rounded-xl hover:shadow-xl px-5 py-3">
+            <div className="flex items-center text-center gap-2 justify-center">
+              <h3 className="text-xl font-semibold text-slate-800">
+                মোবাইল ব্যাংকিং
+              </h3>
+              <img
+                className=" w-12 h-auto mx-auto"
+                src={mobile}
+                alt="Mobile Banking Icon"
+              />
             </div>
           </Tab>
-          <Tab className="border rounded-xl hover:shadow-xl">
-            <div className=" flex items-center gap-10">
-              <div className="avatar">
-                <div className="w-24 mask mask-hexagon">
-                  <img src={debitCard} />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800">
-                Credit or debit
+          <Tab className="border rounded-xl hover:shadow-xl px-5 py-3">
+            <div className="flex items-center text-center gap-2 justify-center">
+              <h3 className="text-xl font-semibold text-slate-800">
+                ডেবিট ও ক্রেডিট
               </h3>
+              <img
+                className=" w-12 h-auto mx-auto"
+                src={atm}
+                alt="ATM Banking Icon"
+              />
             </div>
           </Tab>
         </Tab.List>
         <section className="mt-8">
           <Tab.Panels>
-            <Tab.Panel>Content 1</Tab.Panel>
+            <Tab.Panel>
+              <MobileBanking />
+            </Tab.Panel>
             <Tab.Panel>
               <CreditCardForm />
             </Tab.Panel>

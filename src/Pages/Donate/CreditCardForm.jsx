@@ -182,7 +182,7 @@ const CreditCardForm = () => {
       </div>
       <section className=" py-5 space-y-2">
         <Checkbox onChange={onChange}>
-          Don't display my name publicly on the fundraiser.
+          Don not display my name publicly on the fundraiser.
         </Checkbox>
         <Checkbox onChange={onChange}>
           Get occasional marketing updates from Hilf Al-Fudul. You may
