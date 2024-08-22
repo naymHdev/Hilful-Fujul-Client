@@ -26,10 +26,10 @@ const DonationDetailsCard = ({ donation }) => {
   return (
     <>
       <div className=" py-5 mt-4">
-      <h2 className=" text-4xl font-medium">{title}</h2>
+        <h2 className=" text-4xl font-medium">{title}</h2>
       </div>
       <section className=" grid grid-cols-1 md:grid-cols-9 gap-3">
-        <section className=" col-span-6">
+        <section className=" col-span-6 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar">
           <div>
             <img
               className=" w-full h-full md:h-[90vh] rounded-md"

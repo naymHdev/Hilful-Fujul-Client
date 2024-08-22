@@ -16,6 +16,7 @@ import DonationDetails from "../Pages/Donations/DonationDetails";
 import Contact from "../Pages/Contact/Contact";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
 import ImageGallery from "../Pages/Gallery/Gallery";
+import CausesDetails from "../Pages/Causes/CausesDetails";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/donate/:id",
         element: <Donate />,
+      },
+      {
+        path: "/projects/:projectName/:id",
+        element: <CausesDetails />,
       },
     ],
   },

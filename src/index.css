@@ -13,3 +13,12 @@
 .primary-width {
   @apply max-w-7xl px-4 md:px-8 mx-auto;
 }
+
+/* projects details left section scroll styles */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

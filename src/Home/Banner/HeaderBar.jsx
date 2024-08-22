@@ -36,6 +36,10 @@ const HeaderBar = () => {
             </div>
             <div>
               <div className=" flex items-center space-x-3">
+                <Link to="/" className="text-[#9F9F9F] hover:text-white">
+                  হোম
+                </Link>
+                <div className=" text-white">|</div>
                 <Link to="/about" className="text-[#9F9F9F] hover:text-white">
                   আমাদের সম্পর্কে
                 </Link>

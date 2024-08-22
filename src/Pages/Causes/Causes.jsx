@@ -14,8 +14,8 @@ const Causes = () => {
         />
 
         <section className=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {isProjects?.map((project, index) => (
-            <CausesCard key={index} project={project} />
+          {isProjects?.map((project) => (
+            <CausesCard key={project._id} project={project} />
           ))}
         </section>
       </div>
