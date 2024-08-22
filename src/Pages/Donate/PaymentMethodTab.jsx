@@ -9,7 +9,7 @@ const PaymentMethodTab = () => {
     <div className=" py-5 font-joseFin">
       <Tab.Group>
         <Tab.List className=" flex items-center justify-center  gap-4">
-          <Tab className="border rounded-xl hover:shadow-xl px-5 py-3">
+          <Tab className="border rounded-xl hover:shadow-xl px-5 py-2 focus:outline-green-600">
             <div className="flex items-center text-center gap-2 justify-center">
               <h3 className="text-xl font-semibold text-slate-800">
                 মোবাইল ব্যাংকিং
@@ -21,7 +21,7 @@ const PaymentMethodTab = () => {
               />
             </div>
           </Tab>
-          <Tab className="border rounded-xl hover:shadow-xl px-5 py-3">
+          <Tab className="border rounded-xl hover:shadow-xl px-5 py-2 focus:outline-green-600">
             <div className="flex items-center text-center gap-2 justify-center">
               <h3 className="text-xl font-semibold text-slate-800">
                 ডেবিট ও ক্রেডিট

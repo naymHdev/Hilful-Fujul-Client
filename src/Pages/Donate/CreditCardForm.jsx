@@ -18,7 +18,7 @@ const CreditCardForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-full">
-      <div className="mb-4">
+      <div className="mb-6">
         <input
           {...register("email", {
             required: "Email is required",
@@ -26,7 +26,7 @@ const CreditCardForm = () => {
           })}
           type="email"
           id="email"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+          className={`appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
             errors.email ? "border-red-500" : ""
           }`}
           placeholder="Email Address"
@@ -35,13 +35,13 @@ const CreditCardForm = () => {
           <p className="text-red-500 text-xs italic">{errors.email.message}</p>
         )}
       </div>
-      <div className="grid md:flex gap-5 items-center mb-4">
+      <div className="grid md:flex gap-5 items-center mb-6">
         <div className=" w-full">
           <input
             {...register("firstName", { required: "First name is required" })}
             type="text"
             id="firstName"
-            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+            className={` appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
               errors.firstName ? "border-red-500" : ""
             }`}
             placeholder="First Name"
@@ -57,7 +57,7 @@ const CreditCardForm = () => {
             {...register("lastName", { required: "Last name is required" })}
             type="text"
             id="lastName"
-            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+            className={` appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
               errors.lastName ? "border-red-500" : ""
             }`}
             placeholder="Last Name"
@@ -69,7 +69,7 @@ const CreditCardForm = () => {
           )}
         </div>
       </div>
-      <div className="mb-4">
+      <div className="mb-6">
         <input
           {...register("cardNumber", {
             required: "Card number is required",
@@ -77,7 +77,7 @@ const CreditCardForm = () => {
           })}
           type="text"
           id="cardNumber"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+          className={`appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
             errors.cardNumber ? "border-red-500" : ""
           }`}
           placeholder="Card Number"
@@ -88,13 +88,13 @@ const CreditCardForm = () => {
           </p>
         )}
       </div>
-      <div className="grid md:flex gap-5 items-center mb-4">
+      <div className="grid md:flex gap-5 items-center mb-6">
         <div className="w-full">
           <input
             {...register("country", { required: "Country is required" })}
             type="text"
             id="country"
-            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+            className={`appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
               errors.country ? "border-red-500" : ""
             }`}
             placeholder="Your Country"
@@ -110,7 +110,7 @@ const CreditCardForm = () => {
             {...register("postalCode", { required: "Postal code is required" })}
             type="text"
             id="postalCode"
-            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+            className={` appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
               errors.postalCode ? "border-red-500" : ""
             }`}
             placeholder="Your Postal Code"
@@ -123,12 +123,12 @@ const CreditCardForm = () => {
         </div>
       </div>
 
-      <div className="mb-4">
+      <div className="mb-6">
         <input
           {...register("nameOnCard", { required: "Name on card is required" })}
           type="text"
           id="nameOnCard"
-          className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+          className={` appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
             errors.nameOnCard ? "border-red-500" : ""
           }`}
           placeholder="Name on Card"
@@ -139,7 +139,7 @@ const CreditCardForm = () => {
           </p>
         )}
       </div>
-      <div className="grid md:flex gap-5 items-center mb-4">
+      <div className="grid md:flex gap-5 items-center mb-6">
         <div className="w-full">
           <input
             {...register("expiry", {
@@ -151,7 +151,7 @@ const CreditCardForm = () => {
             })}
             type="text"
             id="expiry"
-            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+            className={`appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
               errors.expiry ? "border-red-500" : ""
             }`}
             placeholder="MM/YY"
@@ -170,7 +170,7 @@ const CreditCardForm = () => {
             })}
             type="text"
             id="cvv"
-            className={`shadow appearance-none border rounded-md w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+            className={`appearance-none border border-gray-400 rounded-xl w-full py-4 px-3 text-black leading-tight focus:outline-none focus:shadow-outline ${
               errors.cvv ? "border-red-500" : ""
             }`}
             placeholder="CVV"
@@ -182,33 +182,34 @@ const CreditCardForm = () => {
       </div>
       <section className=" py-5 space-y-2">
         <Checkbox onChange={onChange}>
-          Don not display my name publicly on the fundraiser.
+          তহবিল সংগ্রহকারীতে আমার নাম সর্বজনীনভাবে প্রদর্শন করবেন না।
         </Checkbox>
         <Checkbox onChange={onChange}>
-          Get occasional marketing updates from Hilf Al-Fudul. You may
-          unsubscribe at any time.
+          হিলফ আল-ফুদুল থেকে মাঝে মাঝে মার্কেটিং আপডেট পান। আপনি যদি চান, যেকোনো
+          সময় সদস্যতা ত্যাগ করতে পারেন।
         </Checkbox>
       </section>
       <hr className=" py-2" />
       <button
         type="submit"
-        className="bg-green-500 w-full hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md focus:outl4ne-none focus:shadow-outline"
+        className="bg-green-500 w-full hover:bg-green-700 text-white font-bold py-3 px-4 rounded-2xl focus:outl4ne-none focus:shadow-outline"
       >
-        Donate now
+        দান করুন
       </button>
-      <div className=" text-xs text-slate-600 font-medium py-5">
-        By choosing the payment method above, you agree to the Hilf Al-Fudul
-        <a className=" underline px-1" href="#">
-          Terms of Service
+      <div className=" text-sm text-slate-600 font-medium py-5">
+        আপনি উপরের পেমেন্ট পদ্ধতি নির্বাচন করে, হিলফ আল-ফুদুলের সেবার{" "}
+        <a className=" underline text-black" href="#">
+          শর্তাবলীর{" "}
         </a>
-        and acknowledge the{" "}
-        <a className=" underline" href="#">
-          Privacy Notice
-        </a>
-        . <br /> Learn more about{" "}
-        <a className=" underline" href="#">
-          pricing and fees.
-        </a>
+        সাথে সম্মত হচ্ছেন এবং{" "}
+        <a className=" underline text-black" href="#">
+          গোপনীয়তা নোটিশটি{" "}
+        </a>{" "}
+        মেনে নিচ্ছেন।{" "}
+        <a className=" underline text-black" href="#">
+          মূল্য নির্ধারণ এবং ফি
+        </a>{" "}
+        সম্পর্কে আরও জানুন।
       </div>
     </form>
   );
