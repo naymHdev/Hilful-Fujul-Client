@@ -1,0 +1,9 @@
+/* Global CSS */
+.range-thumb::-webkit-slider-thumb {
+  appearance: none;
+  width: px;
+  height: px;
+  background-color: #30b981;
+  border-radius: 50%;
+  cursor: pointer;
+}
