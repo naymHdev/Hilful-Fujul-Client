@@ -6,12 +6,12 @@ import atm from "../../../src/assets/atm-card.png";
 
 const PaymentMethodTab = () => {
   return (
-    <div className=" py-5 font-joseFin">
+    <div className=" py-5">
       <Tab.Group>
-        <Tab.List className=" flex items-center justify-center  gap-4">
+        <Tab.List className="grid md:flex items-center justify-center gap-4">
           <Tab className="border rounded-xl hover:shadow-xl px-5 py-2 focus:outline-green-600">
             <div className="flex items-center text-center gap-2 justify-center">
-              <h3 className="text-xl font-semibold text-slate-800">
+              <h3 className="md:text-xl font-medium md:font-semibold text-slate-800">
                 মোবাইল ব্যাংকিং
               </h3>
               <img
@@ -23,7 +23,7 @@ const PaymentMethodTab = () => {
           </Tab>
           <Tab className="border rounded-xl hover:shadow-xl px-5 py-2 focus:outline-green-600">
             <div className="flex items-center text-center gap-2 justify-center">
-              <h3 className="text-xl font-semibold text-slate-800">
+              <h3 className="md:text-xl font-medium md:font-semibold text-slate-800">
                 ডেবিট ও ক্রেডিট
               </h3>
               <img

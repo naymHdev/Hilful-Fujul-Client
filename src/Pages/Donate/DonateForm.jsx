@@ -7,7 +7,7 @@ const DonateForm = ({ donate }) => {
 
   return (
     <>
-      <section className="md:w-7/12 mx-auto rounded-3xl shadow-xl p-10 mt-20 mb-8">
+      <section className="md:w-7/12 mx-auto rounded-3xl md:shadow-xl px-4 mt-10 md:mt-20">
         <div className=" flex items-center gap-5">
           <div className=" w-44 shadow-xl rounded-2xl">
             <img
@@ -21,7 +21,7 @@ const DonateForm = ({ donate }) => {
             <span className=" font-bold text-slate-900"> {projectName}</span>
           </h3>
         </div>
-        <hr className="mt-16 mb-16" />
+        <hr className="mt-10 md:mt-14 mb-10 md:mb-14" />
         {/* Payment method*/}
         <section className="">
           <h2 className=" text-4xl font-bold text-center mb-4 text-green-700">

@@ -17,7 +17,7 @@ const MobileBanking = () => {
       <section>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className=" flex flex-col items-center justify-center gap-8 mt-10">
-            <div className="grid lg:flex items-center gap-5">
+            <div className="flex items-center gap-2 md:gap-5">
               {["100", "500", "1000", "5000"].map((value) => (
                 <button
                   key={value}
