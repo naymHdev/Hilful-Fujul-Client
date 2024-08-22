@@ -6,7 +6,7 @@ import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className=" text-slate-800 border-t-2 font-joseFin">
+    <div className=" text-slate-800 border-t-2 mt-20">
       <footer className="footer rounded-sm primary-width md:gap-10 md:py-10 py-5 grid grid-cols-1 md:grid-cols-3">
         <div>
           <div>
@@ -99,7 +99,7 @@ const Footer = () => {
       <hr className=" py-2" />
       <section>
         <div className="md:flex gap-2 text-center justify-center text-slate-800 pb-5">
-          Copyright @2024 Hilf al-Fudul. Developed By 
+          Copyright @2024 Hilf al-Fudul. Developed By
           <a
             className=" font-bold text-green-900 underline"
             target="_blank"

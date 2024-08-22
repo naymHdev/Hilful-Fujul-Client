@@ -4,7 +4,7 @@ import Banner from "./Banner/Banner";
 import LogoBar from "./Banner/LogoBar";
 import DonateToday from "./DonateToday/DonateToday";
 import Join from "./Join/Join";
-import LatestNews from "./LatestNews/LatestNews";
+// import LatestNews from "./LatestNews/LatestNews";
 import Save from "./Save/Save";
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
       <AboutUs />
       <Join />
       <Causes />
-      <LatestNews />
+      {/* <LatestNews /> */}
     </div>
   );
 };
