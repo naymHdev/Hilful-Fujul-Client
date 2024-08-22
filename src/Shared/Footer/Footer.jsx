@@ -3,11 +3,13 @@ import flagIcon from "../../../src/assets/bd-flag.png";
 import { FacebookIcon, LinkedinIcon, PinterestIcon, XIcon } from "react-share";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <Divider className=" my-16" />
       <div className=" px-4 md:px-6 lg:px-10 mx-auto max-w-7xl mb-12">
-        <section className="md:flex justify-between">
+        <section className="md:flex items-center justify-between">
           <div>
             <div className=" border rounded-xl p-2 shadow-sm flex items-center justify-center gap-2">
               <div>
@@ -46,6 +48,38 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="md:flex items-center gap-5 mt-8 font-medium text-gray-700">
+            <p className=" font-bold">© 2023-{currentYear} হিলফুল ফুজুল</p>
+            <ul className=" grid md:flex items-center gap-4 mt-4 md:mt-0">
+              <li>
+                <a href="#" className="hover:underline">
+                  শর্তাবলী
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  গোপনীয়তা নীতি
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  আইনি তথ্য
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  অ্যাক্সেসযোগ্যতা বিবৃতি
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  কুকি নীতি
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
