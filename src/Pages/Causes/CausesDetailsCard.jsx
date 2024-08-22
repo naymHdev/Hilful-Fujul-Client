@@ -24,7 +24,7 @@ const CausesDetailsCard = ({ details }) => {
             <div className=" w-full border-b border-slate-800 my-10" />
             <div className="">
               <div
-                className="prose text-sm"
+                className="prose text-black"
                 dangerouslySetInnerHTML={{
                   __html: shortDescription && shortDescription,
                 }}
@@ -38,7 +38,7 @@ const CausesDetailsCard = ({ details }) => {
             {hadiths?.firstHadith || (hadiths?.secondHadith && <Divider />)}
 
             <div
-              className="prose text-sm mt-4"
+              className="prose mt-4"
               dangerouslySetInnerHTML={{
                 __html: projectDescription && projectDescription,
               }}

@@ -1,6 +1,5 @@
 import { FacebookIcon, LinkedinIcon, PinterestIcon, XIcon } from "react-share";
 import { FaUser } from "react-icons/fa";
-import { MdCall } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const HeaderBar = () => {
@@ -28,10 +27,6 @@ const HeaderBar = () => {
                 <a href="#">
                   <XIcon className=" w-8 h-auto rounded-full" />
                 </a>
-              </div>
-              <div className="gap-2 flex items-center text-white">
-                <MdCall className=" text-xl" />
-                <p className=" text-sm">+880 0177-006-4053</p>
               </div>
             </div>
             <div>
