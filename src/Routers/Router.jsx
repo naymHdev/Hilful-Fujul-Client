@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Error from "../Components/Error";
 import Layouts from "../Layouts/Layouts";
 import Home from "../Home/Home";
 import About from "../Pages/About/About";
@@ -77,7 +76,7 @@ const router = createBrowserRouter([
         element: <Donate />,
       },
       {
-        path: "/donate/:id",
+        path: "/donate/:projectName/:id",
         element: <Donate />,
       },
       {

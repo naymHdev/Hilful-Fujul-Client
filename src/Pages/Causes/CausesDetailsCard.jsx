@@ -4,8 +4,14 @@ import { Divider } from "antd";
 import DonationSection from "./DonationSection";
 
 const CausesDetailsCard = ({ details }) => {
-  const { projectName, images, projectDescription, hadiths, shortDescription } =
-    details || {};
+  const {
+    projectName,
+    images,
+    projectDescription,
+    hadiths,
+    shortDescription,
+    _id,
+  } = details || {};
 
   return (
     <>
@@ -45,7 +51,7 @@ const CausesDetailsCard = ({ details }) => {
             />
           </div>
           <div className=" col-span-full lg:col-span-3 mb-6">
-            <DonationSection />
+            <DonationSection _id={_id} projectName={projectName} />
           </div>
         </section>
       </div>

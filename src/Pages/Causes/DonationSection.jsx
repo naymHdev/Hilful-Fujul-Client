@@ -1,4 +1,7 @@
-const DonationSection = () => {
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+
+const DonationSection = ({ _id, projectName }) => {
   // input range value set
   const value = 50000;
   const maxValue = 100000;
@@ -39,9 +42,11 @@ const DonationSection = () => {
             <button className="w-full bg-yellow-400 text-black font-semibold py-3 px-4 rounded-xl mb-2">
               শেয়ার করুন
             </button>
-            <button className="w-full bg-orange-400 text-black font-semibold py-3 px-4 rounded-xl mb-6">
-              দান করুন
-            </button>
+            <Link to={`/donate/${projectName}/${_id}`}>
+              <button className="w-full bg-orange-400 text-black font-semibold py-3 px-4 rounded-xl mb-6">
+                দান করুন
+              </button>
+            </Link>
           </div>
         </div>
       </div>

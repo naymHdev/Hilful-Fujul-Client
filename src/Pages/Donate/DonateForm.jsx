@@ -22,7 +22,9 @@ const DonateForm = ({ donate }) => {
           </h3>
         </div>
         <section className=" mt-5">
-          <h4 className=" text-xl font-bold py-4">Enter your donation amount</h4>
+          <h4 className=" text-xl font-bold py-4">
+            Enter your donation amount
+          </h4>
           <div className=" grid grid-cols-3 md:grid-cols-6 gap-5">
             <div className="py-3 rounded-3xl shadow-2xl text-xl font-bold text-slate-900 bg-white border text-center">
               50TK
@@ -65,7 +67,7 @@ const DonateForm = ({ donate }) => {
             <Progress percent={50} status="active" />
           </div>
         </section>
-          <hr className="mt-16 mb-16" />
+        <hr className="mt-16 mb-16" />
         {/* Payment method*/}
         <section className="">
           <h2 className=" text-xl font-bold">Payment method</h2>

@@ -1,6 +1,5 @@
 import { Tab } from "@headlessui/react";
 import ssl from "../../assets/ssl-thumb.png";
-import gPlay from "../../assets/G-play-image.png";
 import debitCard from "../../assets/debit-icon.png";
 import CreditCardForm from "./CreditCardForm";
 
@@ -19,17 +18,6 @@ const PaymentMethodTab = () => {
               <h3 className="text-xl font-bold text-slate-800">E-Payment</h3>
             </div>
           </Tab>
-
-          <Tab className="border rounded-xl hover:shadow-xl">
-            <div className=" flex items-center gap-10">
-              <div className="avatar">
-                <div className="w-24 mask mask-hexagon">
-                  <img src={gPlay} />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-slate-800">Google Play</h3>
-            </div>
-          </Tab>
           <Tab className="border rounded-xl hover:shadow-xl">
             <div className=" flex items-center gap-10">
               <div className="avatar">
@@ -46,7 +34,6 @@ const PaymentMethodTab = () => {
         <section className="mt-8">
           <Tab.Panels>
             <Tab.Panel>Content 1</Tab.Panel>
-            <Tab.Panel>Content 2</Tab.Panel>
             <Tab.Panel>
               <CreditCardForm />
             </Tab.Panel>
