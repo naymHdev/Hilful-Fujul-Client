@@ -79,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-0 right-0 w-64 bg-white shadow-md h-full transform transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-0 right-0 w-[275px] bg-white shadow-md h-full transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -95,51 +95,27 @@ const Navbar = () => {
           <a href="/" className="hover:text-green-500">
             হোম
           </a>
-          <Divider
-            style={{
-              borderColor: "#3BCF95",
-            }}
-          />
+          <Divider />
           <a href="#" className="hover:text-green-500">
             আমাদের কার্যক্রম
           </a>
-          <Divider
-            style={{
-              borderColor: "#3BCF95",
-            }}
-          />
+          <Divider />
           <a href="/events" className="hover:text-green-500">
             চলমান প্রজেক্ট
           </a>
-          <Divider
-            style={{
-              borderColor: "#3BCF95",
-            }}
-          />
+          <Divider />
           <a href="#" className="hover:text-green-500">
             আজীবন ও দাতা সদস্য
           </a>
-          <Divider
-            style={{
-              borderColor: "#3BCF95",
-            }}
-          />
+          <Divider />
           <a href="/gallery" className="hover:text-green-500">
             গ্যালারী
           </a>
-          <Divider
-            style={{
-              borderColor: "#3BCF95",
-            }}
-          />
+          <Divider />
           <a href="/blogs" className="hover:text-green-500">
             তথ্য ব্লগ
           </a>
-          <Divider
-            style={{
-              borderColor: "#3BCF95",
-            }}
-          />
+          <Divider />
         </nav>
       </div>
     </header>

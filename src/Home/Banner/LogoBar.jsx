@@ -14,10 +14,10 @@ const LogoBar = () => {
           </div>
           <Link to="/">
             <div className="col text-center space-y-2">
-              <h2 className="text-4xl font-extrabold text-white">হিলফুল ফুজুল</h2>
-              <p className="text-[#3BCF94] font-bold">
-                সমাজ কল্যাণ ফাউন্ডেশন
-              </p>
+              <h2 className="text-4xl font-extrabold text-white">
+                হিলফুল ফুজুল
+              </h2>
+              <p className="text-[#3BCF94] font-bold">সমাজ কল্যাণ ফাউন্ডেশন</p>
             </div>
           </Link>
         </section>
@@ -35,7 +35,7 @@ const LogoBar = () => {
             <p className="font-medium">বই-পুস্তক লিফলেট বিতরণ</p>
           </div>
           <div>
-            <Button link="/donate" label="দান করুন" />
+            <Button link="#" label="দান করুন" />
           </div>
         </section>
       </div>
