@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
-
-import PaymentMethodTab from "./PaymentMethodTab";
+import MobileBanking from "./MobileBanking";
+// import PaymentMethodTab from "./PaymentMethodTab";
 
 const DonateForm = ({ donate }) => {
   const { images, projectName } = donate || {};
 
   return (
     <>
-      <section className="md:w-7/12 mx-auto rounded-3xl md:shadow-xl px-4 mt-10 md:mt-20">
+      <section className="md:w-7/12 mx-auto rounded-3xl md:shadow-xl px-4 mt-10 md:mt-20 mb-8 pb-10">
         <div className=" flex items-center gap-5">
           <div className=" w-44 shadow-xl rounded-2xl">
             <img
@@ -33,7 +33,8 @@ const DonateForm = ({ donate }) => {
             </h2>
             <p className=" font-semibold mt-1">জাযাকাল্লাহু খাইরান</p>
           </div>
-          <PaymentMethodTab />
+          {/* <PaymentMethodTab /> */}
+          <MobileBanking />
         </section>
       </section>
     </>

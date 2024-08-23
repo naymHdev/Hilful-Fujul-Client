@@ -3,11 +3,7 @@ import toast from "react-hot-toast";
 import { FcDonate } from "react-icons/fc";
 
 const DonateToday = () => {
-  const { register, handleSubmit, watch, setValue } = useForm({
-    defaultValues: {
-      amount: "100",
-    },
-  });
+  const { register, handleSubmit, watch, setValue } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -36,8 +32,8 @@ const DonateToday = () => {
         </section>
         <section>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className=" flex items-center justify-center gap-8 mt-10">
-              <div className="grid lg:flex items-center gap-5">
+            <div className="md:flex items-center justify-center gap-8 mt-10">
+              <div className="flex items-center justify-center gap-2 lg:gap-5">
                 {["100", "500", "1000", "5000"].map((value) => (
                   <button
                     key={value}
@@ -54,7 +50,7 @@ const DonateToday = () => {
                 ))}
               </div>
 
-              <div className="">
+              <div className=" flex items-center justify-center md:mt-0 mt-6">
                 <input
                   type="text"
                   {...register("amount")}
@@ -64,10 +60,10 @@ const DonateToday = () => {
               </div>
             </div>
 
-            <div className=" mt-12 flex items-center justify-center">
+            <div className=" mt-10 flex items-center justify-center">
               <button
                 type="submit"
-                className=" bg-green-500 hover:bg-green-800 hover:rounded text-white py-3 px-10 font-bold text-lg"
+                className=" bg-green-500 hover:bg-green-800 hover:rounded text-white py-3 px-14 font-bold text-lg"
               >
                 দান করুন
               </button>
