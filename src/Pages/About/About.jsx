@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { FaChevronLeft } from "react-icons/fa6";
 import bannerImage from "../../assets/about - banner - image.jpeg";
 import map from "../../assets/aboutUS.jpeg";
 import { BiSolidSquareRounded } from "react-icons/bi";
@@ -7,19 +5,6 @@ import { BiSolidSquareRounded } from "react-icons/bi";
 const About = () => {
   return (
     <>
-      <div className=" flex items-center mt-8 md:mt-16 gap-3 px-2 md:px-20">
-        <div className=" flex items-center gap-5 border rounded-xl px-8 py-1 font-extrabold">
-          <FaChevronLeft />
-          <Link to="/">Home</Link>
-        </div>
-        <div className="border rounded-xl px-8 py-1 font-extrabold">
-          <Link to="/about">About Hilf al-Fudul</Link>
-        </div>
-      </div>
-      <div className="mt-2 md:mt-5 space-y-3 w-11/12 mx-auto">
-        <hr />
-        <hr />
-      </div>
       <div className=" flex items-center justify-center mt-16">
         <h1 className=" text-3xl font-extrabold">About Hilf al-Fudul</h1>
       </div>

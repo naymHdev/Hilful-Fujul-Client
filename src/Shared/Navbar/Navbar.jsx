@@ -1,12 +1,12 @@
 import { Divider } from "antd";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-const Header = () => {
-  const [isSticky, setIsSticky] = useState(false);
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +29,7 @@ const Header = () => {
       className={`${
         isSticky
           ? "fixed top-0 z-50 w-full left-0"
-          : "absolute lg:top-[270px] z-50 w-full lg:w-11/12 mx-auto lg:left-[50px]"
+          : "absolute lg:top-[70px] z-50 w-full mx-auto"
       } bg-white shadow-sm transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-between py-4 md:py-8">
@@ -146,4 +146,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
