@@ -15,7 +15,7 @@ const CausesDetailsCard = ({ details }) => {
 
   return (
     <>
-      <div className=" mt-10 md:mt-16">
+      <div className=" mt-20 md:mt-24">
         <h1 className=" text-4xl font-semibold text-black">{projectName}</h1>
 
         <section className=" grid grid-cols-1 lg:grid-cols-9 gap-4">
