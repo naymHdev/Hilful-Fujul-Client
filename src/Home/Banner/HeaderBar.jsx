@@ -43,7 +43,10 @@ const HeaderBar = () => {
                   আমাদের কার্যক্রম
                 </Link>
                 <div className=" text-white">|</div>
-                <Link to="#" className="text-[#9F9F9F] hover:text-white">
+                <Link
+                  to="/joinVolunteer"
+                  className="text-[#9F9F9F] hover:text-white"
+                >
                   স্বেচ্ছাসেবক নিবন্ধন
                 </Link>
                 <div className=" text-white">|</div>

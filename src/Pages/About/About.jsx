@@ -5,9 +5,6 @@ import { BiSolidSquareRounded } from "react-icons/bi";
 const About = () => {
   return (
     <>
-      <div className=" flex items-center justify-center mt-28">
-        <h1 className=" text-3xl font-extrabold">About Hilf al-Fudul</h1>
-      </div>
       <div className=" mt-20">
         <img className=" w-full rounded-md h-full" src={bannerImage} alt="" />
       </div>

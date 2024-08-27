@@ -1,193 +1,22 @@
-import { Link } from "react-router-dom";
-import { FaChevronRight } from "react-icons/fa";
-import Button from "../../Components/Button";
-import { useState } from "react";
-import PrivateAxios from "../../Hooks/PrivateAxios";
-import toast from "react-hot-toast";
-import { imageApi } from "../../Utils/ImageAPI/imageApi";
+import volunteer from "../../../src/assets/JoinVolunteer.jpg";
+import IsBanner from "../../Hooks/IsBanner";
 
 const JoinVolunteer = () => {
-  const [loading, setLoading] = useState(false);
-
-  //acknowledged
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const images = form.image.files[0];
-    const imageURL = await imageApi(images);
-    const volunteersImage = imageURL.data.display_url;
-    const name = form.name.value;
-    const whatsApp = form.whatsApp.value;
-    const nationalId = form.nationalId.value;
-    const email = form.email.value;
-    const age = form.age.value;
-    const currentAddress = form.currentAddress.value;
-    const permanentAddress = form.permanentAddress.value;
-    const birthDate = form.birthDate.value;
-    const facebookId = form.facebookId.value;
-    const volunteersData = {
-      volunteersImage,
-      name,
-      whatsApp,
-      nationalId,
-      email,
-      age,
-      currentAddress,
-      permanentAddress,
-      birthDate,
-      facebookId,
-    };
-
-    try {
-      await PrivateAxios.post("/joinVolunteer", volunteersData)
-        .then(() => {
-          // console.log(res.data);
-          toast.success("Successfully Joined a Volunteer!");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } catch (error) {
-      console.log(error);
-      toast.error(error?.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return (
-      <span className="loading loading-ring loading-lg flex h-screen"></span>
-    );
-  }
-
   return (
     <>
-      <section className="bg-[url(https://i.ibb.co/1vTMr1X/group-volunteers-nature.jpg)] w-full bg-cover">
-        <div className=" flex items-center gap-2 justify-center py-40 font-bold text-slate-100 text-xl backdrop-blur-sm">
-          <p className=" hover:text-green-500">
-            <Link>Home</Link>
-          </p>
-          <p>
-            <FaChevronRight />
-          </p>
-          <p>Join Now Be a Volunteer</p>
-        </div>
-      </section>
-      <div className=" bg-slate-200 pt-16">
-        <section className="md:w-9/12 mx-auto py-6">
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-4 border rounded-md border-slate-100 px-5 py-2 bg-slate-300"
-          >
-            <div className="w-full">
-              <label className="label font-bold">Full Name:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="text"
-                name="name"
-                id=""
-                placeholder="type your full name"
-              />
-            </div>
-            <div className=" w-full">
-              <label className="label font-bold">Email:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="email"
-                name="email"
-                id=""
-                placeholder="type your email"
-              />
-            </div>
-            <div>
-              <label className=" label font-bold">FaceBook Id Link:</label>
-              <input
-                className=" w-full px-1 py-2 rounded-md border"
-                type="url"
-                id="facebookId"
-                name="facebookId"
-                required
-                placeholder="type your facebook id"
-              />
-            </div>
-            <div>
-              <label className=" label font-bold">WhatsApp Number:</label>
-              <input
-                className=" w-full px-1 py-2 rounded-md border"
-                type="number"
-                id="whatsApp"
-                name="whatsApp"
-                required
-                placeholder="type your whatsApp number"
-              />
-            </div>
-            <div className=" w-full">
-              <label className="label font-bold">National Id:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="text"
-                name="nationalId"
-                id=""
-                placeholder="type your national id"
-              />
-            </div>
-            <div className=" w-full">
-              <label className="label font-bold">Age:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="number"
-                name="age"
-                id=""
-                placeholder="type your age"
-              />
-            </div>
-            <div className=" w-full">
-              <label className="label font-bold">Date of birth:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="text"
-                name="birthDate"
-                id=""
-                placeholder="type your date of birth"
-              />
-            </div>
-            <div className="w-full">
-              <label className="label font-bold">Current Address:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="text"
-                name="currentAddress"
-                id=""
-                placeholder="type your current address"
-              />
-            </div>
-            <div className="w-full">
-              <label className="label font-bold">Permanent Address:</label>
-              <input
-                className=" p-2 border rounded-md w-full"
-                type="text"
-                name="permanentAddress"
-                id=""
-                placeholder="type your permanent address"
-              />
-            </div>
-            <div className="w-full">
-              <label className="label font-bold">Professional Image:</label>
-              <input
-                type="file"
-                id="image"
-                name="image"
-                accept="image/*"
-                required
-              />
-            </div>
-            <div className=" flex justify-end px-10">
-              <Button text="Submit" />
-            </div>
-          </form>
-        </section>
+      <div className=" px-4 md:px-6 lg:px-10 max-w-7xl mx-auto">
+        <IsBanner
+          image={volunteer}
+          headerTitle="পরিবর্তনের সহযোদ্ধা হোন"
+          description=" মানবতার সেবায় স্বেচ্ছাসেবক হিসাবে আমাদের সাথে যুক্ত হন। সমাজের
+              উন্নতির জন্য একসঙ্গে কাজ করুন। আমাদের সমাজের জন্য আপনার সময় ও
+              শক্তি উৎসর্গ করে প্রকৃত পরিবর্তনের অংশীদার হন। স্বেচ্ছাসেবক হিসেবে
+              কাজ করার মাধ্যমে আপনি অন্যদের পাশে দাঁড়াতে পারেন এবং তাদের জীবনে
+              প্রভাব ফেলতে পারেন। আমাদের প্রোগ্রামে যুক্ত হয়ে, আপনি শুধু যে
+              সমাজের উন্নতি করবেন তা নয়, আপনার নিজের দক্ষতা ও অভিজ্ঞতাকেও
+              সমৃদ্ধ করবেন। নিজের ভেতরের মানবতাকে আবিষ্কার করুন এবং স্বেচ্ছাসেবী
+              হয়ে সমাজের জন্য একটি ইতিবাচক পরিবর্তন আনুন।"
+        />
       </div>
     </>
   );
