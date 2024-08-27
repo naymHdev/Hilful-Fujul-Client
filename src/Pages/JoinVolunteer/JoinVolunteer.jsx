@@ -1,5 +1,6 @@
 import volunteer from "../../../src/assets/JoinVolunteer.jpg";
 import IsBanner from "../../Hooks/IsBanner";
+import VolunteerForm from "./VolunteerForm";
 
 const JoinVolunteer = () => {
   return (
@@ -17,6 +18,7 @@ const JoinVolunteer = () => {
               সমৃদ্ধ করবেন। নিজের ভেতরের মানবতাকে আবিষ্কার করুন এবং স্বেচ্ছাসেবী
               হয়ে সমাজের জন্য একটি ইতিবাচক পরিবর্তন আনুন।"
         />
+        <VolunteerForm />
       </div>
     </>
   );
