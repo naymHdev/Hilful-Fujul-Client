@@ -13,7 +13,7 @@ const Layouts = () => {
         <HeaderBar />
         {location.pathname === "/" ? <Header /> : <Navbar />}
       </div>
-      <div className=" overflow-hidden min-h-screen mt-20 md:mt-24">
+      <div className=" overflow-hidden min-h-screen">
         <Outlet />
       </div>
       <div className=" mt-10">

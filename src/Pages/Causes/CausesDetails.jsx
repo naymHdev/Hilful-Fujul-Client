@@ -13,7 +13,7 @@ const CausesDetails = () => {
 
   return (
     <>
-      <div className=" px-4 md:px-6 lg:px-10 mx-auto max-w-7xl">
+      <div className=" px-4 md:px-6 lg:px-10 mx-auto max-w-7xl  mt-20 md:mt-24">
         {projectDetails?.map((details) => (
           <CausesDetailsCard key={details._id} details={details} />
         ))}

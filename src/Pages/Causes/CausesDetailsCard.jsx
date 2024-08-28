@@ -16,7 +16,9 @@ const CausesDetailsCard = ({ details }) => {
   return (
     <>
       <div className="">
-        <h1 className=" text-4xl font-semibold text-black">{projectName}</h1>
+        <h1 className=" text-4xl font-semibold text-black mb-4">
+          {projectName}
+        </h1>
 
         <section className=" grid grid-cols-1 lg:grid-cols-9 gap-4">
           <div className=" col-span-full lg:col-span-6 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar">

@@ -5,7 +5,7 @@ import VolunteerForm from "./VolunteerForm";
 const JoinVolunteer = () => {
   return (
     <>
-      <div className=" px-4 md:px-6 lg:px-10 max-w-7xl mx-auto">
+      <div className=" px-4 md:px-6 lg:px-10 max-w-7xl mx-auto  mt-20 md:mt-24">
         <IsBanner
           image={volunteer}
           headerTitle="পরিবর্তনের সহযোদ্ধা হোন"
