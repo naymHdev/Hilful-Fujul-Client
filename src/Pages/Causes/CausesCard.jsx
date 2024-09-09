@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "./causes.css";
+import { Skeleton } from "antd";
 
-const CausesCard = ({ project }) => {
+const CausesCard = ({ project, isLoading }) => {
   // console.log(project);
 
   const { projectName, images, projectDescription, _id } = project || {};
@@ -17,6 +18,11 @@ const CausesCard = ({ project }) => {
   const value = 50000;
   const maxValue = 100000;
   const percentage = (value / maxValue) * 100;
+
+  // Check if the data is still loading, show Skeleton
+  if (isLoading === true) {
+    return <Skeleton active />;
+  }
 
   return (
     <>

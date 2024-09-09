@@ -3,7 +3,7 @@ import useProjects from "../../Hooks/useProjects";
 import CausesCard from "./CausesCard";
 
 const Causes = () => {
-  const [isProjects] = useProjects();
+  const [isProjects, isFetching, isLoading] = useProjects();
 
   return (
     <>
@@ -15,7 +15,12 @@ const Causes = () => {
 
         <section className=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {isProjects?.map((project) => (
-            <CausesCard key={project._id} project={project} />
+            <CausesCard
+              key={project._id}
+              project={project}
+              isFetching={isFetching}
+              isLoading={isLoading}
+            />
           ))}
         </section>
       </div>
