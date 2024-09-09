@@ -18,3 +18,46 @@ export const threeTopics = [
       "পৃথিবীর ভারসাম্য রক্ষায় প্রাণীকুলের গুরুত্বপূর্ণ ভূমিকা রয়েছে। বিপন্ন প্রাণীদের রক্ষা ও তাদের আবাসস্থল সংরক্ষণে আমরা কাজ করছি, যাতে প্রকৃতির এই মূল্যবান সম্পদগুলি চিরস্থায়ী হয়।",
   },
 ];
+
+export const divisions = [
+  {
+    id: 1,
+    name: "Dhaka",
+    bn_name: "ঢাকা",
+  },
+  {
+    id: 2,
+    name: "Chattogram",
+    bn_name: "চট্টগ্রাম",
+  },
+  {
+    id: 3,
+    name: "Khulna",
+    bn_name: "খুলনা",
+  },
+  {
+    id: 4,
+    name: "Rajshahi",
+    bn_name: "রাজশাহী",
+  },
+  {
+    id: 5,
+    name: "Barishal",
+    bn_name: "বরিশাল",
+  },
+  {
+    id: 6,
+    name: "Sylhet",
+    bn_name: "সিলেট",
+  },
+  {
+    id: 7,
+    name: "Rangpur",
+    bn_name: "রংপুর",
+  },
+  {
+    id: 8,
+    name: "Mymensingh",
+    bn_name: "ময়মনসিংহ",
+  },
+];

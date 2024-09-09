@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
+import { divisions } from "../../Data/data";
+import { useState } from "react";
 
 const VolunteerForm = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -228,7 +231,11 @@ const VolunteerForm = () => {
               className=" mt-2 px-3 py-3 border rounded-md focus:outline-none w-full"
             >
               <option value="">জেলা/উপজেলা নির্বাচন করুন</option>
-              {/* Add more options here */}
+              {divisions?.map((district, index) => (
+                <option key={index} value={district.name}>
+                  {district.bn_name}
+                </option>
+              ))}
             </select>
             {errors.permanentDistrict && (
               <p className="text-red-500 text-xs">
@@ -270,7 +277,11 @@ const VolunteerForm = () => {
               className=" mt-2 px-3 py-3 border rounded-md focus:outline-none w-full"
             >
               <option value="">জেলা/উপজেলা নির্বাচন করুন</option>
-              {/* Add more options here */}
+              {divisions?.map((district, index) => (
+                <option key={index} value={district.name}>
+                  {district.bn_name}
+                </option>
+              ))}
             </select>
             {errors.permanentDistrict && (
               <p className="text-red-500 text-xs">
@@ -284,10 +295,13 @@ const VolunteerForm = () => {
               className="mt-2 w-full px-3 py-3 border rounded-md focus:outline-none"
               name=""
               id=""
+              {...register("presentAddress", {
+                required: "জেলা / উপজেলা প্রয়োজন",
+              })}
             ></textarea>
-            {errors.permanentDistrict && (
+            {errors.presentAddress && (
               <p className="text-red-500 text-xs">
-                {errors.permanentDistrict.message}
+                {errors.presentAddress.message}
               </p>
             )}
           </div>
@@ -295,10 +309,10 @@ const VolunteerForm = () => {
       </section>
 
       {/* Submit Button */}
-      <div className="mt-4">
+      <div className="">
         <button
           type="submit"
-          className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
+          className="bg-green-600 w-full text-white py-3 px-4 rounded hover:bg-green-700"
         >
           জমা দিন
         </button>
