@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { divisions } from "../../Data/data";
 import { useState } from "react";
+import PrivateAxios from "../../Hooks/PrivateAxios";
+import toast from "react-hot-toast";
 
 const VolunteerForm = () => {
   const [loading, setLoading] = useState(false);
@@ -10,8 +12,24 @@ const VolunteerForm = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      const res = await PrivateAxios.post("/api/joinVolunteer", data);
+      // console.log("joinVolunteer", res.data);
+      if (res.data.acknowledged) {
+        toast.success("আপনার ফর্ম জমা দেওয়া হয়েছে");
+      } else {
+        toast.error("আপনার ফর্ম জমা ব্যর্থ হয়েছে");
+      }
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      toast.error("আপনার ফর্ম জমা ব্যর্থ হয়েছে");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -128,7 +146,7 @@ const VolunteerForm = () => {
             </label>
             <input
               className=" mt-2 px-3 py-3 border rounded-md focus:outline-none w-full"
-              type="text"
+              type="number"
               placeholder="90209974239"
               {...register("nidNumber")}
             />
@@ -314,7 +332,7 @@ const VolunteerForm = () => {
           type="submit"
           className="bg-green-600 w-full text-white py-3 px-4 rounded hover:bg-green-700"
         >
-          জমা দিন
+          {loading ? "লোড হচ্ছে..." : "জমা দিন"}
         </button>
       </div>
     </form>
