@@ -53,7 +53,7 @@ const Banner = () => {
               src={banner1}
               alt="Slider Banner"
             />
-            <div className=" text-white absolute flex flex-col space-y-4 md:space-y-6 lg:space-y-10 items-center lg:bottom-[200px] bottom-14 md:bottom-[100px] md:left-[14px] lg:left-[300px] text-center">
+            <div className=" text-white absolute flex flex-col space-y-4 md:space-y-6 lg:space-y-10 items-center lg:bottom-[200px] bottom-14 md:bottom-[100px] md:left-[14px] lg:left-[200px] text-center">
               <SiHelpscout className=" lg:text-9xl text-6xl text-red-600" />
               <h2 className=" text-2xl md:text-5xl font-extrabold">
                 সহমর্মিতার ছোঁয়া,{" "}
@@ -72,7 +72,7 @@ const Banner = () => {
               src={banner2}
               alt=""
             />
-            <div className=" text-white absolute flex flex-col space-y-4 md:space-y-6 lg:space-y-10 items-center lg:bottom-[200px] bottom-14 md:bottom-[100px] md:left-[14px] lg:left-[300px] text-center">
+            <div className=" text-white absolute flex flex-col space-y-4 md:space-y-6 lg:space-y-10 items-center lg:bottom-[200px] bottom-14 md:bottom-[100px] md:left-[14px] lg:left-[200px] text-center">
               <SiHelpscout className="lg:text-9xl text-6xl text-green-600" />
               <h2 className="text-2xl md:text-5xl font-extrabold">
                 প্রকৃতির সুরক্ষায় আপনার{" "}
